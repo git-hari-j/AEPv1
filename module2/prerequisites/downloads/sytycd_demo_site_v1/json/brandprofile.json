@@ -1,0 +1,216 @@
+{
+  "brand": {
+    "name": "La Boutique",
+    "ldap": "...",
+    "industry": "retail",
+    "logo": "http://v4.laboutique.com:8888/images/logoimage.png",
+    "locallogo": false,
+    "favicon": "http://v4.laboutique.com:8888/images/favicon.png",
+    "localfavicon": false,
+    "hero": "http://v4.laboutique.com:8888/images/heroimage.png",
+    "localhero": false,
+    "calltoaction": "Buy It Now!",
+    "calltoactionurl": "custompage1.html",
+    "demosetuptype": "fullecommerceready",
+    "publishLocation": "localhost",
+    "publishUseCustomPort": "no",
+    "publishUseCustomPortNumber": "...",
+    "confighostname": "v4.laboutique.com",
+    "configportnumber": "8888",
+    "useAAM": false,
+    "useAA": false,
+    "useAT": false,
+    "usePlatform": true,
+    "useMKT": false,
+    "useCallCenter": "true",
+    "usePersonalShopper": "true",
+    "currency": "EUR"
+  },
+  "pages": {
+    "page0": {
+      "title": "Home",
+      "url": "index.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page1": {
+      "title": "Test",
+      "url": "custompage1.html",
+      "heroimage": "custompage1.png",
+      "active": true
+    },
+    "page2": {
+      "title": "",
+      "url": "custompage2.html",
+      "heroimage": "custompage2.png",
+      "active": false
+    },
+    "page3": {
+      "title": "",
+      "url": "custompage3.html",
+      "heroimage": "custompage3.png",
+      "active": false
+    },
+    "page4": {
+      "title": "",
+      "url": "custompage4.html",
+      "heroimage": "custompage4.png",
+      "active": false
+    },
+    "page5": {
+      "title": "",
+      "url": "custompage5.html",
+      "heroimage": "custompage5.png",
+      "active": false
+    },
+    "page6": {
+      "title": "",
+      "url": "",
+      "heroimage": "",
+      "active": false
+    },
+    "page7": {
+      "title": "Login/Register",
+      "url": "login-register.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page8": {
+      "title": "Privacy",
+      "url": "privacy.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page9": {
+      "title": "Admin",
+      "url": "admin.html",
+      "heroimage": "",
+      "active": true
+    }
+  },
+  "products": {
+    "product1": {
+      "active": true,
+      "name": "Lisette Dress",
+      "description": "Lisette Dress",
+      "category": "Dresses",
+      "price": "EUR 58.00",
+      "url": "p1.html",
+      "image1": "./img/thumbnails/db_file_img_228_480xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_229_480xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/lisettedress?format=png-alpha"
+    },
+    "product2": {
+      "active": true,
+      "name": "El Silencio",
+      "description": "El Silencio",
+      "category": "T-shirts",
+      "price": "EUR 57.99",
+      "url": "p2.html",
+      "image1": "./img/thumbnails/db_file_img_32_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_33_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/elsilencio?format=png-alpha"
+    },
+    "product3": {
+      "active": true,
+      "name": "Malta Dress",
+      "description": "Malta Dress",
+      "category": "Dresses",
+      "price": "EUR 88.00",
+      "url": "p3.html",
+      "image1": "./img/thumbnails/db_file_img_137_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_138_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/maltadress?format=png-alpha"
+    },
+    "product4": {
+      "active": true,
+      "name": "Babar Soul",
+      "description": "Babar Soul",
+      "category": "T-shirts",
+      "price": "EUR 70.00",
+      "url": "p4.html",
+      "image1": "./img/thumbnails/db_file_img_92_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_93_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/babarsoul?format=png-alpha"
+    },
+    "product5": {
+      "active": true,
+      "name": "Babar Afrique",
+      "description": "Babar Afrique",
+      "category": "T-shirts",
+      "price": "EUR 220.00",
+      "url": "p5.html",
+      "image1": "./img/thumbnails/db_file_img_88_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_87_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/babarafrique?format=png-alpha"
+    },
+    "product6": {
+      "active": true,
+      "name": "El Paso Tank",
+      "description": "El Paso Tank",
+      "category": "T-shirts",
+      "price": "EUR 38.00",
+      "url": "p6.html",
+      "image1": "./img/thumbnails/db_file_img_122_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_123_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/elpasotank?format=png-alpha"
+    },
+    "product7": {
+      "active": true,
+      "name": "Basecamp Tent",
+      "description": "Basecamp Tent",
+      "category": "Equipment",
+      "price": "EUR 649.99",
+      "url": "p7.html",
+      "image1": "http://s7e4a.scene7.com/is/image/OmniPS/glampingtent?format=png-alpha",
+      "image2": "http://s7e4a.scene7.com/is/image/OmniPS/glampingtent?format=png-alpha",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/glampingtent?format=png-alpha"
+    },
+    "product8": {
+      "active": true,
+      "name": "Marais Dress",
+      "description": "Marais Dress",
+      "category": "Dresses",
+      "price": "EUR 58.00",
+      "url": "p8.html",
+      "image1": "./img/thumbnails/db_file_img_42_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_43_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/maraisdress?format=png-alpha"
+    }
+  },
+  "profileAttributes": {
+    "useShoeSize": false,
+    "useShirtSize": false,
+    "usePreferredColor": false
+  },
+  "dmp": {
+    "mediadetails": {
+      "iframeurl": "http://www.nieuwsblad.be",
+      "pagename": "Nieuwsblad.be",
+      "pageurl": "media.html",
+      "activate": "no"
+    },
+    "displayad1": {
+      "image": "http://www.remoteserver.com/ad1.jpg",
+      "local": false
+    },
+    "displayad2": {
+      "image": "http://www.remoteserver.com/ad2.jpg",
+      "local": false
+    },
+    "displayad3": {
+      "image": "http://www.remoteserver.com/ad3.jpg",
+      "local": false
+    },
+    "displayad4": {
+      "image": "http://www.remoteserver.com/ad4.jpg",
+      "local": false
+    }
+  },
+  "marketo": {
+    "mktEndpoint": "",
+    "mktFields": "company,firstname,lastname",
+    "mktClientId": "",
+    "mktClientSecret": "" 
+  }
+}

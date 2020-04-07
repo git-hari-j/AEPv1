@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin Update Brand</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                loadxray: false,
+                adminpage: false,
+                dashboardpage: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="resetBrandValidSettings();">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+    <div class="box">
+        <div class="hgroup title">
+            <h3>So You Think You Can Demo?</h3>
+            <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+            <br/>
+        </div>
+            <div class="box-content" id="ldapAlarmSection" style="display:none;">
+                <h5 style="color:red;">ERROR! No LDAP Selected </h5>
+                You can't update an existing brand without having selected your LDAP.
+                <br/>
+                Please go <a href="./admin_selectldap.html">here</a> to select your LDAP and then come back to this page to create your brand.
+            </div>
+            <div id="loader" style="display:none;"></div>      
+
+            <div id="selectbrandsection" class="box-content" style="display:none;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">Select your Brand to update:
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="brands" name="brands" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="saveButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="saveButton" value="files" onClick="setBrandToUpdate()" disabled>
+                                Continue
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <div id="selectupdatequestionsection" class="box-content" style="display:none;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">What do you want to update?
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="question1" name="question1" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="BrandSettings">Brand Settings</option>
+                                    <option value="CustomPages">Custom Page</option>
+                                    <option value="Categories">Category</option>
+                                    <option value="Products">Product</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="continue1Button" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="continue1Button" value="files" onClick="setWhatToUpdate()" disabled>
+                                Continue
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <div id="selectupdatecustompagessection" class="box-content" style="display:none;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">Which Custom Page do you want to update?
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="custompagenumber" name="custompagenumber" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="continueCustomPagesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="continueCustomPagesButton" value="files" onClick="setCustomPageToUpdate()" disabled>
+                                Continue
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <div id="selectupdatecategoriessection" class="box-content" style="display:none;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">Which Category do you want to update?
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="categorynumber" name="categorynumber" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="continueCategoriesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="continueCategoriesButton" value="files" onClick="setCategoryToUpdate()" disabled>
+                                Continue
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <div id="selectupdateproductssection" class="box-content" style="display:none;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">Which Product do you want to update?
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="productnumber" name="productnumber" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="continueProductsButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="continueProductsButton" value="files" onClick="setProductToUpdate()" disabled>
+                                Continue
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <br/><br/>
+            <div id="updatestatussection" class="box-content" style="display:block;">
+                <div class="row">
+                    <div id="" class="col-sm-12">ACTION:</div>
+                    <div id="statustext" class="col-sm-12">You haven't selected anything to update.</div>
+                    <div id="startupdatingsection" class="controls" style="display:none;">
+                        <div class="col-sm-2">
+                            <button id="startUpdatingButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="startUpdatingButton" value="files" onClick="startUpdating()">
+                                ARE YOU SURE ???
+                            </button>
+                        </div>
+                    </div> 
+                    <div id="startupdating1section" class="controls" style="display:none;">
+                        <div class="col-sm-2">
+                            <button id="startUpdatingButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="startUpdatingButton" value="files" onClick="startUpdatingSure()">
+                                ARE YOU REALLY SURE ???
+                            </button>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="box-content" id="brandSettingsSection" style="display:none;">
+                <h5>Brand Settings: </h5>
+                <div class="row">
+                    <div class="col-sm-2">Demo Type:<div id="choice1" class="notification">* Make a choice</div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="demosetuptype" name="demosetuptype" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="quickandnotsodirty">Quick And Not So Dirty</option>
+                                    <option value="fullecommerceready">Full E-Commerce Ready</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Which industry?<div id="choice2" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="industry" name="industry" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="telco">Telco</option>
+                                    <option value="fsi">FSI</option>
+                                    <option value="car">Car Manufacturer</option>
+                                    <option value="hospitality">Hospitality</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Currency?<div id="choice3" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="currency" name="currency" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="USD">USD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2" style="">Leading Background Color?<div id="infoColor" class="information">Enter the hex color code that matches your brand's colors</div>
+                        <div class="form-group" style="display:block;width:180px;">
+                            <div class="controls">
+                                <input class="form-control" id="brandColor" type="text" name="brandColor" value="#FFFFFF">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2" style="">Leading Text Color?<div id="infoTextColor" class="information">Select Light or Dark</div>
+                        <div class="form-group" style="display:block;width:180px;">
+                            <div class="controls">
+                                <select id="textColor" name="textColor" style="color:#000000;height:34px;width:180px;">
+                                    <option value="light">Light</option>
+                                    <option value="dark" selected>Dark</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">Use custom Profile Attributes?<div id="choice4" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="usecustomprofileattributes" name="usecustomprofileattributes" style="color:#000000;height:34px;width:180px;">v
+                                    <option value="..." selected>...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Use Call Center?<div id="choice5" class="notification">* Make a choice</div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="usecallcenter" name="usecallcenter" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Use Personal Shopper?<div id="choice6" class="notification">* Make a choice</div>  
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="usepersonalshopper" name="usepersonalshopper" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">Which solutions on X-ray? <div id="infoColor" class="information">Adobe Experience Platform should always be selected.</div>
+                        <div class="form-group">
+                            <div class="controls" style="">
+                                <input id="usePlatform" type="checkbox" name="usePlatform" value="" checked disabled="disabled"><label class="control-label" for="">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/experience_platform_RGB?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAAM" type="checkbox" name="useAAM" value=""><label class="control-label" for="">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/aam?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAA" type="checkbox" name="useAA" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/aa?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAT" type="checkbox" name="useAT" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/at?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useACS" type="checkbox" name="useACS" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/acs?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useMKT" type="checkbox" name="useMKT" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/marketo?fmt=png-alpha" style="height:40px;"/></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>   
+            </div>
+            <div class="box-content" id="brandNameSection" style="display:none;">
+                <h5>Brand Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Brand Name</label><div id="infobrandname" class="notification">* Enter your own brand name</div>  
+                            <div class="controls">
+                                <input class="form-control" id="brandName" type="text" name="brandName" value="">
+                                <button id="verifyBrandName" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="verifyBrandName" value="" onClick="checkIfBrandNameExists()">
+                                Verify Brand Name
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-content" id="brandDetailsSection" style="display:none;">  
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Alexa Brand Name</label><div id="alexabn" class="notification">* Enter your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!</div>  
+                            <div class="controls">
+                                <input class="form-control" id="alexabrandname" type="text" name="alexabrandname" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">      
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="logoImageLabel" class="control-label" for="">Brand Logo Image</label><div id="choice7" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="brandLogo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="faviconImageLabel" class="control-label" for="">Brand Fav Icon Image</label><div id="choice8" class="notification">* Select your favourite icon</div>  
+                            <div class="controls">
+                                <input type="file" id="favIcon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="heroImageLabel" class="control-label" for="">Brand Hero Image</label><div id="choice9" class="notification">* Select your hero image</div>  
+                            <div class="controls">
+                                <input type="file" id="brandHeroImage">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use CTA-box?</label><div id="ctainfo" class="information">* Check to use</div>
+                            <div class="controls">
+                                <input id="ctaActive" type="checkbox" name="ctaActive" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">CTA Box Position</label><div id="ctaboxpositioninfo" class="information">* Select the position of the CTA-box</div> 
+                            <div class="controls">
+                                <select id="brandctaboxposition" name="brandctaboxposition" disabled>
+                                    <option value="..." selected>...</option>
+                                    <option value="TL">Top Left</option>
+                                    <option value="TR">Top Right</option>
+                                    <option value="BL">Bottom Left</option>
+                                    <option value="BR">Bottom Right</option>
+                                    <option value="C">Center</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Hero Img CTA</label><div id="choice10" class="information">* Enter your Call To Action</div>  
+                            <div class="controls">
+                                <input class="form-control" id="brandcalltoaction" type="text" name="brandcalltoaction" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">CTA & Hero Img URL</label><div id="choice11" class="notification">* Select the landing page after clicking the hero image</div> 
+                            <div class="controls">
+                                <select id="brandcalltoactionurl" name="brandcalltoactionurl">
+                                    <option value="..." selected>...</option>
+                                    <option value="index.html">No Next Page</option>
+                                    <option value="custompage1.html">Custom Page 1</option>
+                                    <option value="custompage2.html">Custom Page 2</option>
+                                    <option value="custompage3.html">Custom Page 3</option>
+                                    <option value="custompage4.html">Custom Page 4</option>
+                                    <option value="custompage5.html">Custom Page 5</option>
+                                    <option value="p1.html">Product 1</option>
+                                    <option value="p2.html">Product 2</option>
+                                    <option value="p3.html">Product 3</option>
+                                    <option value="p4.html">Product 4</option>
+                                    <option value="p5.html">Product 5</option>
+                                    <option value="p6.html">Product 6</option>
+                                    <option value="p7.html">Product 7</option>
+                                    <option value="p8.html">Product 8</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="box-content" id="carIndustrySection" style="display:none;">
+                <h5>Car Industry Specific Settings</h5>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="">Test Drive Dealers</label><div id="testdrivedealersinfo" class="notification">* Enter a comma-separated list of Dealer Locations</div>
+                            <div class="controls">
+                                <input class="form-control" id="testdrivedealers" type="text" name="testdrivedealers" value="Dealer Location 1, Dealer Location 2, Dealer Location 3" style="width:500px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="">Test Drive Car Types</label><div id="testdrivecartypesinfo" class="notification">* Enter a comma-separated list of Car Types</div>
+                            <div class="controls">
+                                <input class="form-control" id="testdrivecartypes" type="text" name="testdrivecartypes" value="Car Type 1, Car Type 2, Car Type 3" style="width:500px;">
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>   
+  
+            <br/>
+            <div id="loader" style="display:none;"></div>
+            <div id="updatebrandbuttonsection" class="row" style="display:none;">
+                <div class="controls">
+                    <div class="col-sm-12">
+                        <button id="nextPageCreateBrandButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="nextPageCreateBrandButton" value="" style="width:300px;" onClick="saveBrand()" disabled>
+                                Update Brand
+                        </button>
+                        <label id="brandupdatestatus" class="control-label" for=""></label>
+                    </div>
+                </div>     
+            </div> 
+
+
+            <div id="updatecustompagessection" class="box-content" style="display:none;">
+                <div class="row">
+                    <div id="" class="col-sm-12">Let's update a Custom Page:</div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page?</label><div id="pa" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="pageActive" type="checkbox" name="pageActive" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page Title</label><div id="pt" class="notification">* Make a choice</div>
+                            <div class="controls">
+                                <input class="form-control" id="pageTitle" type="text" name="pageTitle" value="...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page URL</label><div id="pu" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="pageUrl" type="text" name="pageUrl" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page Hero Image</label><div id="ph" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="pageHeroImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="custompagestatusoverview" class="box-content" style="display:none;">
+                    <h5>Custom Page Configuration Status:  </h5>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Custom Page Status:</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <label id="pagestatus" class="control-label" for="">Not Used</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="updateCustomPages" class="box-content" style="display:none;">
+                    <div class="row">
+                        <div class="controls">
+                            <div class="col-sm-6">
+                                <button id="updateCustomPagesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="updateCustomPagesButton" value="" onClick="updateCustomPage()" style="width:300px;" disabled>
+                                    Update/Create Custom Page
+                                </button>
+                                <label id="custompageupdatestatus" class="control-label" for=""></label>
+                            </div>
+                        </div> 
+                    </div>   
+                </div>  
+
+
+
+            </div>
+
+            <div id="updateproductssection" class="box-content" style="display:none;">
+                <div class="row">
+                    <div id="" class="col-sm-12">Let's update a Product:</div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product?</label><div id="pa" class="information">Good choice!</div>
+                            <div class="controls">
+                                <input id="productActive" type="checkbox" name="productActive" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="pf" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="productFeatured" type="checkbox" name="productFeatured" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product Name</label><div id="pn" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="productName" type="text" name="productName" value="" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product Description</label><div id="pd" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="productDescription" type="text" name="productDescription" value="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product Page URL</label><div id="pu" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="productUrl" type="text" name="productUrl" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product Category</label><div id="pc" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="productCategory" name="productCategory" style="color:#000000;height:34px;width:100px;" >
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="pup" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="productUsePrice" type="checkbox" name="productUsePrice" value="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product Price</label><div id="pp" class="information">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="productPrice" type="number" min="1" max="999999" name="productPrice" value="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product Image</label><div id="prh" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="productImage1" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="productStatusOverview" class="box-content" style="display:none;">
+                <h5>Product Configuration Status:  </h5>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product1status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div id="updateProduct" class="box-content" style="display:none;">
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-6">
+                            <button id="updateProductButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="updateProductButton" value="" onClick="updateProduct()" style="width:300px;" disabled>
+                                Update/Create Product
+                            </button>
+                            <label id="productupdatestatus" class="control-label" for=""></label>
+                        </div>
+                    </div> 
+                </div>   
+            </div>
+
+            <div id="updatecategorysection" class="box-content" style="display:none;">
+                <div class="row">
+                    <div id="" class="col-sm-12">Let's update a Category:</div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <label class="control-label" for="">Use Category?</label><div id="ca" class="notification">* Check to use</div>
+                                <div class="controls">
+                                    <input id="categoryActive" type="checkbox" name="categoryActive" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category Name</label><div id="cn" class="notification">* Enter a Category Name</div>
+                                <div class="controls">
+                                    <input class="form-control" id="categoryName" type="text" name="categoryName" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">  
+                            <div class="form-group">                    
+                                <label class="control-label" for="">Category Image</label><div id="ci" class="notification">* Select your image</div>
+                                <div class="controls">
+                                    <input type="file" id="categoryImage">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+            <div id="categorystatusoverview" class="box-content" style="display:none;">
+                <h5>Category Configuration Status:  </h5>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Category Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="categorystatus" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="updateCategory" class="box-content" style="display:none;">
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-6">
+                            <button id="updateCategoryButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="updateCategoryButton" value="" onClick="updateCategory()" style="width:300px;" disabled>
+                                Update/Create Category
+                            </button>
+                            <label id="categoryupdatestatus" class="control-label" for=""></label>
+                        </div>
+                    </div> 
+                </div>   
+            </div> 
+            <br/><br/>
+	        <!-- Credits bar -->
+            <div class="credits">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p id="footerCredits">
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End class="credits" -->
+
+            <!-- JAVASCRIPT -->
+            <script src="./js/loadFromLocalStorage.js"></script>
+            <script src="./js/jquery-1.11.3.min.js"></script>
+            <script src="./js/bootstrap.min.js"></script>
+
+            <script>
+
+            ////////////////////////////////
+            // Brand Update Validation Section
+            ////////////////////////////////
+            $("#brands").change(function(){
+                localStorage.removeItem("admin_brandToUpdateBrandId");
+                localStorage.removeItem("admin_brandToUpdateBrandName");
+                $('#statustext').text("Updating Action...");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+                //selection changed
+                if(this.value === "..."){
+                    $("#saveButton").attr("disabled", true);
+
+                }else{
+                    $("#saveButton").attr("disabled", false);
+                }
+            });
+
+            $("#question1").change(function(){
+                $('#statustext').text("Updating Action...");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+                localStorage.removeItem("admin_brandWhatToUpdate");
+                localStorage.removeItem("admin_brandWhatToUpdateName");
+                localStorage.removeItem("admin_brandCustomPageNumberToUpdate");
+                localStorage.removeItem("admin_brandProductNumberToUpdate");
+                localStorage.removeItem("admin_brandCategoryNumberToUpdate");
+                $("#selectupdateproductssection").attr("style", "display:none;");
+                $("#selectupdatecategoriessection").attr("style", "display:none;");
+                $("#selectupdatecustompagessection").attr("style", "display:none;");
+                $("#selectupdatebrandsettingssection").attr("style", "display:none;");
+                //selection changed
+                if(this.value === "..."){
+                    $("#continue1Button").attr("disabled", true);
+                }else{
+                    $("#continue1Button").attr("disabled", false);
+                }
+            });
+
+            $("#custompagenumber").change(function(){
+                $('#statustext').text("Updating Action...");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+                localStorage.removeItem("admin_brandCustomPageNumberToUpdate");
+                localStorage.removeItem("admin_brandProductNumberToUpdate");
+                localStorage.removeItem("admin_brandCategoryNumberToUpdate");
+                //selection changed
+                if(this.value === "..."){
+                    $("#continueCustomPagesButton").attr("disabled", true);
+                }else{
+                    $("#continueCustomPagesButton").attr("disabled", false);
+                }
+            });
+
+            ////////////////////////////////
+            // Custom Page Validation Section
+            ////////////////////////////////
+            $("#pageActive").change(function(){
+                //selection changed
+                if($('#pageActive').prop('checked')){
+                    console.log(">>>>> Custom Page is active.");
+                    $("#pa").attr('class', 'information');
+                    $("#pa").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompageactive", "valid");
+                    $("#pageTitle").attr("disabled", false);
+                    $("#pageHeroImage").attr("disabled", false);
+                    verifyCustomPageSettings();
+                }else{
+                    console.log(">>>>> Custom Page is not active.");
+                    $("#pa").attr('class', 'information');
+                    $("#pa").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompageactive", "invalid");
+                    $("#pageTitle").attr("disabled", true);
+                    $("#pageHeroImage").attr("disabled", true);
+                    verifyCustomPageSettings();
+                }
+            });
+
+            $("#pageTitle").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page Title entered.");
+                    $("#pt").attr('class', 'notification');
+                    $("#pt").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompagetitle", "invalid");
+                    verifyCustomPageSettings();
+                }else{
+                    console.log(">>>>> Custom Page Title is entered successfully.");
+                    $("#pt").attr('class', 'information');
+                    $("#pt").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompagetitle", "valid");
+                    verifyCustomPageSettings();
+                }
+            });
+
+            $("#pageHeroImage").change(function(){
+                //selection changed
+                if ($('#pageHeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page Image File selected.");
+                    $("#ph").attr('class', 'notification');
+                    $("#ph").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompageimage", "invalid");
+                    verifyCustomPageSettings();
+                }else{
+                    console.log(">>>>> Custom Page Image File selected.");
+                    $("#ph").attr('class', 'information');
+                    $("#ph").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompageimage", "valid");
+                    verifyCustomPageSettings();
+                }
+            });
+
+            function verifyCustomPageSettings() {
+                if($('#pageActive').prop('checked')){
+                    $("#updateCustomPagesButton").text("Update/Create Custom Page");
+                    $("#updateCustomPagesButton").attr("onclick","updateCustomPage()");
+                                    
+                    admin_selectcustompageactive = localStorage.getItem('admin_selectcustompageactive');
+                    admin_selectcustompagetitle = localStorage.getItem('admin_selectcustompagetitle');
+                    admin_selectcustompageimage = localStorage.getItem('admin_selectcustompageimage');
+
+                    if(admin_selectcustompageactive == "valid" && admin_selectcustompagetitle == "valid" && admin_selectcustompageimage == "valid" ){
+                        console.log(">>>>> Custom Page settings are valid!")
+                        $("#pagestatus").attr('class', 'information');
+                        $("#pagestatus").text("Used and Valid");
+                        localStorage.setItem("admin_custompagestatus", "valid");
+                    }else{
+                        console.log(">>>>> Not all Custom Page settings are valid!")
+                        $("#pagestatus").attr('class', 'notification');
+                        $("#pagestatus").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompagestatus", "invalid");
+                    }
+                }else{
+                    $("#pagestatus").attr('class', 'information');
+                    $("#pagestatus").text("Not Used");
+                    if(localStorage.getItem("admin_custompagetoupdateexists") === "Y"){
+                        $("#updateCustomPagesButton").text("Deactivate Page");
+                        $("#updateCustomPagesButton").attr("onclick","deactivateCustomPage()");
+                        localStorage.setItem("admin_custompagestatus", "valid");
+                    }else{
+                        localStorage.setItem("admin_custompagestatus", "invalid");
+                    }
+                }
+
+                admin_custompagestatus = localStorage.getItem('admin_custompagestatus');
+
+                if((admin_custompagestatus == "valid")){
+                    $("#updateCustomPagesButton").attr("disabled", false);
+                }else{
+                    $("#updateCustomPagesButton").attr("disabled", true);
+                }
+            }
+
+
+            ////////////////////////////////
+            // Category Validation Section
+            ////////////////////////////////
+
+            $("#categoryActive").change(function(){
+                //selection changed
+                if($('#categoryActive').prop('checked')){
+                    console.log(">>>>> Category is active.");
+                    $("#ca").attr('class', 'information');
+                    $("#ca").text("Good choice!");
+                    localStorage.setItem("admin_selectcategoryactive", "valid");
+                    $("#categoryName").attr("disabled", false);
+                    $("#categoryImage").attr("disabled", false);
+                    verifyCategorySettings();
+                }else{
+                    console.log(">>>>> Category is not active.");
+                    $("#ca").attr('class', 'notification');
+                    $("#ca").text("* Check to use");
+                    localStorage.setItem("admin_selectcategoryactive", "invalid");
+                    $("#categoryName").attr("disabled", true);
+                    $("#categoryImage").attr("disabled", true);
+                    verifyCategorySettings();
+                }
+            });
+
+            $("#categoryName").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Category - No Name entered.");
+                    $("#cn").attr('class', 'notification');
+                    $("#cn").text("* Enter a Category Name");
+                    localStorage.setItem("admin_selectcategoryname", "invalid");
+                    verifyCategorySettings();
+                }else{
+                    console.log(">>>>> Category - Name entered successfully.");
+                    $("#cn").attr('class', 'information');
+                    $("#cn").text("Good choice!");
+                    localStorage.setItem("admin_selectcategoryname", "valid");
+                    verifyCategorySettings();
+                }
+            });
+
+            $("#categoryImage").change(function(){
+                //selection changed
+                if ($('#categoryImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Category Image File selected.");
+                    $("#ci").attr('class', 'notification');
+                    $("#ci").text("* Select your image");
+                    localStorage.setItem("admin_selectcategoryimage", "invalid");
+                    verifyCategorySettings();
+                }else{
+                    console.log(">>>>> Category Image File selected.");
+                    $("#ci").attr('class', 'information');
+                    $("#ci").text("Good choice!");
+                    localStorage.setItem("admin_selectcategoryimage", "valid");
+                    verifyCategorySettings();
+                }
+            });
+
+            function verifyCategorySettings() {
+                if($('#categoryActive').prop('checked')){
+                    $("#updateCustomPagesButton").text("Update/Create Category");
+                    $("#updateCustomPagesButton").attr("onclick","updateCategory()");
+
+                    admin_selectcategoryactive = localStorage.getItem('admin_selectcategoryactive');
+                    admin_selectcategoryname = localStorage.getItem('admin_selectcategoryname');
+                    admin_selectcategoryimage = localStorage.getItem('admin_selectcategoryimage');
+
+                    if(admin_selectcategoryactive == "valid" && admin_selectcategoryname == "valid" && admin_selectcategoryimage == "valid" ){
+                        console.log(">>>>> Category : All settings are valid!")
+                        $("#categorystatus").attr('class', 'information');
+                        $("#categorystatus").text("Used and Valid");
+                        localStorage.setItem("admin_categorystatus", "valid");
+                    }else{
+                        console.log(">>>>> Category : Some settings are invalid!")
+                        $("#categorystatus").attr('class', 'notification');
+                        $("#categorystatus").text("Used and Not Valid");
+                        localStorage.setItem("admin_categorystatus", "invalid");
+                    }
+                }else{
+                    $("#categorystatus").attr('class', 'information');
+                    $("#categorystatus").text("Not Used.");
+                    if(localStorage.getItem("admin_categorytoupdateexists") === "Y"){
+                        $("#updateCategoryButton").text("Deactivate Category");
+                        $("#updateCategoryButton").attr("onclick","deactivateCategory()");
+                        localStorage.setItem("admin_categorystatus", "valid");
+                    }else{
+                        localStorage.setItem("admin_categorystatus", "invalid");
+                    }
+                }
+
+                admin_categorystatus = localStorage.getItem('admin_categorystatus');
+
+                if((admin_categorystatus == "valid")){
+                    $("#updateCategoryButton").attr("disabled", false);
+                }else{
+                    $("#updateCategoryButton").attr("disabled", true);
+                }
+            }
+
+
+            ////////////////////////////////
+            // Product Validation Section
+            ////////////////////////////////
+
+            $("#productActive").change(function(){
+                //selection changed
+                if($('#productActive').prop('checked')){
+                    console.log(">>>>> Product is active.");
+                    $("#pa").attr('class', 'information');
+                    $("#pa").text("Good choice!");
+                    localStorage.setItem("admin_selectproductactive", "valid");
+                    $("#productFeatured").attr("disabled", false);
+                    $("#productName").attr("disabled", false);
+                    $("#productDescription").attr("disabled", false);
+                    $("#productCategory").attr("disabled", false);
+                    $("#productUsePrice").attr("disabled", false);
+                    $("#productUsePrice").prop("checked", true);
+                    $("#productPrice").attr("disabled", false);
+                    $("#productImage1").attr("disabled", false);
+                    $("#pup").attr('class', 'information');
+                    $("#pup").text("* Uncheck if not needed.");
+                    $("#pp").attr('class', 'notification');
+                    $("#pp").text("* Enter a price.");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product is not active.");
+                    $("#pa").attr('class', 'notification');
+                    $("#pa").text("* Check to use");
+                    localStorage.setItem("admin_selectproductactive", "invalid");
+                    $("#productFeatured").attr("disabled", true);
+                    $("#productName").attr("disabled", true);
+                    $("#productDescription").attr("disabled", true);
+                    $("#productCategory").attr("disabled", true);
+                    $("#productUsePrice").attr("disabled", true);
+                    $("#productUsePrice").attr("checked", false);
+                    $("#productPrice").attr("disabled", true);
+                    $("#productImage1").attr("disabled", true);
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productFeatured").change(function(){
+                //selection changed
+                if($('#productFeatured').prop('checked')){
+                    console.log(">>>>> Product - Featured is checked.");
+                    $("#pf").attr('class', 'information');
+                    $("#pf").text("Good choice!");
+                    localStorage.setItem("admin_selectproductfeatured", "valid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Featured isn't checked.");
+                    $("#pf").attr('class', 'information');
+                    $("#pf").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproductfeatured", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productName").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product - No Name entered.");
+                    $("#pn").attr('class', 'notification');
+                    $("#pn").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproductname", "invalid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Name entered successfully.");
+                    $("#pn").attr('class', 'information');
+                    $("#pn").text("Good choice!");
+                    localStorage.setItem("admin_selectproductname", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productDescription").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product - No Description entered.");
+                    $("#pd").attr('class', 'notification');
+                    $("#pd").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproductdescription", "invalid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Description entered successfully.");
+                    $("#pd").attr('class', 'information');
+                    $("#pd").text("Good choice!");
+                    localStorage.setItem("admin_selectproductdescription", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productCategory").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product - No Category entered.");
+                    $("#pc").attr('class', 'notification');
+                    $("#pc").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproductcategory", "invalid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Category entered successfully.");
+                    $("#pc").attr('class', 'information');
+                    $("#pc").text("Good choice!");
+                    localStorage.setItem("admin_selectproductcategory", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productUsePrice").change(function(){
+                //selection changed
+                if($('#productUsePrice').prop('checked')){
+                    console.log(">>>>> Product - Price is used.");
+                    $("#pup").attr('class', 'information');
+                    $("#pup").text("* Good choice!");
+                    $("#productPrice").attr("disabled", false);
+                    $("#pp").attr('class', 'notification');
+                    $("#pp").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproductuseprice", "valid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Price isn't used.");
+                    $("#pup").attr('class', 'information');
+                    $("#pup").text("* Price isn't a required field.");
+                    $("#pp").attr('class', 'information');
+                    $("#pp").text("* Price isn't a required field.");
+                    $("#productPrice").attr("disabled", true);
+                    localStorage.setItem("admin_selectproductuseprice", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productPrice").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product - No Price entered.");
+                    $("#pp").attr('class', 'notification');
+                    $("#pp").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproductprice", "valid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product - Price entered successfully.");
+                    $("#pp").attr('class', 'information');
+                    $("#pp").text("Good choice!");
+                    localStorage.setItem("admin_selectproductprice", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            $("#productImage1").change(function(){
+                //selection changed
+                if ($('#productImage1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product Image File selected.");
+                    $("#prh").attr('class', 'notification');
+                    $("#prh").text("* Select your image");
+                    localStorage.setItem("admin_selectproductimage", "invalid");
+                    verifyProductSettings();
+                }else{
+                    console.log(">>>>> Product Image File selected.");
+                    $("#prh").attr('class', 'information');
+                    $("#prh").text("Good choice!");
+                    localStorage.setItem("admin_selectproductimage", "valid");
+                    verifyProductSettings();
+                }
+            });
+
+            function verifyProductSettings() {
+                if($('#productActive').prop('checked')){
+                    $("#updateProductButton").text("Update/Create Product");
+                    $("#updateProductButton").attr("onclick","updateProduct()");
+
+                    admin_selectproductactive = localStorage.getItem('admin_selectproductactive');
+                    admin_selectproductname = localStorage.getItem('admin_selectproductname');
+                    admin_selectproductimage = localStorage.getItem('admin_selectproductimage');
+                    admin_selectproductdescription = localStorage.getItem('admin_selectproductdescription');
+                    admin_selectproductcategory = localStorage.getItem('admin_selectproductcategory');
+                    admin_selectproductprice = localStorage.getItem('admin_selectproductprice');
+                    admin_selectproductfeatured = localStorage.getItem('admin_selectproductfeatured');
+
+                    if(admin_selectproductactive == "valid" && admin_selectproductname == "valid" && admin_selectproductimage == "valid" && admin_selectproductdescription == "valid" && admin_selectproductcategory == "valid" && admin_selectproductprice == "valid" && admin_selectproductfeatured == "valid"){
+                        console.log(">>>>> Product: All settings are valid!")
+                        $("#productstatus").attr('class', 'information');
+                        $("#productstatus").text("Used and Valid");
+                        localStorage.setItem("admin_productstatus", "valid");
+                    }else{
+                        console.log(">>>>> Product: Some settings are invalid!")
+                        $("#productstatus").attr('class', 'notification');
+                        $("#productstatus").text("Used and Not Valid");
+                        localStorage.setItem("admin_productstatus", "invalid");
+                    }
+                }else{
+                    $("#productstatus").attr('class', 'information');
+                    $("#productstatus").text("Not Used");
+                    if(localStorage.getItem("admin_producttoupdateexists") === "Y"){
+                        $("#updateProductButton").text("Deactivate Product");
+                        $("#updateProductButton").attr("onclick","deactivateProduct()");
+                        localStorage.setItem("admin_productstatus", "valid");
+                    }else{
+                        localStorage.setItem("admin_productstatus", "invalid");
+                    }
+                }
+
+                admin_productstatus = localStorage.getItem('admin_productstatus');
+
+                if((admin_productstatus == "valid")){
+                    $("#updateProductButton").attr("disabled", false);
+                }else{
+                    $("#updateProductButton").attr("disabled", true);
+                }
+            }
+
+
+            ////////////////////////////////
+            // Questions & Answers Validation Section
+            ////////////////////////////////
+
+            $("#productnumber").change(function(){
+                $('#statustext').text("Updating Action...");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+                localStorage.removeItem("admin_brandCustomPageNumberToUpdate");
+                localStorage.removeItem("admin_brandProductNumberToUpdate");
+                localStorage.removeItem("admin_brandCategoryNumberToUpdate");
+                //selection changed
+                if(this.value === "..."){
+                    $("#continueProductsButton").attr("disabled", true);
+                }else{
+                    $("#continueProductsButton").attr("disabled", false);
+                }
+            });
+
+            $("#categorynumber").change(function(){
+                $('#statustext').text("Updating Action...");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+                localStorage.removeItem("admin_brandCustomPageNumberToUpdate");
+                localStorage.removeItem("admin_brandProductNumberToUpdate");
+                localStorage.removeItem("admin_brandCategoryNumberToUpdate");
+                //selection changed
+                if(this.value === "..."){
+                    $("#continueCategoriesButton").attr("disabled", true);
+                }else{
+                    $("#continueCategoriesButton").attr("disabled", false);
+                }
+            });
+
+
+            ////////////////////////////////
+            // Get All Brands fopr this LDAP Section
+            ////////////////////////////////
+            var pullReadBrandResults = [];
+            var brandsDropdown = document.getElementById("brands");
+
+            function getBrands() {
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+
+                var ldapArray = [];
+                if (localStorage.getItem("admin_ldap") !== null) {
+                    ldapArray.push(localStorage.getItem("admin_ldap"));
+                }
+
+                console.log(ldapArray);
+
+                query.containedIn("ldap", ldapArray);
+                query.equalTo("canbeedited", 'Y');
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Brandsresults: ", results);
+                            displayBrands(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching LDAP', error);
+                        }
+                    }
+                );
+            };
+
+            function displayBrands(pullReadBrandResults) {
+                for (i = 0; i < pullReadBrandResults.length; i++) {
+                    try{
+                        var brandId = pullReadBrandResults[i].attributes.brandId;
+                        var brandName = pullReadBrandResults[i].attributes.brandName;
+                        console.log(">>>>> Brand ID: " + brandId + " - Brand Name: " + brandName);
+                        var el = document.createElement("option");
+                        el.textContent = brandName;
+                        el.value = brandId;
+                        brandsDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+            }
+
+
+            ////////////////////////////////
+            // Define Brand & Elements To Update 
+            ////////////////////////////////
+
+            function setBrandToUpdate() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("brands");
+                localStorage.setItem("admin_brandToUpdateBrandId", e.options[e.selectedIndex].value);
+                localStorage.setItem("admin_brandToUpdateBrandName", e.options[e.selectedIndex].text);
+
+                $("#selectupdatequestionsection").attr("style", "display:block;");
+
+                $('#statustext').text("You have selected brand " + localStorage.getItem("admin_brandToUpdateBrandName") + " to update.");
+
+                $("#loader").attr("style", "display:none;");
+            }
+
+            function setWhatToUpdate() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("question1");
+                localStorage.setItem("admin_brandWhatToUpdate", e.options[e.selectedIndex].value);
+                localStorage.setItem("admin_brandWhatToUpdateName", e.options[e.selectedIndex].text);
+
+                $('#statustext').text("You have selected brand " + localStorage.getItem("admin_brandToUpdateBrandName") + " to update and you will be updating a " + localStorage.getItem("admin_brandWhatToUpdateName") + ".");
+
+                if (localStorage.getItem("admin_brandWhatToUpdate") === "Products") {
+                    $("#selectupdateproductssection").attr("style", "display:block;");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "Categories") {
+                    $("#selectupdatecategoriessection").attr("style", "display:block;");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "CustomPages") {
+                    $("#selectupdatecustompagessection").attr("style", "display:block;");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "BrandSettings") {
+                    checkUpdating();
+                }else{
+                    //do nothing;
+                }
+
+                $("#loader").attr("style", "display:none;");
+            }
+
+            function setCustomPageToUpdate() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("custompagenumber");
+                localStorage.setItem("admin_brandCustomPageNumberToUpdate", e.options[e.selectedIndex].value);
+
+                $('#statustext').text("You have selected brand " + localStorage.getItem("admin_brandToUpdateBrandName") + " to update and you will be updating " + localStorage.getItem("admin_brandWhatToUpdateName") + " " + localStorage.getItem("admin_brandCustomPageNumberToUpdate") + ".");
+                
+                checkUpdating();
+
+                $("#loader").attr("style", "display:none;");
+            }
+
+            function setProductToUpdate() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("productnumber");
+                localStorage.setItem("admin_brandProductNumberToUpdate", e.options[e.selectedIndex].value);
+
+                $('#statustext').text("You have selected brand " + localStorage.getItem("admin_brandToUpdateBrandName") + " to update and you will be updating " + localStorage.getItem("admin_brandWhatToUpdateName") + " " + localStorage.getItem("admin_brandProductNumberToUpdate") + ".");
+                
+                checkUpdating();
+
+                $("#loader").attr("style", "display:none;");
+            }
+
+            function setCategoryToUpdate() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("categorynumber");
+                localStorage.setItem("admin_brandCategoryNumberToUpdate", e.options[e.selectedIndex].value);
+
+
+                $('#statustext').text("You have selected brand " + localStorage.getItem("admin_brandToUpdateBrandName") + " to update and you will be updating " + localStorage.getItem("admin_brandWhatToUpdateName") + " " + localStorage.getItem("admin_brandCategoryNumberToUpdate") + ".");
+                
+                checkUpdating();
+
+                $("#loader").attr("style", "display:none;");
+            }
+
+
+            ////////////////////////////////
+            // Are You Sure Section
+            ////////////////////////////////
+            
+            function checkUpdating(){
+                $("#startupdatingsection").attr("style", "display:block;");
+            }
+
+            function startUpdating(){
+                $("#startupdating1section").attr("style", "display:block;");
+            }
+
+
+            ////////////////////////////////
+            // Start Update Process 
+            ////////////////////////////////
+
+            function startUpdatingSure(){
+                $("#selectbrandsection").attr("style", "display:none;");
+                $("#selectupdatequestionsection").attr("style", "display:none;");
+                $("#selectupdatecustompagessection").attr("style", "display:none;");
+                $("#selectupdatecategoriessection").attr("style", "display:none;");
+                $("#selectupdateproductssection").attr("style", "display:none;");
+                $("#startupdatingsection").attr("style", "display:none;");
+                $("#startupdating1section").attr("style", "display:none;");
+
+                var brandId = localStorage.getItem("admin_brandToUpdateBrandId");
+
+                if (localStorage.getItem("admin_brandWhatToUpdate") === "Products") {
+                    getAndDisplayProductCategories(brandId);
+                    getProduct(brandId, localStorage.getItem("admin_brandProductNumberToUpdate"));
+                    $("#updateproductssection").attr("style", "display:block;");
+                    $("#productstatusoverview").attr("style", "display:block;");
+                    $("#updateProduct").attr("style", "display:block;");
+                    $("#productActive").attr("checked", true);
+                    $("#pa").attr('class', 'information');
+                    $("#pa").text("Good choice!");
+                    $("#pn").attr('class', 'information');
+                    $("#pn").text("This is your Product Name.");
+                    $("#pd").attr('class', 'information');
+                    $("#pd").text("This is your Product Description.");
+                    $("#pc").attr('class', 'notification');
+                    $("#pc").text("Verify your Product Category.");
+                    $("#pup").attr('class', 'information');
+                    $("#pup").text("Product Price Status.");
+                    $("#pp").attr('class', 'information');
+                    $("#pp").text("This is your Product Price.");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "Categories") {
+                    getCategory(brandId, localStorage.getItem("admin_brandCategoryNumberToUpdate"));
+                    $("#updatecategorysection").attr("style", "display:block;");
+                    $("#categorystatusoverview").attr("style", "display:block;");
+                    $("#updateCategory").attr("style", "display:block;");
+                    $("#categoryActive").attr("checked", true);
+                    $("#ca").attr('class', 'information');
+                    $("#ca").text("Good choice!");
+                    $("#ct").attr('class', 'information');
+                    $("#ct").text("This is your Category Title.");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "CustomPages") {
+                    getCustomPage(brandId, localStorage.getItem("admin_brandCustomPageNumberToUpdate"));
+                    $("#updatecustompagessection").attr("style", "display:block;");
+                    $("#custompagestatusoverview").attr("style", "display:block;");
+                    $("#updateCustomPages").attr("style", "display:block;");
+                    $("#pageActive").attr("checked", true);
+                    $("#pa").attr('class', 'information');
+                    $("#pa").text("Good choice!");
+                    $("#pt").attr('class', 'information');
+                    $("#pt").text("This is your Custom Page Title.");
+                }else if(localStorage.getItem("admin_brandWhatToUpdate") === "BrandSettings") {
+                    getBrand(brandId);
+                    $("#brandSettingsSection").attr("style", "display:block;");
+                }else{
+                    //do nothing;
+                }
+            }
+
+            /////////////////////////
+            //Verify Brand Settings
+            /////////////////////////
+
+            $("#demosetuptype").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice1").attr('class', 'notification');
+                    $("#choice1").text("* Make a choice");
+                    localStorage.setItem("admin_demosetuptypechoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice1").attr('class', 'information');
+                    $("#choice1").text("Good choice!");
+                    localStorage.setItem("admin_demosetuptypechoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#industry").change(function(){
+                //selection changed
+                if(this.value !== "car"){
+                    localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                    localStorage.setItem("admin_testdrivecartypes", "valid");
+                    $("#carIndustrySection").attr("style", "display:none;");
+                    verifyBrandDetailSettings();
+                }
+                
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice2").attr('class', 'notification');
+                    $("#choice2").text("* Make a choice");
+                    localStorage.setItem("admin_industrychoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice2").attr('class', 'information');
+                    $("#choice2").text("Good choice!");
+                    localStorage.setItem("admin_industrychoice", "valid");
+                    verifyBrandSettings();
+                    if(this.value === "car"){
+                        localStorage.setItem("admin_testdrivedealerlocations", "invalid");
+                        localStorage.setItem("admin_testdrivecartypes", "invalid");
+                        $("#carIndustrySection").attr("style", "display:block;");
+                        verifyBrandDetailSettings();
+                    }
+                }
+            });
+
+            $("#currency").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice3").attr('class', 'notification');
+                    $("#choice3").text("* Make a choice");
+                    localStorage.setItem("admin_currencychoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice3").attr('class', 'information');
+                    $("#choice3").text("Good choice!");
+                    localStorage.setItem("admin_currencychoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usecustomprofileattributes").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice4").attr('class', 'notification');
+                    $("#choice4").text("* Make a choice");
+                    localStorage.setItem("admin_customprofileattributeschoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice4").attr('class', 'information');
+                    $("#choice4").text("Good choice!");
+                    localStorage.setItem("admin_customprofileattributeschoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usecallcenter").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice5").attr('class', 'notification');
+                    $("#choice5").text("* Make a choice");
+                    localStorage.setItem("admin_usecallcenterchoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice5").attr('class', 'information');
+                    $("#choice5").text("Good choice!");
+                    localStorage.setItem("admin_usecallcenterchoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usepersonalshopper").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice6").attr('class', 'notification');
+                    $("#choice6").text("* Make a choice");
+                    localStorage.setItem("admin_usepersonalshopperchoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice6").attr('class', 'information');
+                    $("#choice6").text("Good choice!");
+                    localStorage.setItem("admin_usepersonalshopperchoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            function verifyBrandSettings() {
+                admin_demosetuptypechoice = localStorage.getItem('admin_demosetuptypechoice');
+                admin_industrychoice = localStorage.getItem('admin_industrychoice');
+                admin_currencychoice = localStorage.getItem('admin_currencychoice');
+                admin_customprofileattributeschoice = localStorage.getItem('admin_customprofileattributeschoice');
+                admin_usecallcenterchoice = localStorage.getItem('admin_usecallcenterchoice');
+                admin_usepersonalshopperchoice = localStorage.getItem('admin_usepersonalshopperchoice');
+
+                if(admin_demosetuptypechoice == "valid" && admin_industrychoice == "valid" && admin_currencychoice == "valid" && admin_customprofileattributeschoice == "valid" && admin_usecallcenterchoice == "valid" && admin_usepersonalshopperchoice == "valid"){
+                    console.log(">>>>> Brand settings are valid!")
+                    $("#brandNameSection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Not all brand settings are valid!")
+                    $("#brandNameSection").attr("style", "display:none;");
+                }
+            }
+
+            function verifyBrandDetailSettings() {
+                admin_selectbrandlogo = localStorage.getItem('admin_selectbrandlogo');
+                admin_selectfavicon = localStorage.getItem('admin_selectfavicon');
+                admin_selectbrandheroimage = localStorage.getItem('admin_selectbrandheroimage');
+                admin_cta = localStorage.getItem('admin_cta');
+                admin_ctaurl = localStorage.getItem('admin_ctaurl');
+                admin_usecta = localStorage.getItem('admin_usecta');
+                admin_ctaboxposition = localStorage.getItem('admin_ctaboxposition');
+                admin_testdrivedealerlocations = localStorage.getItem('admin_testdrivedealerlocations');
+                admin_testdrivecartypes = localStorage.getItem('admin_testdrivecartypes');
+                admin_alexabrandname = localStorage.getItem('admin_alexabrandname');
+
+                if(admin_selectbrandlogo == "valid" && admin_selectfavicon == "valid" && admin_selectbrandheroimage == "valid" && admin_customprofileattributeschoice == "valid" && admin_cta == "valid" && admin_ctaurl == "valid"  && admin_usecta == "valid" && admin_ctaboxposition == "valid" && admin_testdrivedealerlocations == "valid" && admin_testdrivecartypes == "valid" && admin_alexabrandname == "valid"){
+                    console.log(">>>>> Brand Detail Settings are valid!")
+                    $("#updatebrandbuttonsection").attr("style", "display:block;");
+                    $("#nextPageCreateBrandButton").attr("style", "display:block;");
+                    $("#nextPageCreateBrandButton").attr("disabled", false);
+                }else{
+                    console.log(">>>>> Not all Brand Detail Settings are valid!")
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                }
+            }
+
+            ////////////////////////////
+            //Check if Brand Name exists
+            ////////////////////////////
+
+            function checkIfBrandNameExists() {
+                var brandName = document.getElementById("brandName").value;
+                console.log(">>>>> Checking if Brand Name: " + brandName + " already exists...")
+
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+                query.equalTo("brandName", brandName);
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            if(results.length > 0){
+                                console.log('>>>>> Brand Name already exists:', results);
+                                localStorage.setItem("admin_brandname", "invalid");
+                                $("#infobrandname").attr('class', 'notification');
+                                $("#infobrandname").text("Brand Name already exists. Choose a new Brand Name!");
+                                $("#brandDetailsSection").attr("style", "display:none;");
+                            }else{
+                                console.log(">>>>> Brand Name doesn't exist yet:", results);
+                                $("#infobrandname").attr('class', 'information');
+                                $("#infobrandname").text("Brand Name doesn't exist yet. Continue to create this brand!");
+                                localStorage.setItem("admin_brandname", "valid");
+                                $("#brandDetailsSection").attr("style", "display:block;");
+                                var alexabrandname = brandName.replace(/ & /gi, " and ").replace(/&/gi, " and ").replace(/ - /gi, " ").replace(/-/gi, " ");
+                                $("#alexabrandname").val(alexabrandname.toLowerCase());
+                                $("#alexabn").attr('class', 'information');
+                                $("#alexabn").text("Verify your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                                localStorage.setItem("admin_alexabrandname", "valid");
+                            }
+                        }
+                    }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Brand Name doesnt exist yet.', error);
+                            localStorage.setItem("admin_brandname", "valid");
+                            $("#brandDetailsSection").attr("style", "display:block;");
+                        }
+
+                });
+            }
+
+            ////////////////////////////////////
+            // Brand Details Verification
+            ////////////////////////////////////
+
+            $("#brandLogo").change(function(){
+                //selection changed
+                if ($('#brandLogo').get(0).files.length === 0) {
+                    console.log(">>>>> No Brand Logo file selected.");
+                    $("#choice7").attr('class', 'notification');
+                    $("#choice7").text("* Make a choice");
+                    localStorage.setItem("admin_selectbrandlogo", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Brand Logo file selected.");
+                    $("#choice7").attr('class', 'information');
+                    $("#choice7").text("Good choice!");
+                    localStorage.setItem("admin_selectbrandlogo", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#favIcon").change(function(){
+                //selection changed
+                if ($('#favIcon').get(0).files.length === 0) {
+                    console.log(">>>>> No Fav Icon file selected.");
+                    $("#choice8").attr('class', 'notification');
+                    $("#choice8").text("* Make a choice");
+                    localStorage.setItem("admin_selectfavicon", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Fav Icon file selected.");
+                    $("#choice8").attr('class', 'information');
+                    $("#choice8").text("Good choice!");
+                    localStorage.setItem("admin_selectfavicon", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+
+            $("#brandHeroImage").change(function(){
+                //selection changed
+                if ($('#brandHeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Fav Icon file selected.");
+                    $("#choice9").attr('class', 'notification');
+                    $("#choice9").text("* Make a choice");
+                    localStorage.setItem("admin_selectbrandheroimage", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Fav Icon file selected.");
+                    $("#choice9").attr('class', 'information');
+                    $("#choice9").text("Good choice!");
+                    localStorage.setItem("admin_selectbrandheroimage", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#ctaActive").change(function(){
+                //selection changed
+                if($('#ctaActive').prop('checked')){
+                    console.log(">>>>> Use CTA is checked.");
+                    $("#ctainfo").attr('class', 'information');
+                    $("#ctainfo").text("* Good choice!");
+                    $("#choice10").attr('class', 'notification');
+                    $("#choice10").text("* Enter your Call To Action.");
+                    $("#ctaboxpositioninfo").attr('class', 'notification');
+                    $("#ctaboxpositioninfo").text("* Select your position.");
+                    localStorage.setItem("admin_usecta", "valid");
+                    localStorage.setItem("admin_cta", "invalid");
+                    localStorage.setItem("admin_ctaboxposition", "invalid");
+                    $("#brandcalltoaction").attr("disabled", false);
+                    $("#brandctaboxposition").attr("disabled", false);
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Use CTA is not checked.");
+                    $("#ctainfo").attr('class', 'information');
+                    $("#ctainfo").text("* Check to use");
+                    localStorage.setItem("admin_usecta", "valid");
+                    localStorage.setItem("admin_cta", "valid");
+                    localStorage.setItem("admin_ctaboxposition", "valid");
+                    $("#brandcalltoaction").attr("disabled", true);
+                    $("#brandctaboxposition").attr("disabled", true);
+                    $("#choice10").attr('class', 'information');
+                    $("#choice10").text("* Call To Action is unused.");
+                    $("#ctaboxpositioninfo").attr('class', 'information');
+                    $("#ctaboxpositioninfo").text("* Call To Action is unused.");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandctaboxposition").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA Box Position entered.");
+                    $("#ctaboxpositioninfo").attr('class', 'notification');
+                    $("#ctaboxpositioninfo").text("* Select a position.");
+                    localStorage.setItem("admin_ctaboxposition", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA Box Position entered.");
+                    $("#ctaboxpositioninfo").attr('class', 'information');
+                    $("#ctaboxpositioninfo").text("Good choice!");
+                    localStorage.setItem("admin_ctaboxposition", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandcalltoaction").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA entered.");
+                    $("#choice10").attr('class', 'notification');
+                    $("#choice10").text("* Enter your Call To Action.");
+                    localStorage.setItem("admin_cta", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA entered successfully.");
+                    $("#choice10").attr('class', 'information');
+                    $("#choice10").text("Good choice!");
+                    localStorage.setItem("admin_cta", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#alexabrandname").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> No Alexa Brand Name entered.");
+                    $("#alexabn").attr('class', 'notification');
+                    $("#alexabn").text("* Enter your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                    localStorage.setItem("admin_alexabrandname", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Alexa Brand Name entered successfully.");
+                    $("#alexabn").attr('class', 'information');
+                    $("#alexabn").text("Verify your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                    localStorage.setItem("admin_alexabrandname", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandcalltoactionurl").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA URL selected.");
+                    $("#choice11").attr('class', 'notification');
+                    $("#choice11").text("* Select the landing page after clicking the hero image.");
+                    localStorage.setItem("admin_ctaurl", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA URL selected successfully.");
+                    $("#choice11").attr('class', 'information');
+                    $("#choice11").text("Good choice!");
+                    localStorage.setItem("admin_ctaurl", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#testdrivedealers").change(function(){
+                //selection changed
+                if(this.value === "Dealer Location 1, Dealer Location 2, Dealer Location 3"){
+                    console.log(">>>>> No Dealer Locations entered.");
+                    $("#testdrivedealersinfo").attr('class', 'notification');
+                    $("#testdrivedealersinfo").text("* Enter a comma-separated list of Dealer Locations");
+                    localStorage.setItem("admin_testdrivedealerlocations", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Dealer Locations entered successfully.");
+                    $("#testdrivedealersinfo").attr('class', 'information');
+                    $("#testdrivedealersinfo").text("Good choice!");
+                    localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#testdrivecartypes").change(function(){
+                //selection changed
+                if(this.value === "Car Type 1, Car Type 2, Car Type 3"){
+                    console.log(">>>>> No Car Types entered.");
+                    $("#testdrivecartypesinfo").attr('class', 'notification');
+                    $("#testdrivecartypesinfo").text("* Enter a comma-separated list of Car Types");
+                    localStorage.setItem("admin_testdrivecartypes", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Car Types entered successfully.");
+                    $("#testdrivecartypesinfo").attr('class', 'information');
+                    $("#testdrivecartypesinfo").text("Good choice!");
+                    localStorage.setItem("admin_testdrivecartypes", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            ////////////////////////////////////
+            // Save Brand Section
+            ////////////////////////////////////
+
+            var pullReadBrandResults = [];
+
+            function saveBrand() {
+                $("#loader").attr("style", "display:block;");
+                $("#nextPageCreateBrandButton").attr("disabled", true);
+
+                var brandLdap = localStorage.getItem('admin_ldap');
+                var brandDemoSetupType = document.getElementById("demosetuptype").value;
+                var brandIndustry = document.getElementById("industry").value;
+                var brandCurrency = document.getElementById("currency").value;
+                var brandColor = document.getElementById("brandColor").value;
+                var textColor = document.getElementById("textColor").value;
+                var brandUseCustomProfileAttributes = document.getElementById("usecustomprofileattributes").value;
+                var brandUseCallCenter = document.getElementById("usecallcenter").value;
+                var brandUsePersonalShopper = document.getElementById("usepersonalshopper").value;
+                var brandUsePlatform = document.getElementById("usePlatform").checked;
+                var brandUseAAM = document.getElementById("useAAM").checked;
+                var brandUseAA = document.getElementById("useAA").checked;
+                var brandUseAT = document.getElementById("useAT").checked;
+                var brandUseACS = document.getElementById("useACS").checked;
+                var brandUseMKT = document.getElementById("useMKT").checked;
+
+                var brandName = document.getElementById("brandName").value;
+                var alexaBrandName = document.getElementById("alexabrandname").value;
+                var brandUseCallToAction = document.getElementById("ctaActive").checked;
+                var brandCallToAction = document.getElementById("brandcalltoaction").value;
+                var brandCallToActionBoxPosition = document.getElementById("brandctaboxposition").value;
+                var brandCallToActionUrl = document.getElementById("brandcalltoactionurl").value;
+
+                if(brandIndustry === "car"){
+                  var testDriveDealerLocations = document.getElementById("testdrivedealers").value;
+                  var testDriveCarTypes = document.getElementById("testdrivecartypes").value;
+                }else{
+                  var testDriveDealerLocations = "";
+                  var testDriveCarTypes = "";
+                }
+
+                var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+                var file = new Parse.File("myfile.txt", { base64: base64 });
+
+                var fileUploadControlBrandLogo = $("#brandLogo")[0];
+                if (fileUploadControlBrandLogo.files.length > 0) {
+                  var brandLogoFile = fileUploadControlBrandLogo.files[0];
+                  var brandLogoName = "image1.jpg";
+
+                  var parseBrandLogo = new Parse.File(brandLogoName, brandLogoFile);
+                }
+
+                var fileUploadControlFavIcon = $("#favIcon")[0];
+                if (fileUploadControlFavIcon.files.length > 0) {
+                  var favIconFile = fileUploadControlFavIcon.files[0];
+                  var favIconName = "image2.jpg";
+
+                  var parseFavIcon = new Parse.File(favIconName, favIconFile);
+                }
+
+                var fileUploadControlBrandHeroImage = $("#brandHeroImage")[0];
+                if (fileUploadControlBrandHeroImage.files.length > 0) {
+                  var brandHeroImageFile = fileUploadControlBrandHeroImage.files[0];
+                  var brandHeroImageName = "image2.jpg";
+
+                  var parseBrandHeroImage = new Parse.File(brandHeroImageName, brandHeroImageFile);
+                }
+
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+
+                query.get(localStorage.getItem('admin_brandobjectidtoupdate')).then((object) => {
+                    object.set('brandName', brandName);
+                    object.set('alexaBrandName', alexaBrandName);
+                    object.set('brandLogo', parseBrandLogo);
+                    object.set('brandHeroImage', parseBrandHeroImage);
+                    object.set('demoType', brandDemoSetupType);
+                    object.set('industry', brandIndustry);
+                    object.set('currency', brandCurrency);
+                    object.set('brandColor', brandColor);
+                    object.set('textColor', textColor);
+                    object.set('useCustomProfileAttributes', brandUseCustomProfileAttributes);
+                    object.set('useCallCenter', brandUseCallCenter);
+                    object.set('usePersonalShopper', brandUsePersonalShopper);
+                    object.set('usePlatform', brandUsePlatform);
+                    object.set('useAAM', brandUseAAM);
+                    object.set('useAA', brandUseAA);
+                    object.set('useAT', brandUseAT);
+                    object.set('useACS', brandUseACS);
+                    object.set('useMKT', brandUseMKT);
+                    object.set('brandFavIcon', parseFavIcon);
+                    object.set('useCTA', brandUseCallToAction);
+                    object.set('heroImageCTA', brandCallToAction);
+                    object.set('ctaBoxPosition', brandCallToActionBoxPosition);
+                    object.set('heroImageCTAUrl', brandCallToActionUrl);
+                    object.set('active', 'Y');
+                    object.set('canbeedited', 'Y');
+                    object.set('testDriveDealerLocations', testDriveDealerLocations);
+                    object.set('testDriveCarTypes', testDriveCarTypes);
+
+                    object.save().then((response) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Brand "+brandName+" has been updated.", response);
+                            $("#brandupdatestatus").text("SUCCESS! Brand "+brandName+" has been updated. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                    }, (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while updating Brand', error);
+                        }
+                    });
+                });
+            }
+
+
+            ////////////////////////////////
+            // Reset Variables on Page Load
+            ////////////////////////////////
+
+            function resetBrandValidSettings() {
+
+                var brandLdap = localStorage.getItem('admin_ldap');
+
+                if(brandLdap === null){
+                    $("#brandSettingsSection").attr("style", "display:none;");
+                    $("#ldapAlarmSection").attr("style", "display:block;");
+
+                }else{
+                    getBrands();
+                    $("#selectbrandsection").attr("style", "display:block;");
+                }
+
+                ////////////////////////////////
+                // Remove/Reset Variables
+                ////////////////////////////////
+
+                localStorage.removeItem("admin_brandToUpdateBrandId");
+                localStorage.removeItem("admin_brandToUpdateBrandName");
+                localStorage.removeItem("admin_brandWhatToUpdate");
+                localStorage.removeItem("admin_brandWhatToUpdateName");
+                localStorage.removeItem("admin_brandCustomPageNumberToUpdate");
+                localStorage.removeItem("admin_brandProductNumberToUpdate");
+                localStorage.removeItem("admin_brandCategoryNumberToUpdate");
+                localStorage.setItem("admin_custompagestatus", "invalid");
+                localStorage.setItem("admin_selectcustompageactive", "valid");
+                localStorage.setItem("admin_selectcustompagetitle", "valid");
+                localStorage.setItem("admin_selectcustompageimage", "invalid");
+                localStorage.removeItem("admin_custompagetoupdateexists");
+                localStorage.removeItem("admin_custompageobjectidtoupdate");
+                localStorage.removeItem("admin_categorytoupdateexists");
+                localStorage.removeItem("admin_categoryobjectidtoupdate");
+                localStorage.removeItem("admin_producttoupdateexists");
+                localStorage.removeItem("admin_productobjectidtoupdate");
+                localStorage.setItem("admin_categorystatus", "invalid");
+                localStorage.setItem("admin_selectcategoryactive", "valid");
+                localStorage.setItem("admin_selectcategoryname", "valid");
+                localStorage.setItem("admin_selectcategoryimage", "invalid");
+                localStorage.setItem('admin_selectproductactive', "valid");
+                localStorage.setItem('admin_selectproductname', "valid");
+                localStorage.setItem('admin_selectproductimage', "invalid");
+                localStorage.setItem('admin_selectproductdescription', "valid");
+                localStorage.setItem('admin_selectproductcategory', "invalid");
+                localStorage.setItem('admin_selectproductprice', "valid");
+                localStorage.setItem('admin_selectproductfeatured', "valid");
+                localStorage.setItem("admin_productstatus", "invalid");
+                localStorage.setItem("admin_demosetuptypechoice", "invalid");
+                localStorage.setItem("admin_industrychoice", "invalid");
+                localStorage.setItem("admin_currencychoice", "invalid");
+                localStorage.setItem("admin_customprofileattributeschoice", "invalid");
+                localStorage.setItem("admin_usecallcenterchoice", "invalid");
+                localStorage.setItem("admin_usepersonalshopperchoice", "invalid");
+                localStorage.setItem("admin_brandname", "invalid");
+                localStorage.setItem("admin_selectbrandlogo", "invalid");
+                localStorage.setItem("admin_selectfavicon", "invalid");
+                localStorage.setItem("admin_selectbrandheroimage", "invalid");
+                localStorage.setItem("admin_usecta", "valid");
+                localStorage.setItem("admin_cta", "valid");
+                localStorage.setItem("admin_ctaboxposition", "valid");
+                localStorage.setItem("admin_ctaurl", "invalid");
+                localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                localStorage.setItem("admin_testdrivecartypes", "valid");
+            }
+
+
+            ////////////////////////////////
+            // Custom Page - Back4app Section
+            ////////////////////////////////
+
+            function getCustomPage(brandId, pageNumber){
+                const CustomPage = Parse.Object.extend('CustomPage');
+                const query = new Parse.Query(CustomPage);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("pageNumber", pageNumber);
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Custom Page " +pageNumber+ " has been retrieved: results: ", results);
+                                if(results.length > 0 ) {
+                                    console.log("Custom Page " + pageNumber + " already exists for this brand. Let's update it.")
+                                    $("#pageTitle").val(results[0].attributes.pageTitle);
+                                    $("#pageUrl").val("custompage"+pageNumber+".html");
+                                    localStorage.setItem("admin_custompagetoupdateexists", "Y");
+                                    localStorage.setItem("admin_custompageobjectidtoupdate", results[0].id);
+                                }else{
+                                    console.log("Custom Page " + pageNumber + " doesn't exist yet for this brand. Let's create it.")
+                                    localStorage.setItem("admin_custompagetoupdateexists", "N");
+                                    $("#pageUrl").val("custompage"+pageNumber+".html");
+                                }
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Custom Page' +pageNumber, error);
+                        }
+                    }
+                );
+
+            }
+            
+            function deactivateCustomPage(){
+                var customPageNumber = localStorage.getItem('admin_brandCustomPageNumberToUpdate');
+                const CustomPage = Parse.Object.extend('CustomPage');
+                const query = new Parse.Query(CustomPage);
+                // here you put the objectId that you want to update
+                query.get(localStorage.getItem("admin_custompageobjectidtoupdate")).then((object) => {
+                      object.set('usePage', false);
+                      object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Custom Page "+customPageNumber+" has been deactivated.", result);
+                            $("#custompageupdatestatus").text("SUCCESS! Custom Page "+customPageNumber+" has been deactivated. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating CustomPage', error);
+                      });
+                    });
+                }
+
+            function updateCustomPage(){
+                $("#updateCustomPagesButton").attr("disabled", true);
+                $("#custompageupdatestatus").text("Updating...");
+                const CustomPage = Parse.Object.extend('CustomPage');
+
+                var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+                var file = new Parse.File("myfile.txt", { base64: base64 });
+
+                var brandId = localStorage.getItem('admin_brandToUpdateBrandId');
+                var customPageNumber = localStorage.getItem('admin_brandCustomPageNumberToUpdate');
+
+                console.log(">>>>> Saving Custom Page " + customPageNumber)
+
+                pageTitle = document.getElementById("pageTitle").value;
+                pageUrl = document.getElementById("pageUrl").value;
+                pageActive = document.getElementById("pageActive").checked;
+
+                var fileUploadControlCustomPage = $("#pageHeroImage")[0];
+                if (fileUploadControlCustomPage.files.length > 0) {
+                    var pageHeroImageFile = fileUploadControlCustomPage.files[0];
+                    var pageHeroImageName = "custompage"+customPageNumber+".jpg";
+
+                    var parseCustomPageImage = new Parse.File(pageHeroImageName, pageHeroImageFile);
+                }
+
+                if(localStorage.getItem("admin_custompagetoupdateexists") === "N"){
+                    const customPage = new CustomPage();
+
+                    customPage.set('usePage', pageActive);
+                    customPage.set('pageTitle', pageTitle);
+                    customPage.set('brandId', brandId);
+                    customPage.set('pageUrl', pageUrl);
+                    customPage.set('pageHeroImage', parseCustomPageImage);
+                    customPage.set('pageNumber', customPageNumber);
+
+
+                    customPage.save().then(
+                      (result) => {
+                        if (typeof document !== 'undefined'){ 
+                            console.log(">>>>> SUCCESS! Custom Page "+customPageNumber+" is saved.", result);
+                            $("#custompageupdatestatus").text("SUCCESS! Custom Page "+customPageNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      },
+                      (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while saving CustomPage: '+customPageNumber, error);
+                        }
+                      }
+                    );
+                }else{
+                    const query = new Parse.Query(CustomPage);
+                    // here you put the objectId that you want to update
+                    query.get(localStorage.getItem("admin_custompageobjectidtoupdate")).then((object) => {
+                      object.set('pageTitle', pageTitle);
+                      object.set('pageUrl', pageUrl);
+                      object.set('pageHeroImage', parseCustomPageImage);
+                      object.set('usePage', pageActive);
+                      object.set('pageNumber', customPageNumber);
+                      object.set('brandId', brandId);
+                      object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Custom Page "+customPageNumber+" is saved.", result);
+                            $("#custompageupdatestatus").text("SUCCESS! Custom Page "+customPageNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating CustomPage', error);
+                      });
+                    });
+                }
+            }
+
+
+            ////////////////////////////////
+            // Category Back4App Section
+            ////////////////////////////////
+
+            function getCategory(brandId, categoryNumber){
+                const Categories = Parse.Object.extend('Categories');
+                const query = new Parse.Query(Categories);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("categoryNumber", Number(categoryNumber));
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            if(results.length > 0 ) {
+                                    console.log("Category " + categoryNumber + " already exists for this brand. Let's update it.")
+                                    $("#categoryName").val(results[0].attributes.category);
+                                    localStorage.setItem("admin_categorytoupdateexists", "Y");
+                                    localStorage.setItem("admin_categoryobjectidtoupdate", results[0].id);
+                                }else{
+                                    console.log("Category " + categoryNumber + " doesn't exist yet for this brand. Let's create it.")
+                                    localStorage.setItem("admin_categorytoupdateexists", "N");
+                                }
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Category' +categoryNumber, error);
+                        }
+                    }
+                );
+
+            }
+            function deactivateCategory(){
+                var categoryNumber = localStorage.getItem('admin_brandCategoryNumberToUpdate');
+                const Categories = Parse.Object.extend('Categories');
+                const query = new Parse.Query(Categories);
+                // here you put the objectId that you want to update
+                query.get(localStorage.getItem("admin_categoryobjectidtoupdate")).then((object) => {
+                      object.set('useCategory', false);
+                      object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Category "+categoryNumber+" has been deactivated.", result);
+                            $("#custompageupdatestatus").text("SUCCESS! Category "+categoryNumber+" has been deactivated. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating Category', error);
+                      });
+                    });
+                }
+
+            function updateCategory(){
+                $("#updateCategoryButton").attr("disabled", true);
+                $("#categoryupdatestatus").text("Updating...");
+                const Categories = Parse.Object.extend('Categories');
+
+                var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+                var file = new Parse.File("myfile.txt", { base64: base64 });
+
+                var brandId = localStorage.getItem('admin_brandToUpdateBrandId');
+                var categoryNumber = localStorage.getItem('admin_brandCategoryNumberToUpdate');
+
+                console.log(">>>>> Saving Category " + categoryNumber)
+
+                categoryName = document.getElementById("categoryName").value;
+                categoryActive = document.getElementById("categoryActive").checked;
+
+                var fileUploadControlCategory = $("#categoryImage")[0];
+                if (fileUploadControlCategory.files.length > 0) {
+                    var categoryImageFile = fileUploadControlCategory.files[0];
+                    var categoryImageName = "category"+categoryNumber+".jpg";
+
+                    var parseCategoryImage = new Parse.File(categoryImageName, categoryImageFile);
+                }
+
+                if(localStorage.getItem("admin_categorytoupdateexists") === "N"){
+                    const category = new Categories();
+                
+                    category.set('image', parseCategoryImage);
+                    category.set('category', categoryName);
+                    category.set('useCategory', categoryActive);
+                    category.set('brandId', brandId);
+                    category.set('categoryNumber', Number(categoryNumber));
+
+
+                    category.save().then(
+                      (result) => {
+                        if (typeof document !== 'undefined'){ 
+                            console.log(">>>>> SUCCESS! Category "+categoryNumber+" is saved.", result);
+                            $("#categoryupdatestatus").text("SUCCESS! Category "+categoryNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      },
+                      (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while saving Category: '+customPageNumber, error);
+                        }
+                      }
+                    );
+                }else{
+                    const query = new Parse.Query(Categories);
+                    // here you put the objectId that you want to update
+                    query.get(localStorage.getItem("admin_categoryobjectidtoupdate")).then((object) => {
+                      object.set('image', parseCategoryImage);
+                      object.set('category', categoryName);
+                      object.set('categoryNumber', Number(categoryNumber));
+                      object.set('brandId', brandId);
+                      object.set('useCategory', categoryActive);
+                      object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Category "+categoryNumber+" is saved.", result);
+                            $("#categoryupdatestatus").text("SUCCESS! Category "+categoryNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating Category', error);
+                      });
+                    });
+                }
+            }
+
+
+            ////////////////////////////////
+            // Product Back4App Section
+            ////////////////////////////////
+
+            function getProduct(brandId, productNumber){
+                const Products = Parse.Object.extend('Products');
+                const query = new Parse.Query(Products);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("productNumber", String(productNumber));
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                                if(results.length > 0 ) {
+                                        console.log("Product " + productNumber + " already exists for this brand. Let's update it.", results)
+                                        $("#productName").val(results[0].attributes.name);
+                                        $("#productDescription").val(results[0].attributes.description);
+                                        if(results[0].attributes.isFeatured === true){
+                                            $("#productFeatured").prop('checked', true);
+                                        }else{
+                                            $("#productFeatured").prop('checked', false);
+                                        }
+                                        if(results[0].attributes.usePrice === true){
+                                            $("#productUsePrice").prop('checked', true);
+                                        }else{
+                                            $("#productUsePrice").prop('checked', false);
+                                        }
+                                        $("#productDescription").val(results[0].attributes.description);
+                                        $("#productCategory").val(results[0].attributes.category);
+                                        $("#productPrice").val(results[0].attributes.finalPrice);
+                                        $("#productUrl").val(results[0].attributes.productUrl);
+                                
+                                        localStorage.setItem("admin_producttoupdateexists", "Y");
+                                        localStorage.setItem("admin_productobjectidtoupdate", results[0].id);
+                                    }else{
+                                        console.log("Product " + productNumber + " doesn't exist yet for this brand. Let's create it.")
+                                        localStorage.setItem("admin_producttoupdateexists", "N");
+                                    }
+                                }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Custom Page' +pageNumber, error);
+                        }
+                    }
+                );
+
+            }
+            function deactivateProduct(){
+                var productNumber = localStorage.getItem('admin_brandProductNumberToUpdate');
+                const Products = Parse.Object.extend('Products');
+                const query = new Parse.Query(Products);
+                // here you put the objectId that you want to update
+                query.get(localStorage.getItem("admin_productobjectidtoupdate")).then((object) => {
+                      object.set('useProduct', false);
+                      object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Product "+productNumber+" has been deactivated.", result);
+                            $("#productupdatestatus").text("SUCCESS! Product "+productNumber+" has been deactivated. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating Product', error);
+                      });
+                    });
+                }
+
+            function updateProduct(){
+                $("#updateProductButton").attr("disabled", true);
+                $("#productupdatestatus").text("Updating...");
+                const Products = Parse.Object.extend('Products');
+
+                var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+                var file = new Parse.File("myfile.txt", { base64: base64 });
+
+                var brandId = localStorage.getItem('admin_brandToUpdateBrandId');
+                var productNumber = localStorage.getItem('admin_brandProductNumberToUpdate');
+                var brandCurrency = localStorage.getItem('admin_brandToUpdateCurrency');
+
+                console.log(">>>>> Saving Product " + productNumber);
+
+                productName = document.getElementById("productName").value;
+                productActive = document.getElementById("productActive").checked;
+                productDescription = document.getElementById("productDescription").value;
+                productUrl = document.getElementById("productUrl").value;
+                productCategory = document.getElementById("productCategory").value;
+                productFeatured = document.getElementById("productFeatured").checked;
+                productUsePrice = document.getElementById("productUsePrice").checked;
+
+                if(productUsePrice === true){
+                    productPrice = parseFloat(document.getElementById("productPrice").value);
+                }else{
+                    productPrice = 0;
+                }
+
+                var fileUploadControlProduct = $("#productImage1")[0];
+                if (fileUploadControlProduct.files.length > 0) {
+                    var productImageFile = fileUploadControlProduct.files[0];
+                    var productImageName = "product"+productNumber+".jpg";
+
+                    var parseProductImage = new Parse.File(productImageName, productImageFile);
+                }
+
+                if(localStorage.getItem("admin_producttoupdateexists") === "N"){
+                    const product = new Products();
+                
+                    product.set('useProduct', productActive);
+                    product.set('name', productName);
+                    product.set('description', productDescription);
+                    product.set('category', productCategory);
+                    product.set('isFeatured', productFeatured);
+                    product.set('image1', parseProductImage);
+                    product.set('finalPrice', productPrice);
+                    product.set('currency', 'EUR');
+                    product.set('brandId', brandId);
+                    product.set('productUrl', productUrl);
+                    product.set('productNumber', productNumber);
+
+                    product.save().then(
+                      (result) => {
+                        if (typeof document !== 'undefined'){ 
+                            console.log(">>>>> SUCCESS! Product "+productNumber+" is saved.", result);
+                            $("#categoryupdatestatus").text("SUCCESS! Product "+productNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      },
+                      (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while saving Product: '+productNumber, error);
+                        }
+                      }
+                    );
+                }else{
+                    const query = new Parse.Query(Products);
+                    // here you put the objectId that you want to update
+                    query.get(localStorage.getItem("admin_productobjectidtoupdate")).then((object) => {
+                        object.set('useProduct', productActive);
+                        object.set('name', productName);
+                        object.set('description', productDescription);
+                        object.set('category', productCategory);
+                        object.set('isFeatured', productFeatured);
+                        object.set('image1', parseProductImage);
+                        object.set('finalPrice', productPrice);
+                        object.set('currency', 'EUR');
+                        object.set('brandId', brandId);
+                        object.set('productUrl', productUrl);
+                        object.set('productNumber', productNumber);    
+                        object.save().then((result) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> SUCCESS! Product "+productNumber+" is saved.", result);
+                            $("#productupdatestatus").text("SUCCESS! Product "+productNumber+" is saved. You will be redirected to Admin Home in 3 seconds.");
+                            setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+                        }
+                      }, (error) => {
+                        if (typeof document !== 'undefined') console.error('Error while updating Product' + productNumber, error);
+                      });
+                    });
+                }
+            }
+
+
+            ////////////////////////////////
+            // Display Product Categories for Product Update Section
+            ////////////////////////////////
+
+            var productCategoryDropdown = document.getElementById("productCategory");
+
+            function getAndDisplayProductCategories(brandId) {
+                const Categories = Parse.Object.extend('Categories');
+                const query = new Parse.Query(Categories);
+                
+                query.equalTo("brandId", brandId);
+
+                query.find().then(
+                    (results) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Product Categories retrieved successfully: ", results);
+                            displayProductCategories(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('>>>>> Error while fetching Product Categories', error);
+                        }
+                    }
+                );
+            };
+
+            function displayProductCategories(results) {
+                for (i = 0; i < results.length; i++) {
+                    try{
+                        var productCategoryName = results[i].attributes.category
+                        console.log(">>>>> Display Category Name: " + productCategoryName)
+
+                        var el = document.createElement("option");
+                        el.textContent = productCategoryName;
+                        el.value = productCategoryName;
+
+                        productCategoryDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+            }
+
+
+            ////////////////////////////////
+            // Get a Specific Brand Section
+            ////////////////////////////////
+
+            function getBrand(brandId){
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+
+                query.equalTo("brandId", brandId);
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Brand Results: ", results);
+                            localStorage.setItem("admin_brandobjectidtoupdate", results[0].id);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching LDAP', error);
+                        }
+                    }
+                );
+
+
+            }
+
+
+        </script>
+
+	
+	</body>
+</html>

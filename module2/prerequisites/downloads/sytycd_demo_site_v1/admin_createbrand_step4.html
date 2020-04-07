@@ -1,0 +1,3417 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin Step 4</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                admincreatepage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="resetProductValidSettings()">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+        <div class="box">
+            <div class="hgroup title">
+                <h3>So You Think You Can Demo?</h3>
+                <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+                <br/>
+                Step 4: Create your Products
+                <br/><br/>
+            </div>
+            <div id="product1detailssection" class="box-content" style="display:block;">
+                <h5>Product 1 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 1?</label><div id="p1a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product1Active" type="checkbox" name="product1Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p1f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product1Featured" type="checkbox" name="product1Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 1 Name</label><div id="p1n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product1Name" type="text" name="product1Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 1 Description</label><div id="p1d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product1Description" type="text" name="product1Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 1 Page URL</label><div id="p1u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product1Url" type="text" name="product1Url" value="p1.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 1 Category</label><div id="p1c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product1Category" name="product1Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p1up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product1UsePrice" type="checkbox" name="product1UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 1 Price</label><div id="p1p" class="information">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product1Price" type="number" min="1" max="999999" name="product1Price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 1 Image</label><div id="p1h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product1Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product2detailssection" class="box-content" style="display:none;">
+                <h5>Product 2 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 2?</label><div id="p2a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product2Active" type="checkbox" name="product2Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p2f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product2Featured" type="checkbox" name="product2Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 2 Name</label><div id="p2n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product2Name" type="text" name="product2Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 2 Description</label><div id="p2d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product2Description" type="text" name="product2Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 2 Page URL</label><div id="p2u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product2Url" type="text" name="product2Url" value="p2.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 2 Category</label><div id="p2c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product2Category" name="product2Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p2up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product2UsePrice" type="checkbox" name="product2UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 2 Price</label><div id="p2p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product2Price" type="number" min="1" max="999999" name="product2Price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 2 Image</label><div id="p2h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product2Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product3detailssection" class="box-content" style="display:none;">
+                <h5>Product 3 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 3?</label><div id="p3a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product3Active" type="checkbox" name="product3Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p3f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product3Featured" type="checkbox" name="product3Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 3 Name</label><div id="p3n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product3Name" type="text" name="product3Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 3 Description</label><div id="p3d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product3Description" type="text" name="product3Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 3 Page URL</label><div id="p3u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product3Url" type="text" name="product3Url" value="p3.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 3 Category</label><div id="p3c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product3Category" name="product3Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p3up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product3UsePrice" type="checkbox" name="product3UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 3 Price</label><div id="p3p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product3Price" type="number" min="1" max="999999" name="product3price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 3 Image</label><div id="p3h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product3Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product4detailssection" class="box-content" style="display:none;">
+                <h5>Product 4 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 4?</label><div id="p4a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product4Active" type="checkbox" name="product4Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p4f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product4Featured" type="checkbox" name="product4Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 4 Name</label><div id="p4n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product4Name" type="text" name="product4Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 4 Description</label><div id="p4d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product4Description" type="text" name="product4Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 4 Page URL</label><div id="p4u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product4Url" type="text" name="product4Url" value="p4.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 4 Category</label><div id="p4c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product4Category" name="product4Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p4up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product4UsePrice" type="checkbox" name="product4UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 4 Price</label><div id="p4p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product4Price" type="number" min="1" max="999999" name="product4Price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 4 Image</label><div id="p4h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product4Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product5detailssection" class="box-content" style="display:none;">
+                <h5>Product 5 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 5?</label><div id="p5a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product5Active" type="checkbox" name="product5Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p5f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product5Featured" type="checkbox" name="product5Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 5 Name</label><div id="p5n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product5Name" type="text" name="product5Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 5 Description</label><div id="p5d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product5Description" type="text" name="product5Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 5 Page URL</label><div id="p5u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product5Url" type="text" name="product5Url" value="p5.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 5 Category</label><div id="p5c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product5Category" name="product5Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p5up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product5UsePrice" type="checkbox" name="product5UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 5 Price</label><div id="p5p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product5Price" type="number" min="1" max="999999" name="product5Price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 5 Image</label><div id="p5h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product5Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product6detailssection" class="box-content" style="display:none;">
+                <h5>Product 6 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 6?</label><div id="p6a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product6Active" type="checkbox" name="product6Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p6f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product6Featured" type="checkbox" name="product6Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 6 Name</label><div id="p6n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product6Name" type="text" name="product6Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 6 Description</label><div id="p6d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product6Description" type="text" name="product6Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 6 Page URL</label><div id="p6u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product6Url" type="text" name="product6Url" value="p6.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 6 Category</label><div id="p6c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product6Category" name="product6Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p6up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product6UsePrice" type="checkbox" name="product6UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 6 Price</label><div id="p6p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product6Price" type="number" min="1" max="999999" name="product6Price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 6 Image</label><div id="p6h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product6Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product7detailssection" class="box-content" style="display:none;">
+                <h5>Product 7 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 7?</label><div id="p7a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product7Active" type="checkbox" name="product7Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p7f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product7Featured" type="checkbox" name="product7Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 7 Name</label><div id="p7n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product7Name" type="text" name="product7Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 7 Description</label><div id="p7d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product7Description" type="text" name="product7Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 7 Page URL</label><div id="p7u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product7Url" type="text" name="product7Url" value="p7.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 7 Category</label><div id="p7c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product7Category" name="product7Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p7up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product7UsePrice" type="checkbox" name="product7UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 7 Price</label><div id="p7p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product7Price" type="number" min="1" max="999999" name="product7price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 7 Image</label><div id="p7h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product7Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product8detailssection" class="box-content" style="display:none;">
+                <h5>Product 8 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Product 8?</label><div id="p8a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product8Active" type="checkbox" name="product8Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is featured product?</label><div id="p8f" class="information">* Check to activate</div>
+                            <div class="controls">
+                                <input id="product8Featured" type="checkbox" name="product8Featured" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 8 Name</label><div id="p8n" class="notification">* Enter a Product Name</div>
+                            <div class="controls">
+                                <input class="form-control" id="product8Name" type="text" name="product8Name" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 8 Description</label><div id="p8d" class="notification">* Enter a Product Description</div>
+                            <div class="controls">
+                                <input class="form-control" id="product8Description" type="text" name="product8Description" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 8 Page URL</label><div id="p8u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="product8Url" type="text" name="product8Url" value="p8.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 8 Category</label><div id="p8c" class="notification">* Enter a Product Category</div>
+                            <div class="controls">
+                                <select id="product8Category" name="product8Category" style="color:#000000;height:34px;width:100px;" disabled>
+                                    <option value="" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Price?</label><div id="p8up" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="product8UsePrice" type="checkbox" name="product8UsePrice" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 8 Price</label><div id="p8p" class="notification">* Enter a Product Price</div>
+                            <div class="controls">
+                                <input class="form-control" id="product8Price" type="number" min="1" max="999999" name="product8price" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Product 8 Image</label><div id="p8h" class="notification">* Select your image</div>
+                            <div class="controls">
+                                <input type="file" id="product8Image1" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pageStatusOverview" class="box-content" style="display:block;">
+                <h5>Product Configuration Status:  </h5>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 1 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product1status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 2 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product2status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 3 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product3status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 4 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product4status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 5 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product5status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 6 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product6status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 7 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product7status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Product 8 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label id="product8status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+                <div id="loader" style="display:none;"></div>
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="nextPageCreateProductsButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="nextPageCreateProductsButton" value="" onClick="saveProducts()" disabled>
+                                Save Products
+                            </button>
+                        </div>
+                    </div>     
+                </div> 
+            </div> 
+            
+        </div>
+
+	    <!-- Credits bar -->
+        <div class="credits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits">
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+
+        <script>
+
+            //////////////////////////
+            // Client-Side Validation
+            //////////////////////////
+
+            //////////////////////////
+            //Validation Product 1
+            //////////////////////////
+
+            $("#product1Active").change(function(){
+                //selection changed
+                if($('#product1Active').prop('checked')){
+                    console.log(">>>>> Product 1 is active.");
+                    $("#p1a").attr('class', 'information');
+                    $("#p1a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1active", "valid");
+                    $("#product1Featured").attr("disabled", false);
+                    $("#product1Name").attr("disabled", false);
+                    $("#product1Description").attr("disabled", false);
+                    $("#product1Category").attr("disabled", false);
+                    $("#product1UsePrice").attr("disabled", false);
+                    $("#product1UsePrice").prop("checked", true);
+                    $("#product1Price").attr("disabled", false);
+                    $("#product1Image1").attr("disabled", false);
+                    $("#p1up").attr('class', 'information');
+                    $("#p1up").text("* Uncheck if not needed.");
+                    $("#p1p").attr('class', 'notification');
+                    $("#p1p").text("* Enter a price.");
+                    verifyProduct1Settings();
+                    //Enable Page 2 
+                    $("#product2Active").attr("disabled", false);
+                    $("#product2detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 1 is not active.");
+                    $("#p1a").attr('class', 'notification');
+                    $("#p1a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct1active", "invalid");
+                    $("#product1Featured").attr("disabled", true);
+                    $("#product1Name").attr("disabled", true);
+                    $("#product1Description").attr("disabled", true);
+                    $("#product1Category").attr("disabled", true);
+                    $("#product1UsePrice").attr("disabled", true);
+                    $("#product1UsePrice").attr("checked", false);
+                    $("#product1Price").attr("disabled", true);
+                    $("#product1Image1").attr("disabled", true);
+                    verifyProduct1Settings();
+                    //Disable Page 2
+                    disableProduct("2");
+                    disableProduct("3");
+                    disableProduct("4");
+                    disableProduct("5");
+                    disableProduct("6");
+                    disableProduct("7");
+                    disableProduct("8");
+                    $("#nextPageCreateProductsButton").attr("disabled", true);
+                }
+            });
+
+            $("#product1Featured").change(function(){
+                //selection changed
+                if($('#product1Featured').prop('checked')){
+                    console.log(">>>>> Product 1 - Featured is checked.");
+                    $("#p1f").attr('class', 'information');
+                    $("#p1f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1featured", "valid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Featured isn't checked.");
+                    $("#p1f").attr('class', 'information');
+                    $("#p1f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct1featured", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 1 - No Name entered.");
+                    $("#p1n").attr('class', 'notification');
+                    $("#p1n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct1name", "invalid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Name entered successfully.");
+                    $("#p1n").attr('class', 'information');
+                    $("#p1n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1name", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 1 - No Description entered.");
+                    $("#p1d").attr('class', 'notification');
+                    $("#p1d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct1description", "invalid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Description entered successfully.");
+                    $("#p1d").attr('class', 'information');
+                    $("#p1d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1description", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 1 - No Category entered.");
+                    $("#p1c").attr('class', 'notification');
+                    $("#p1c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct1category", "invalid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Category entered successfully.");
+                    $("#p1c").attr('class', 'information');
+                    $("#p1c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1category", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1UsePrice").change(function(){
+                //selection changed
+                if($('#product1UsePrice').prop('checked')){
+                    console.log(">>>>> Product 1 - Price is used.");
+                    $("#p1up").attr('class', 'information');
+                    $("#p1up").text("* Good choice!");
+                    $("#product1Price").attr("disabled", false);
+                    $("#p1p").attr('class', 'notification');
+                    $("#p1p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct1useprice", "valid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Price isn't used.");
+                    $("#p1up").attr('class', 'information');
+                    $("#p1up").text("* Price isn't a required field.");
+                    $("#p1p").attr('class', 'information');
+                    $("#p1p").text("* Price isn't a required field.");
+                    $("#product1Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct1useprice", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1Price").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 1 - No Price entered.");
+                    $("#p1p").attr('class', 'notification');
+                    $("#p1p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct1price", "valid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 - Price entered successfully.");
+                    $("#p1p").attr('class', 'information');
+                    $("#p1p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1price", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            $("#product1Image1").change(function(){
+                //selection changed
+                if ($('#product1Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 1 Image File selected.");
+                    $("#p1h").attr('class', 'notification');
+                    $("#p1h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct1image", "invalid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 1 Image File selected.");
+                    $("#p1h").attr('class', 'information');
+                    $("#p1h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct1image", "valid");
+                    verifyProduct1Settings();
+                }
+            });
+
+            function disableProduct(number){
+                $("#product"+number+"Active").attr("disabled", true);
+                $("#product"+number+"Active").prop("checked", false);
+                $("#product"+number+"detailssection").attr("style", "display:none;");
+                $("#p"+number+"a").attr('class', 'notification');
+                $("#p"+number+"a").text("* Check to use");
+                $("#product"+number+"UsePrice").prop("checked", false);
+                verifyAllProductSettings();
+            }
+
+            function verifyAllProductSettings() {
+                verifyProduct1Settings();
+                verifyProduct2Settings();
+                verifyProduct3Settings();
+                verifyProduct4Settings();
+                verifyProduct5Settings();
+                verifyProduct6Settings();
+                verifyProduct7Settings();
+                verifyProduct8Settings();
+            }    
+
+            function verifyProduct1Settings() {
+                if($('#product1Active').prop('checked')){
+                    admin_selectproduct1active = localStorage.getItem('admin_selectproduct1active');
+                    admin_selectproduct1name = localStorage.getItem('admin_selectproduct1name');
+                    admin_selectproduct1image = localStorage.getItem('admin_selectproduct1image');
+                    admin_selectproduct1description = localStorage.getItem('admin_selectproduct1description');
+                    admin_selectproduct1category = localStorage.getItem('admin_selectproduct1category');
+                    admin_selectproduct1price = localStorage.getItem('admin_selectproduct1price');
+                    admin_selectproduct1featured = localStorage.getItem('admin_selectproduct1featured');
+
+                    if(admin_selectproduct1active == "valid" && admin_selectproduct1name == "valid" && admin_selectproduct1image == "valid" && admin_selectproduct1description == "valid" && admin_selectproduct1category == "valid" && admin_selectproduct1price == "valid" && admin_selectproduct1featured == "valid"){
+                        console.log(">>>>> Product 1: All settings are valid!")
+                        $("#product1status").attr('class', 'information');
+                        $("#product1status").text("Used and Valid");
+                        localStorage.setItem("admin_product1status", "valid");
+                    }else{
+                        console.log(">>>>> Product 1: Some settings are invalid!")
+                        $("#product1status").attr('class', 'notification');
+                        $("#product1status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product1status", "invalid");
+                    }
+                }else{
+                    $("#product1status").attr('class', 'notification');
+                    $("#product1status").text("Not Valid - A minimum of 1 product is required.");
+                    localStorage.setItem("admin_product1status", "invalid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 2
+            //////////////////////////
+
+            $("#product2Active").change(function(){
+                //selection changed
+                if($('#product2Active').prop('checked')){
+                    console.log(">>>>> Product 1 is active.");
+                    $("#p2a").attr('class', 'information');
+                    $("#p2a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2active", "valid");
+                    $("#product2Featured").attr("disabled", false);
+                    $("#product2Name").attr("disabled", false);
+                    $("#product2Description").attr("disabled", false);
+                    $("#product2Category").attr("disabled", false);
+                    $("#product2UsePrice").attr("disabled", false);
+                    $("#product2UsePrice").prop("checked", true);
+                    $("#product2Price").attr("disabled", false);
+                    $("#product2Image1").attr("disabled", false);
+                    $("#p2up").attr('class', 'information');
+                    $("#p2up").text("* Uncheck if not needed.");
+                    $("#p2p").attr('class', 'notification');
+                    $("#p2p").text("* Enter a price.");
+                    verifyProduct2Settings();
+                    //Enable Page 3
+                    $("#product3Active").attr("disabled", false);
+                    $("#product3detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 2 is not active.");
+                    $("#p2a").attr('class', 'notification');
+                    $("#p2a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct2active", "invalid");
+                    $("#product2Featured").attr("disabled", true);
+                    $("#product2Name").attr("disabled", true);
+                    $("#product2Description").attr("disabled", true);
+                    $("#product2Category").attr("disabled", true);
+                    $("#product2Price").attr("disabled", true);
+                    $("#product2UsePrice").prop("checked", false);
+                    $("#product2Image1").attr("disabled", true);
+                    verifyProduct2Settings();
+                    //Disable Page 3
+                    disableProduct("3");
+                    disableProduct("4");
+                    disableProduct("5");
+                    disableProduct("6");
+                    disableProduct("7");
+                    disableProduct("8");
+                }
+            });
+
+            $("#product2Featured").change(function(){
+                //selection changed
+                if($('#product2Featured').prop('checked')){
+                    console.log(">>>>> Product 2 - Featured is checked.");
+                    $("#p2f").attr('class', 'information');
+                    $("#p2f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2featured", "valid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Featured isn't checked.");
+                    $("#p2f").attr('class', 'information');
+                    $("#p2f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct2featured", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 2 - No Name entered.");
+                    $("#p2n").attr('class', 'notification');
+                    $("#p2n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct2name", "invalid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Name entered successfully.");
+                    $("#p2n").attr('class', 'information');
+                    $("#p2n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2name", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 2 - No Description entered.");
+                    $("#p2d").attr('class', 'notification');
+                    $("#p2d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct2description", "invalid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Description entered successfully.");
+                    $("#p2d").attr('class', 'information');
+                    $("#p2d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2description", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 2 - No Category entered.");
+                    $("#p2c").attr('class', 'notification');
+                    $("#p2c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct2category", "invalid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Category entered successfully.");
+                    $("#p2c").attr('class', 'information');
+                    $("#p2c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2category", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2UsePrice").change(function(){
+                //selection changed
+                if($('#product2UsePrice').prop('checked')){
+                    console.log(">>>>> Product 2 - Price is used.");
+                    $("#p2up").attr('class', 'information');
+                    $("#p2up").text("* Good choice!");
+                    $("#product2Price").attr("disabled", false);
+                    $("#p2p").attr('class', 'notification');
+                    $("#p2p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct2useprice", "valid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Price isn't used.");
+                    $("#p2up").attr('class', 'information');
+                    $("#p2up").text("* Price isn't a required field.");
+                    $("#p2p").attr('class', 'information');
+                    $("#p2p").text("* Price isn't a required field.");
+                    $("#product2Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct2useprice", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 2 - No Price entered.");
+                    $("#p2p").attr('class', 'notification');
+                    $("#p2p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct2price", "valid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 - Price entered successfully.");
+                    $("#p2p").attr('class', 'information');
+                    $("#p2p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2price", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            $("#product2Image1").change(function(){
+                //selection changed
+                if ($('#product2Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 2 Image File selected.");
+                    $("#p2h").attr('class', 'notification');
+                    $("#p2h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct2image", "invalid");
+                    verifyProduct2Settings();
+                }else{
+                    console.log(">>>>> Product 2 Image File selected.");
+                    $("#p2h").attr('class', 'information');
+                    $("#p2h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct2image", "valid");
+                    verifyProduct2Settings();
+                }
+            });
+
+            function verifyProduct2Settings() {
+                if($('#product2Active').prop('checked')){
+                    admin_selectproduct2active = localStorage.getItem('admin_selectproduct2active');
+                    admin_selectproduct2name = localStorage.getItem('admin_selectproduct2name');
+                    admin_selectproduct2image = localStorage.getItem('admin_selectproduct2image');
+                    admin_selectproduct2description = localStorage.getItem('admin_selectproduct2description');
+                    admin_selectproduct2category = localStorage.getItem('admin_selectproduct2category');
+                    admin_selectproduct2price = localStorage.getItem('admin_selectproduct2price');
+                    admin_selectproduct2featured = localStorage.getItem('admin_selectproduct2featured');
+
+                    if(admin_selectproduct2active == "valid" && admin_selectproduct2name == "valid" && admin_selectproduct2image == "valid" && admin_selectproduct2description == "valid" && admin_selectproduct2category == "valid" && admin_selectproduct2price == "valid" && admin_selectproduct2featured =="valid"){
+                        console.log(">>>>> Product 2: All settings are valid!")
+                        $("#product2status").attr('class', 'information');
+                        $("#product2status").text("Used and Valid");
+                        localStorage.setItem("admin_product2status", "valid");
+                    }else{
+                        console.log(">>>>> Product 2: Some settings are invalid!")
+                        $("#product2status").attr('class', 'notification');
+                        $("#product2status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product2status", "invalid");
+                    }
+                }else{
+                    $("#product2status").attr('class', 'information');
+                    $("#product2status").text("Not Used");
+                    localStorage.setItem("admin_product2status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 3
+            //////////////////////////
+
+            $("#product3Active").change(function(){
+                //selection changed
+                if($('#product3Active').prop('checked')){
+                    console.log(">>>>> Product 3 is active.");
+                    $("#p3a").attr('class', 'information');
+                    $("#p3a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3active", "valid");
+                    $("#product3Featured").attr("disabled", false);
+                    $("#product3Name").attr("disabled", false);
+                    $("#product3Description").attr("disabled", false);
+                    $("#product3Category").attr("disabled", false);
+                    $("#product3UsePrice").attr("disabled", false);
+                    $("#product3UsePrice").prop("checked", true);
+                    $("#product3Price").attr("disabled", false);
+                    $("#product3Image1").attr("disabled", false);
+                    $("#p3up").attr('class', 'information');
+                    $("#p3up").text("* Uncheck if not needed.");
+                    $("#p3p").attr('class', 'notification');
+                    $("#p3p").text("* Enter a price.");
+                    verifyProduct3Settings();
+                    //Enable Page 4
+                    $("#product4Active").attr("disabled", false);
+                    $("#product4detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 3 is not active.");
+                    $("#p3a").attr('class', 'notification');
+                    $("#p3a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct3active", "invalid");
+                    $("#product3Featured").attr("disabled", true);
+                    $("#product3Name").attr("disabled", true);
+                    $("#product3Description").attr("disabled", true);
+                    $("#product3Category").attr("disabled", true);
+                    $("#product3Price").attr("disabled", true);
+                    $("#product3UsePrice").prop("checked", false);
+                    $("#product3Image1").attr("disabled", true);
+                    verifyProduct3Settings();
+                    //Disable Page 4
+                    disableProduct("4");
+                    disableProduct("5");
+                    disableProduct("6");
+                    disableProduct("7");
+                    disableProduct("8");
+                }
+            });
+
+            $("#product3Featured").change(function(){
+                //selection changed
+                if($('#product3Featured').prop('checked')){
+                    console.log(">>>>> Product 3 - Featured is checked.");
+                    $("#p3f").attr('class', 'information');
+                    $("#p3f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3featured", "valid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Featured isn't checked.");
+                    $("#p3f").attr('class', 'information');
+                    $("#p3f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct3featured", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            $("#product3Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 3 - No Name entered.");
+                    $("#p3n").attr('class', 'notification');
+                    $("#p3n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct3name", "invalid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Name entered successfully.");
+                    $("#p3n").attr('class', 'information');
+                    $("#p3n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3name", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            $("#product3Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 3 - No Description entered.");
+                    $("#p3d").attr('class', 'notification');
+                    $("#p3d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct3description", "invalid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Description entered successfully.");
+                    $("#p3d").attr('class', 'information');
+                    $("#p3d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3description", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            $("#product3Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 3 - No Category entered.");
+                    $("#p3c").attr('class', 'notification');
+                    $("#p3c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct3category", "invalid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Category entered successfully.");
+                    $("#p3c").attr('class', 'information');
+                    $("#p3c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3category", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            $("#product3UsePrice").change(function(){
+                //selection changed
+                if($('#product3UsePrice').prop('checked')){
+                    console.log(">>>>> Product 3 - Price is used.");
+                    $("#p3up").attr('class', 'information');
+                    $("#p3up").text("* Good choice!");
+                    $("#product3Price").attr("disabled", false);
+                    $("#p3p").attr('class', 'notification');
+                    $("#p3p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct3useprice", "valid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Price isn't used.");
+                    $("#p3up").attr('class', 'information');
+                    $("#p3up").text("* Price isn't a required field.");
+                    $("#p3p").attr('class', 'information');
+                    $("#p3p").text("* Price isn't a required field.");
+                    $("#product3Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct3useprice", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+
+            $("#product3Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 3 - No Price entered.");
+                    $("#p3p").attr('class', 'notification');
+                    $("#p3p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct3price", "valid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 - Price entered successfully.");
+                    $("#p3p").attr('class', 'information');
+                    $("#p3p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3price", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            $("#product3Image1").change(function(){
+                //selection changed
+                if ($('#product3Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 3 Image File selected.");
+                    $("#p3h").attr('class', 'notification');
+                    $("#p3h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct3image", "invalid");
+                    verifyProduct3Settings();
+                }else{
+                    console.log(">>>>> Product 3 Image File selected.");
+                    $("#p3h").attr('class', 'information');
+                    $("#p3h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct3image", "valid");
+                    verifyProduct3Settings();
+                }
+            });
+
+            function verifyProduct3Settings() {
+                if($('#product3Active').prop('checked')){
+                    admin_selectproduct3active = localStorage.getItem('admin_selectproduct3active');
+                    admin_selectproduct3name = localStorage.getItem('admin_selectproduct3name');
+                    admin_selectproduct3image = localStorage.getItem('admin_selectproduct3image');
+                    admin_selectproduct3description = localStorage.getItem('admin_selectproduct3description');
+                    admin_selectproduct3category = localStorage.getItem('admin_selectproduct3category');
+                    admin_selectproduct3price = localStorage.getItem('admin_selectproduct3price');
+                    admin_selectproduct3featured = localStorage.getItem('admin_selectproduct3featured');
+
+                    if(admin_selectproduct3active == "valid" && admin_selectproduct3name == "valid" && admin_selectproduct3image == "valid" && admin_selectproduct3description == "valid" && admin_selectproduct3category == "valid" && admin_selectproduct3price == "valid" && admin_selectproduct3featured == "valid"){
+                        console.log(">>>>> Product 3: All settings are valid!")
+                        $("#product3status").attr('class', 'information');
+                        $("#product3status").text("Used and Valid");
+                        localStorage.setItem("admin_product3status", "valid");
+                    }else{
+                        console.log(">>>>> Product 3: Some settings are invalid!")
+                        $("#product3status").attr('class', 'notification');
+                        $("#product3status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product3status", "invalid");
+                    }
+                }else{
+                    $("#product3status").attr('class', 'information');
+                    $("#product3status").text("Not Used");
+                    localStorage.setItem("admin_product3status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+
+
+            //////////////////////////
+            //Validation Product 4
+            //////////////////////////
+
+            $("#product4Active").change(function(){
+                //selection changed
+                if($('#product4Active').prop('checked')){
+                    console.log(">>>>> Product 4 is active.");
+                    $("#p4a").attr('class', 'information');
+                    $("#p4a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4active", "valid");
+                    $("#product4Featured").attr("disabled", false);
+                    $("#product4Name").attr("disabled", false);
+                    $("#product4Description").attr("disabled", false);
+                    $("#product4Category").attr("disabled", false);
+                    $("#product4UsePrice").attr("disabled", false);
+                    $("#product4UsePrice").prop("checked", true);
+                    $("#product4Price").attr("disabled", false);
+                    $("#product4Image1").attr("disabled", false);
+                    $("#p4up").attr('class', 'information');
+                    $("#p4up").text("* Uncheck if not needed.");
+                    $("#p4p").attr('class', 'notification');
+                    $("#p4p").text("* Enter a price.");
+                    verifyProduct4Settings();
+                    //Enable Page 5
+                    $("#product5Active").attr("disabled", false);
+                    $("#product5detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 4 is not active.");
+                    $("#p4a").attr('class', 'notification');
+                    $("#p4a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct4active", "invalid");
+                    $("#product4Featured").attr("disabled", true);
+                    $("#product4Name").attr("disabled", true);
+                    $("#product4Description").attr("disabled", true);
+                    $("#product4Category").attr("disabled", true);
+                    $("#product4Price").attr("disabled", true);
+                    $("#product4UsePrice").prop("checked", false);
+                    $("#product4Image1").attr("disabled", true);
+                    verifyProduct4Settings();
+                    //Disable Page 5
+                    disableProduct("5");
+                    disableProduct("6");
+                    disableProduct("7");
+                    disableProduct("8");
+                }
+            });
+
+            $("#product4Featured").change(function(){
+                //selection changed
+                if($('#product4Featured').prop('checked')){
+                    console.log(">>>>> Product 4 - Featured is checked.");
+                    $("#p4f").attr('class', 'information');
+                    $("#p4f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4featured", "valid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Featured isn't checked.");
+                    $("#p4f").attr('class', 'information');
+                    $("#p4f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct4featured", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            $("#product4Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 4 - No Name entered.");
+                    $("#p4n").attr('class', 'notification');
+                    $("#p4n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct4name", "invalid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Name entered successfully.");
+                    $("#p4n").attr('class', 'information');
+                    $("#p4n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4name", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            $("#product4Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 4 - No Description entered.");
+                    $("#p4d").attr('class', 'notification');
+                    $("#p4d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct4description", "invalid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Description entered successfully.");
+                    $("#p4d").attr('class', 'information');
+                    $("#p4d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4description", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            $("#product4Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 4 - No Category entered.");
+                    $("#p4c").attr('class', 'notification');
+                    $("#p4c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct4category", "invalid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Category entered successfully.");
+                    $("#p4c").attr('class', 'information');
+                    $("#p4c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4category", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            $("#product4UsePrice").change(function(){
+                //selection changed
+                if($('#product4UsePrice').prop('checked')){
+                    console.log(">>>>> Product 4 - Price is used.");
+                    $("#p4up").attr('class', 'information');
+                    $("#p4up").text("* Good choice!");
+                    $("#product4Price").attr("disabled", false);
+                    $("#p4p").attr('class', 'notification');
+                    $("#p4p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct4useprice", "valid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Price isn't used.");
+                    $("#p4up").attr('class', 'information');
+                    $("#p4up").text("* Price isn't a required field.");
+                    $("#p4p").attr('class', 'information');
+                    $("#p4p").text("* Price isn't a required field.");
+                    $("#product4Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct4useprice", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+
+            $("#product4Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 4 - No Price entered.");
+                    $("#p4p").attr('class', 'notification');
+                    $("#p4p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct4price", "valid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 - Price entered successfully.");
+                    $("#p4p").attr('class', 'information');
+                    $("#p4p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4price", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            $("#product4Image1").change(function(){
+                //selection changed
+                if ($('#product4Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 4 Image File selected.");
+                    $("#p4h").attr('class', 'notification');
+                    $("#p4h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct4image", "invalid");
+                    verifyProduct4Settings();
+                }else{
+                    console.log(">>>>> Product 4 Image File selected.");
+                    $("#p4h").attr('class', 'information');
+                    $("#p4h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct4image", "valid");
+                    verifyProduct4Settings();
+                }
+            });
+
+            function verifyProduct4Settings() {
+                if($('#product4Active').prop('checked')){
+                    admin_selectproduct4active = localStorage.getItem('admin_selectproduct4active');
+                    admin_selectproduct4name = localStorage.getItem('admin_selectproduct4name');
+                    admin_selectproduct4image = localStorage.getItem('admin_selectproduct4image');
+                    admin_selectproduct4description = localStorage.getItem('admin_selectproduct4description');
+                    admin_selectproduct4category = localStorage.getItem('admin_selectproduct4category');
+                    admin_selectproduct4price = localStorage.getItem('admin_selectproduct4price');
+                    admin_selectproduct4featured = localStorage.getItem('admin_selectproduct4featured');
+
+                    if(admin_selectproduct4active == "valid" && admin_selectproduct4name == "valid" && admin_selectproduct4image == "valid" && admin_selectproduct4description == "valid" && admin_selectproduct4category == "valid" && admin_selectproduct4price == "valid" && admin_selectproduct4featured == "valid"){
+                        console.log(">>>>> Product 4: All settings are valid!")
+                        $("#product4status").attr('class', 'information');
+                        $("#product4status").text("Used and Valid");
+                        localStorage.setItem("admin_product4status", "valid");
+                    }else{
+                        console.log(">>>>> Product 4: Some settings are invalid!")
+                        $("#product4status").attr('class', 'notification');
+                        $("#product4status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product4status", "invalid");
+                    }
+                }else{
+                    $("#product4status").attr('class', 'information');
+                    $("#product4status").text("Not Used");
+                    localStorage.setItem("admin_product4status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 5
+            //////////////////////////
+
+            $("#product5Active").change(function(){
+                //selection changed
+                if($('#product5Active').prop('checked')){
+                    console.log(">>>>> Product 5 is active.");
+                    $("#p5a").attr('class', 'information');
+                    $("#p5a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5active", "valid");
+                    $("#product5Featured").attr("disabled", false);
+                    $("#product5Name").attr("disabled", false);
+                    $("#product5Description").attr("disabled", false);
+                    $("#product5Category").attr("disabled", false);
+                    $("#product5UsePrice").attr("disabled", false);
+                    $("#product5UsePrice").prop("checked", true);
+                    $("#product5Price").attr("disabled", false);
+                    $("#product5Image1").attr("disabled", false);
+                    $("#p5up").attr('class', 'information');
+                    $("#p5up").text("* Uncheck if not needed.");
+                    $("#p5p").attr('class', 'notification');
+                    $("#p5p").text("* Enter a price.");
+                    verifyProduct5Settings();
+                    //Enable Page 6
+                    $("#product6Active").attr("disabled", false);
+                    $("#product6detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 5 is not active.");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct5active", "invalid");
+                    $("#product5Featured").attr("disabled", true);
+                    $("#product5Name").attr("disabled", true);
+                    $("#product5Description").attr("disabled", true);
+                    $("#product5Category").attr("disabled", true);
+                    $("#product5Price").attr("disabled", true);
+                    $("#product5UsePrice").prop("checked", false);
+                    $("#product5Image1").attr("disabled", true);
+                    verifyProduct5Settings();
+                    //Disable Page 6
+                    disableProduct("6");
+                    disableProduct("7");
+                    disableProduct("8");
+                }
+            });
+
+            $("#product5Featured").change(function(){
+                //selection changed
+                if($('#product5Featured').prop('checked')){
+                    console.log(">>>>> Product 5 - Featured is checked.");
+                    $("#p5f").attr('class', 'information');
+                    $("#p5f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5featured", "valid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Featured isn't checked.");
+                    $("#p5f").attr('class', 'information');
+                    $("#p5f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct5featured", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            $("#product5Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 5 - No Name entered.");
+                    $("#p5n").attr('class', 'notification');
+                    $("#p5n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct5name", "invalid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Name entered successfully.");
+                    $("#p5n").attr('class', 'information');
+                    $("#p5n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5name", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            $("#product5Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 5 - No Description entered.");
+                    $("#p5d").attr('class', 'notification');
+                    $("#p5d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct5description", "invalid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Description entered successfully.");
+                    $("#p5d").attr('class', 'information');
+                    $("#p5d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5description", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            $("#product5Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 5 - No Category entered.");
+                    $("#p5c").attr('class', 'notification');
+                    $("#p5c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct5category", "invalid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Category entered successfully.");
+                    $("#p5c").attr('class', 'information');
+                    $("#p5c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5category", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            $("#product5UsePrice").change(function(){
+                //selection changed
+                if($('#product5UsePrice').prop('checked')){
+                    console.log(">>>>> Product 5 - Price is used.");
+                    $("#p5up").attr('class', 'information');
+                    $("#p5up").text("* Good choice!");
+                    $("#product5Price").attr("disabled", false);
+                    $("#p5p").attr('class', 'notification');
+                    $("#p5p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct5useprice", "valid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Price isn't used.");
+                    $("#p5up").attr('class', 'information');
+                    $("#p5up").text("* Price isn't a required field.");
+                    $("#p5p").attr('class', 'information');
+                    $("#p5p").text("* Price isn't a required field.");
+                    $("#product5Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct5useprice", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+
+            $("#product5Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 5 - No Price entered.");
+                    $("#p5p").attr('class', 'notification');
+                    $("#p5p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct5price", "valid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 - Price entered successfully.");
+                    $("#p5p").attr('class', 'information');
+                    $("#p5p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5price", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            $("#product5Image1").change(function(){
+                //selection changed
+                if ($('#product5Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 5 Image File selected.");
+                    $("#p5h").attr('class', 'notification');
+                    $("#p5h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct5image", "invalid");
+                    verifyProduct5Settings();
+                }else{
+                    console.log(">>>>> Product 5 Image File selected.");
+                    $("#p5h").attr('class', 'information');
+                    $("#p5h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct5image", "valid");
+                    verifyProduct5Settings();
+                }
+            });
+
+            function verifyProduct5Settings() {
+                if($('#product5Active').prop('checked')){
+                    admin_selectproduct5active = localStorage.getItem('admin_selectproduct5active');
+                    admin_selectproduct5name = localStorage.getItem('admin_selectproduct5name');
+                    admin_selectproduct5image = localStorage.getItem('admin_selectproduct5image');
+                    admin_selectproduct5description = localStorage.getItem('admin_selectproduct5description');
+                    admin_selectproduct5category = localStorage.getItem('admin_selectproduct5category');
+                    admin_selectproduct5price = localStorage.getItem('admin_selectproduct5price');
+                    admin_selectproduct5featured = localStorage.getItem('admin_selectproduct5featured');
+
+                    if(admin_selectproduct5active == "valid" && admin_selectproduct5name == "valid" && admin_selectproduct5image == "valid" && admin_selectproduct5description == "valid" && admin_selectproduct5category == "valid" && admin_selectproduct5price == "valid" && admin_selectproduct5featured == "valid"){
+                        console.log(">>>>> Product 5: All settings are valid!")
+                        $("#product5status").attr('class', 'information');
+                        $("#product5status").text("Used and Valid");
+                        localStorage.setItem("admin_product5status", "valid");
+                    }else{
+                        console.log(">>>>> Product 5: Some settings are invalid!")
+                        $("#product5status").attr('class', 'notification');
+                        $("#product5status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product5status", "invalid");
+                    }
+                }else{
+                    $("#product5status").attr('class', 'information');
+                    $("#product5status").text("Not Used");
+                    localStorage.setItem("admin_product5status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 6
+            //////////////////////////
+
+            $("#product6Active").change(function(){
+                //selection changed
+                if($('#product6Active').prop('checked')){
+                    console.log(">>>>> Product 6 is active.");
+                    $("#p6a").attr('class', 'information');
+                    $("#p6a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6active", "valid");
+                    $("#product6Featured").attr("disabled", false);
+                    $("#product6Name").attr("disabled", false);
+                    $("#product6Description").attr("disabled", false);
+                    $("#product6Category").attr("disabled", false);
+                    $("#product6UsePrice").attr("disabled", false);
+                    $("#product6UsePrice").prop("checked", true);
+                    $("#product6Price").attr("disabled", false);
+                    $("#product6Image1").attr("disabled", false);
+                    $("#p6up").attr('class', 'information');
+                    $("#p6up").text("* Uncheck if not needed.");
+                    $("#p6p").attr('class', 'notification');
+                    $("#p6p").text("* Enter a price.");
+                    verifyProduct6Settings();
+                    //Enable Page 7
+                    $("#product7Active").attr("disabled", false);
+                    $("#product7detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 6 is not active.");
+                    $("#p6a").attr('class', 'notification');
+                    $("#p6a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct6active", "invalid");
+                    $("#product6Featured").attr("disabled", true);
+                    $("#product6Name").attr("disabled", true);
+                    $("#product6Description").attr("disabled", true);
+                    $("#product6Category").attr("disabled", true);
+                    $("#product6Price").attr("disabled", true);
+                    $("#product6UsePrice").prop("checked", false);
+                    $("#product6Image1").attr("disabled", true);
+                    verifyProduct6Settings();
+                    //Disable Page 7
+                    disableProduct("7");
+                    disableProduct("8");
+                }
+            });
+
+            $("#product6Featured").change(function(){
+                //selection changed
+                if($('#product6Featured').prop('checked')){
+                    console.log(">>>>> Product 6 - Featured is checked.");
+                    $("#p6f").attr('class', 'information');
+                    $("#p6f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6featured", "valid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Featured isn't checked.");
+                    $("#p6f").attr('class', 'information');
+                    $("#p6f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct6featured", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 6 - No Name entered.");
+                    $("#p6n").attr('class', 'notification');
+                    $("#p6n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct6name", "invalid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Name entered successfully.");
+                    $("#p6n").attr('class', 'information');
+                    $("#p6n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6name", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 6 - No Description entered.");
+                    $("#p6d").attr('class', 'notification');
+                    $("#p6d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct6description", "invalid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Description entered successfully.");
+                    $("#p6d").attr('class', 'information');
+                    $("#p6d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6description", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 6 - No Category entered.");
+                    $("#p6c").attr('class', 'notification');
+                    $("#p6c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct6category", "invalid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Category entered successfully.");
+                    $("#p6c").attr('class', 'information');
+                    $("#p6c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6category", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6UsePrice").change(function(){
+                //selection changed
+                if($('#product6UsePrice').prop('checked')){
+                    console.log(">>>>> Product 6 - Price is used.");
+                    $("#p6up").attr('class', 'information');
+                    $("#p6up").text("* Good choice!");
+                    $("#product6Price").attr("disabled", false);
+                    $("#p6p").attr('class', 'notification');
+                    $("#p6p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct6useprice", "valid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Price isn't used.");
+                    $("#p6up").attr('class', 'information');
+                    $("#p6up").text("* Price isn't a required field.");
+                    $("#p6p").attr('class', 'information');
+                    $("#p6p").text("* Price isn't a required field.");
+                    $("#product6Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct6useprice", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 6 - No Price entered.");
+                    $("#p6p").attr('class', 'notification');
+                    $("#p6p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct6price", "valid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 - Price entered successfully.");
+                    $("#p6p").attr('class', 'information');
+                    $("#p6p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6price", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            $("#product6Image1").change(function(){
+                //selection changed
+                if ($('#product6Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 6 Image File selected.");
+                    $("#p6h").attr('class', 'notification');
+                    $("#p6h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct6image", "invalid");
+                    verifyProduct6Settings();
+                }else{
+                    console.log(">>>>> Product 6 Image File selected.");
+                    $("#p6h").attr('class', 'information');
+                    $("#p6h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct6image", "valid");
+                    verifyProduct6Settings();
+                }
+            });
+
+            function verifyProduct6Settings() {
+                if($('#product6Active').prop('checked')){
+                    admin_selectproduct6active = localStorage.getItem('admin_selectproduct6active');
+                    admin_selectproduct6name = localStorage.getItem('admin_selectproduct6name');
+                    admin_selectproduct6image = localStorage.getItem('admin_selectproduct6image');
+                    admin_selectproduct6description = localStorage.getItem('admin_selectproduct6description');
+                    admin_selectproduct6category = localStorage.getItem('admin_selectproduct6category');
+                    admin_selectproduct6price = localStorage.getItem('admin_selectproduct6price');
+                    admin_selectproduct6featured = localStorage.getItem('admin_selectproduct6featured');
+
+                    if(admin_selectproduct6active == "valid" && admin_selectproduct6name == "valid" && admin_selectproduct6image == "valid" && admin_selectproduct6description == "valid" && admin_selectproduct6category == "valid" && admin_selectproduct6price == "valid" && admin_selectproduct6featured =="valid"){
+                        console.log(">>>>> Product 6: All settings are valid!")
+                        $("#product6status").attr('class', 'information');
+                        $("#product6status").text("Used and Valid");
+                        localStorage.setItem("admin_product6status", "valid");
+                    }else{
+                        console.log(">>>>> Product 6: Some settings are invalid!")
+                        $("#product6status").attr('class', 'notification');
+                        $("#product6status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product6status", "invalid");
+                    }
+                }else{
+                    $("#product6status").attr('class', 'information');
+                    $("#product6status").text("Not Used");
+                    localStorage.setItem("admin_product6status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 7
+            //////////////////////////
+
+            $("#product7Active").change(function(){
+                //selection changed
+                if($('#product7Active').prop('checked')){
+                    console.log(">>>>> Product 7 is active.");
+                    $("#p7a").attr('class', 'information');
+                    $("#p7a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7active", "valid");
+                    $("#product7Featured").attr("disabled", false);
+                    $("#product7Name").attr("disabled", false);
+                    $("#product7Description").attr("disabled", false);
+                    $("#product7Category").attr("disabled", false);
+                    $("#product7UsePrice").attr("disabled", false);
+                    $("#product7UsePrice").prop("checked", true);
+                    $("#product7Price").attr("disabled", false);
+                    $("#product7Image1").attr("disabled", false);
+                    $("#p7up").attr('class', 'information');
+                    $("#p7up").text("* Uncheck if not needed.");
+                    $("#p7p").attr('class', 'notification');
+                    $("#p7p").text("* Enter a price.");
+                    verifyProduct7Settings();
+                    //Enable Page 8
+                    $("#product8Active").attr("disabled", false);
+                    $("#product8detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Product 7 is not active.");
+                    $("#p7a").attr('class', 'notification');
+                    $("#p7a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct7active", "invalid");
+                    $("#product7Featured").attr("disabled", true);
+                    $("#product7Name").attr("disabled", true);
+                    $("#product7Description").attr("disabled", true);
+                    $("#product7Category").attr("disabled", true);
+                    $("#product7Price").attr("disabled", true);
+                    $("#product7UsePrice").prop("checked", false);
+                    $("#product7Image1").attr("disabled", true);
+                    verifyProduct7Settings();
+                    //Disable Page 8
+                    disableProduct("8");
+                }
+            });
+
+            $("#product7Featured").change(function(){
+                //selection changed
+                if($('#product7Featured').prop('checked')){
+                    console.log(">>>>> Product 7 - Featured is checked.");
+                    $("#p7f").attr('class', 'information');
+                    $("#p7f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7featured", "valid");
+                    verifyProduct1Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Featured isn't checked.");
+                    $("#p7f").attr('class', 'information');
+                    $("#p7f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct7featured", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 7 - No Name entered.");
+                    $("#p7n").attr('class', 'notification');
+                    $("#p7n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct7name", "invalid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Name entered successfully.");
+                    $("#p7n").attr('class', 'information');
+                    $("#p7n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7name", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 7 - No Description entered.");
+                    $("#p7d").attr('class', 'notification');
+                    $("#p7d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct7description", "invalid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Description entered successfully.");
+                    $("#p7d").attr('class', 'information');
+                    $("#p7d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7description", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 7 - No Category entered.");
+                    $("#p7c").attr('class', 'notification');
+                    $("#p7c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct7category", "invalid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Category entered successfully.");
+                    $("#p7c").attr('class', 'information');
+                    $("#p7c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7category", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7UsePrice").change(function(){
+                //selection changed
+                if($('#product7UsePrice').prop('checked')){
+                    console.log(">>>>> Product 7 - Price is used.");
+                    $("#p7up").attr('class', 'information');
+                    $("#p7up").text("* Good choice!");
+                    $("#product7Price").attr("disabled", false);
+                    $("#p7p").attr('class', 'notification');
+                    $("#p7p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct7useprice", "valid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Price isn't used.");
+                    $("#p7up").attr('class', 'information');
+                    $("#p7up").text("* Price isn't a required field.");
+                    $("#p7p").attr('class', 'information');
+                    $("#p7p").text("* Price isn't a required field.");
+                    $("#product7Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct7useprice", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 7 - No Price entered.");
+                    $("#p7p").attr('class', 'notification');
+                    $("#p7p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct7price", "valid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 - Price entered successfully.");
+                    $("#p7p").attr('class', 'information');
+                    $("#p7p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7price", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            $("#product7Image1").change(function(){
+                //selection changed
+                if ($('#product7Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 7 Image File selected.");
+                    $("#p7h").attr('class', 'notification');
+                    $("#p7h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct7image", "invalid");
+                    verifyProduct7Settings();
+                }else{
+                    console.log(">>>>> Product 7 Image File selected.");
+                    $("#p7h").attr('class', 'information');
+                    $("#p7h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct7image", "valid");
+                    verifyProduct7Settings();
+                }
+            });
+
+            function verifyProduct7Settings() {
+                if($('#product7Active').prop('checked')){
+                    admin_selectproduct7active = localStorage.getItem('admin_selectproduct7active');
+                    admin_selectproduct7name = localStorage.getItem('admin_selectproduct7name');
+                    admin_selectproduct7image = localStorage.getItem('admin_selectproduct7image');
+                    admin_selectproduct7description = localStorage.getItem('admin_selectproduct7description');
+                    admin_selectproduct7category = localStorage.getItem('admin_selectproduct7category');
+                    admin_selectproduct7price = localStorage.getItem('admin_selectproduct7price');
+                    admin_selectproduct7featured = localStorage.getItem('admin_selectproduct7featured');
+
+                    if(admin_selectproduct7active == "valid" && admin_selectproduct7name == "valid" && admin_selectproduct7image == "valid" && admin_selectproduct7description == "valid" && admin_selectproduct7category == "valid" && admin_selectproduct7price == "valid" && admin_selectproduct7featured == "valid"){
+                        console.log(">>>>> Product 7: All settings are valid!")
+                        $("#product7status").attr('class', 'information');
+                        $("#product7status").text("Used and Valid");
+                        localStorage.setItem("admin_product7status", "valid");
+                    }else{
+                        console.log(">>>>> Product 7: Some settings are invalid!")
+                        $("#product7status").attr('class', 'notification');
+                        $("#product7status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product7status", "invalid");
+                    }
+                }else{
+                    $("#product7status").attr('class', 'information');
+                    $("#product7status").text("Not Used");
+                    localStorage.setItem("admin_product7status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Validation Product 8
+            //////////////////////////
+
+            $("#product8Active").change(function(){
+                //selection changed
+                if($('#product8Active').prop('checked')){
+                    console.log(">>>>> Product 8 is active.");
+                    $("#p8a").attr('class', 'information');
+                    $("#p8a").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8active", "valid");
+                    $("#product8Featured").attr("disabled", false);
+                    $("#product8Name").attr("disabled", false);
+                    $("#product8Description").attr("disabled", false);
+                    $("#product8Category").attr("disabled", false);
+                    $("#product8UsePrice").attr("disabled", false);
+                    $("#product8UsePrice").prop("checked", true);
+                    $("#product8Price").attr("disabled", false);
+                    $("#product8Image1").attr("disabled", false);
+                    $("#p8up").attr('class', 'information');
+                    $("#p8up").text("* Uncheck if not needed.");
+                    $("#p8p").attr('class', 'notification');
+                    $("#p8p").text("* Enter a price.");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 is not active.");
+                    $("#p8a").attr('class', 'notification');
+                    $("#p8a").text("* Check to use");
+                    localStorage.setItem("admin_selectproduct8active", "invalid");
+                    $("#product8Featured").attr("disabled", true);
+                    $("#product8Name").attr("disabled", true);
+                    $("#product8Description").attr("disabled", true);
+                    $("#product8Category").attr("disabled", true);
+                    $("#product8Price").attr("disabled", true);
+                    $("#product8UsePrice").prop("checked", false);
+                    $("#product8Image1").attr("disabled", true);
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Featured").change(function(){
+                //selection changed
+                if($('#product8Featured').prop('checked')){
+                    console.log(">>>>> Product 8 - Featured is checked.");
+                    $("#p8f").attr('class', 'information');
+                    $("#p8f").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8featured", "valid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Featured isn't checked.");
+                    $("#p8f").attr('class', 'information');
+                    $("#p8f").text("* Check to activate!");
+                    localStorage.setItem("admin_selectproduct8featured", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 8 - No Name entered.");
+                    $("#p8n").attr('class', 'notification');
+                    $("#p8n").text("* Enter a Product Name");
+                    localStorage.setItem("admin_selectproduct8name", "invalid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Name entered successfully.");
+                    $("#p8n").attr('class', 'information');
+                    $("#p8n").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8name", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Description").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 8 - No Description entered.");
+                    $("#p8d").attr('class', 'notification');
+                    $("#p8d").text("* Enter a Product Description");
+                    localStorage.setItem("admin_selectproduct8description", "invalid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Description entered successfully.");
+                    $("#p8d").attr('class', 'information');
+                    $("#p8d").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8description", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Category").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Product 8 - No Category entered.");
+                    $("#p8c").attr('class', 'notification');
+                    $("#p8c").text("* Enter a Product Category");
+                    localStorage.setItem("admin_selectproduct8category", "invalid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Category entered successfully.");
+                    $("#p8c").attr('class', 'information');
+                    $("#p8c").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8category", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8UsePrice").change(function(){
+                //selection changed
+                if($('#product8UsePrice').prop('checked')){
+                    console.log(">>>>> Product 8 - Price is used.");
+                    $("#p8up").attr('class', 'information');
+                    $("#p8up").text("* Good choice!");
+                    $("#product8Price").attr("disabled", false);
+                    $("#p8p").attr('class', 'notification');
+                    $("#p8p").text("* Enter a price.");
+                    localStorage.setItem("admin_selectproduct8useprice", "valid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Price isn't used.");
+                    $("#p8up").attr('class', 'information');
+                    $("#p8up").text("* Price isn't a required field.");
+                    $("#p8p").attr('class', 'information');
+                    $("#p8p").text("* Price isn't a required field.");
+                    $("#product8Price").attr("disabled", true);
+                    localStorage.setItem("admin_selectproduct8useprice", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Price").change(function(){
+                //selection changed
+                if(this.value === "0"){
+                    console.log(">>>>> Product 8 - No Price entered.");
+                    $("#p8p").attr('class', 'notification');
+                    $("#p8p").text("* Enter a Product Price");
+                    localStorage.setItem("admin_selectproduct8price", "valid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 - Price entered successfully.");
+                    $("#p8p").attr('class', 'information');
+                    $("#p8p").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8price", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            $("#product8Image1").change(function(){
+                //selection changed
+                if ($('#product8Image1').get(0).files.length === 0) {
+                    console.log(">>>>> No Product 8 Image File selected.");
+                    $("#p8h").attr('class', 'notification');
+                    $("#p8h").text("* Select your image");
+                    localStorage.setItem("admin_selectproduct8image", "invalid");
+                    verifyProduct8Settings();
+                }else{
+                    console.log(">>>>> Product 8 Image File selected.");
+                    $("#p8h").attr('class', 'information');
+                    $("#p8h").text("Good choice!");
+                    localStorage.setItem("admin_selectproduct8image", "valid");
+                    verifyProduct8Settings();
+                }
+            });
+
+            function verifyProduct8Settings() {
+                if($('#product8Active').prop('checked')){
+                    admin_selectproduct8active = localStorage.getItem('admin_selectproduct8active');
+                    admin_selectproduct8name = localStorage.getItem('admin_selectproduct8name');
+                    admin_selectproduct8image = localStorage.getItem('admin_selectproduct8image');
+                    admin_selectproduct8description = localStorage.getItem('admin_selectproduct8description');
+                    admin_selectproduct8category = localStorage.getItem('admin_selectproduct8category');
+                    admin_selectproduct8price = localStorage.getItem('admin_selectproduct8price');
+                    admin_selectproduct8featured = localStorage.getItem('admin_selectproduct8featured');
+
+                    if(admin_selectproduct8active == "valid" && admin_selectproduct8name == "valid" && admin_selectproduct8image == "valid" && admin_selectproduct8description == "valid" && admin_selectproduct8category == "valid" && admin_selectproduct8price == "valid" && admin_selectproduct8featured == "valid"){
+                        console.log(">>>>> Product 8: All settings are valid!")
+                        $("#product8status").attr('class', 'information');
+                        $("#product8status").text("Used and Valid");
+                        localStorage.setItem("admin_product8status", "valid");
+                    }else{
+                        console.log(">>>>> Product 8: Some settings are invalid!")
+                        $("#product8status").attr('class', 'notification');
+                        $("#product8status").text("Used and Not Valid");
+                        localStorage.setItem("admin_product8status", "invalid");
+                    }
+                }else{
+                    $("#product8status").attr('class', 'information');
+                    $("#product8status").text("Not Used");
+                    localStorage.setItem("admin_product8status", "valid");
+                }
+                verifyAllProducts();
+            }
+
+            //////////////////////////
+            //Final Validation of all Products
+            //////////////////////////
+
+            function verifyAllProducts() {
+                admin_product1status = localStorage.getItem('admin_product1status');
+                admin_product2status = localStorage.getItem('admin_product2status');
+                admin_product3status = localStorage.getItem('admin_product3status');
+                admin_product4status = localStorage.getItem('admin_product4status');
+                admin_product5status = localStorage.getItem('admin_product5status');
+                admin_product6status = localStorage.getItem('admin_product6status');
+                admin_product7status = localStorage.getItem('admin_product7status');
+                admin_product8status = localStorage.getItem('admin_product8status');
+
+                if((admin_product1status == "valid") && (admin_product2status == "valid" || admin_product2status == "unused")  && (admin_product3status == "valid" || admin_product3status == "unused") && (admin_product4status == "valid" || admin_product4status == "unused") && (admin_product5status == "valid" || admin_product5status == "unused") && (admin_product6status == "valid" || admin_product6status == "unused") && (admin_product7status == "valid" || admin_product7status == "unused") && (admin_product8status == "valid" || admin_product8status == "unused")){
+                    $("#nextPageCreateProductsButton").attr("disabled", false);
+                }else{
+                    $("#nextPageCreateProductsButton").attr("disabled", true);
+                }
+            }
+
+            //////////////////////////
+            //Get Product Categories
+            //////////////////////////
+
+            var pullReadProductCategoriesResults = [];
+            var product1CategoryDropdown = document.getElementById("product1Category");
+            var product2CategoryDropdown = document.getElementById("product2Category");
+            var product3CategoryDropdown = document.getElementById("product3Category");
+            var product4CategoryDropdown = document.getElementById("product4Category");
+            var product5CategoryDropdown = document.getElementById("product5Category");
+            var product6CategoryDropdown = document.getElementById("product6Category");
+            var product7CategoryDropdown = document.getElementById("product7Category");
+            var product8CategoryDropdown = document.getElementById("product8Category");
+
+            function getProductCategories() {
+                const Categories = Parse.Object.extend('Categories');
+                const query = new Parse.Query(Categories);
+                
+                query.equalTo("brandId", brandId);
+
+                query.find().then(
+                    (results) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Product Categories retrieved successfully: ", results);
+                            displayProductCategories(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('>>>>> Error while fetching Product Categories', error);
+                        }
+                    }
+                );
+            };
+
+            function displayProductCategories(results) {
+                for (i = 0; i < results.length; i++) {
+                    try{
+                        var productCategoryName = results[i].attributes.category
+                        console.log(">>>>> Display Category Name: " + productCategoryName)
+
+                        var el1 = document.createElement("option");
+                        el1.textContent = productCategoryName;
+                        el1.value = productCategoryName;
+                        var el2 = document.createElement("option");
+                        el2.textContent = productCategoryName;
+                        el2.value = productCategoryName;
+                        var el3 = document.createElement("option");
+                        el3.textContent = productCategoryName;
+                        el3.value = productCategoryName;
+                        var el4 = document.createElement("option");
+                        el4.textContent = productCategoryName;
+                        el4.value = productCategoryName;
+                        var el5 = document.createElement("option");
+                        el5.textContent = productCategoryName;
+                        el5.value = productCategoryName;
+                        var el6 = document.createElement("option");
+                        el6.textContent = productCategoryName;
+                        el6.value = productCategoryName;
+                        var el7 = document.createElement("option");
+                        el7.textContent = productCategoryName;
+                        el7.value = productCategoryName;
+                        var el8 = document.createElement("option");
+                        el8.textContent = productCategoryName;
+                        el8.value = productCategoryName;
+
+                        product1CategoryDropdown.appendChild(el1);
+                        product2CategoryDropdown.appendChild(el2);
+                        product3CategoryDropdown.appendChild(el3);
+                        product4CategoryDropdown.appendChild(el4);
+                        product5CategoryDropdown.appendChild(el5);
+                        product6CategoryDropdown.appendChild(el6);
+                        product7CategoryDropdown.appendChild(el7);
+                        product8CategoryDropdown.appendChild(el8);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+            }
+
+            //////////////////////////
+            //Reset Validation of all Products on pageload
+            //////////////////////////
+
+            function resetProductValidSettings() {
+                getProductCategories();
+
+                localStorage.setItem("admin_product1status", "unused");
+                localStorage.setItem("admin_product2status", "unused");
+                localStorage.setItem("admin_product3status", "unused");
+                localStorage.setItem("admin_product4status", "unused");
+                localStorage.setItem("admin_product5status", "unused");
+                localStorage.setItem("admin_product6status", "unused");
+                localStorage.setItem("admin_product7status", "unused");
+                localStorage.setItem("admin_product8status", "unused");
+
+                localStorage.setItem("admin_selectproduct1active", "invalid");
+                localStorage.setItem("admin_selectproduct1title", "invalid");
+                localStorage.setItem("admin_selectproduct1image", "invalid");
+                localStorage.setItem("admin_selectproduct1description", "invalid");
+                localStorage.setItem("admin_selectproduct1category", "invalid");
+                localStorage.setItem("admin_selectproduct1price", "valid");
+                localStorage.setItem("admin_selectproduct1featured", "valid");
+
+                localStorage.setItem("admin_selectproduct2active", "invalid");
+                localStorage.setItem("admin_selectproduct2title", "invalid");
+                localStorage.setItem("admin_selectproduct2image", "invalid");
+                localStorage.setItem("admin_selectproduct2description", "invalid");
+                localStorage.setItem("admin_selectproduct2category", "invalid");
+                localStorage.setItem("admin_selectproduct2price", "valid");
+                localStorage.setItem("admin_selectproduct2featured", "valid");
+
+                localStorage.setItem("admin_selectproduct3active", "invalid");
+                localStorage.setItem("admin_selectproduct3title", "invalid");
+                localStorage.setItem("admin_selectproduct3image", "invalid");
+                localStorage.setItem("admin_selectproduct3description", "invalid");
+                localStorage.setItem("admin_selectproduct3category", "invalid");
+                localStorage.setItem("admin_selectproduct3price", "valid");
+                localStorage.setItem("admin_selectproduct3featured", "valid");
+
+                localStorage.setItem("admin_selectproduct4active", "invalid");
+                localStorage.setItem("admin_selectproduct4title", "invalid");
+                localStorage.setItem("admin_selectproduct4image", "invalid");
+                localStorage.setItem("admin_selectproduct4description", "invalid");
+                localStorage.setItem("admin_selectproduct4category", "invalid");
+                localStorage.setItem("admin_selectproduct4price", "valid");
+                localStorage.setItem("admin_selectproduct4featured", "valid");
+
+                localStorage.setItem("admin_selectproduct5active", "invalid");
+                localStorage.setItem("admin_selectproduct5title", "invalid");
+                localStorage.setItem("admin_selectproduct5image", "invalid");
+                localStorage.setItem("admin_selectproduct5description", "invalid");
+                localStorage.setItem("admin_selectproduct5category", "invalid");
+                localStorage.setItem("admin_selectproduct5price", "valid");
+                localStorage.setItem("admin_selectproduct5featured", "valid");
+
+                localStorage.setItem("admin_selectproduct6active", "invalid");
+                localStorage.setItem("admin_selectproduct6title", "invalid");
+                localStorage.setItem("admin_selectproduct6image", "invalid");
+                localStorage.setItem("admin_selectproduct6description", "invalid");
+                localStorage.setItem("admin_selectproduct6category", "invalid");
+                localStorage.setItem("admin_selectproduct6price", "valid");
+                localStorage.setItem("admin_selectproduct6featured", "valid");
+
+                localStorage.setItem("admin_selectproduct7active", "invalid");
+                localStorage.setItem("admin_selectproduct7title", "invalid");
+                localStorage.setItem("admin_selectproduct7image", "invalid");
+                localStorage.setItem("admin_selectproduct7description", "invalid");
+                localStorage.setItem("admin_selectproduct7category", "invalid");
+                localStorage.setItem("admin_selectproduct7price", "valid");
+                localStorage.setItem("admin_selectproduct7featured", "valid");
+
+                localStorage.setItem("admin_selectproduct8active", "invalid");
+                localStorage.setItem("admin_selectproduct8title", "invalid");
+                localStorage.setItem("admin_selectproduct8image", "invalid");
+                localStorage.setItem("admin_selectproduct8description", "invalid");
+                localStorage.setItem("admin_selectproduct8category", "invalid");
+                localStorage.setItem("admin_selectproduct8price", "valid");
+                localStorage.setItem("admin_selectproduct8featured", "valid");
+            }
+
+            //////////////////////////
+            //Set global variables for all products
+            //////////////////////////
+
+            const Products = Parse.Object.extend('Products');
+
+            var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+            var file = new Parse.File("myfile.txt", { base64: base64 });
+
+            var brandId = localStorage.getItem('admin_brandId');
+            var brandCurrency = localStorage.getItem('admin_brandCurrency');
+
+
+            //////////////////////////
+            //Start Saving Products
+            //////////////////////////
+
+            function saveProducts() {
+                $("#loader").attr("style", "display:block;");
+                $("#nextPageCreateProductsButton").attr("disabled", true);
+
+                var numberProducts = 8;
+
+                for (i = 1; i < (numberProducts+1); i++) {
+                    var productActive = document.getElementById("product"+i+"Active").checked;
+                    var admin_productstatus = localStorage.getItem("admin_product"+i+"status");
+                    if(productActive && admin_productstatus == "valid"){
+                        saveProduct(i);
+                        console.log(">>>>> Product " + i + " was saved. Back in the loop.")
+                    }
+                    if(i == numberProducts){
+                        setTimeout(savingProductsSuccess, 5000);
+                    }
+                }
+                /**
+                var product1Active = document.getElementById("product1Active").checked;
+                var product2Active = document.getElementById("product2Active").checked;
+                var product3Active = document.getElementById("product3Active").checked;
+                var product4Active = document.getElementById("product4Active").checked;
+                var product5Active = document.getElementById("product5Active").checked;
+                var product6Active = document.getElementById("product6Active").checked;
+                var product7Active = document.getElementById("product7Active").checked;
+                var product8Active = document.getElementById("product8Active").checked;
+
+                
+                var admin_product1status = localStorage.getItem('admin_product1status');
+                var admin_product2status = localStorage.getItem('admin_product2status');
+                var admin_product3status = localStorage.getItem('admin_product3status');
+                var admin_product4status = localStorage.getItem('admin_product4status');
+                var admin_product5status = localStorage.getItem('admin_product5status');
+                var admin_product6status = localStorage.getItem('admin_product6status');
+                var admin_product7status = localStorage.getItem('admin_product7status');
+                var admin_product8status = localStorage.getItem('admin_product8status');
+
+                //Start with Product 1
+                if(product1Active && admin_product1status == "valid"){
+                    saveProduct1();
+                }
+                **/
+            }
+
+            function savingProductsSuccess() {
+                $("#loader").attr("style", "display:none;");
+                document.location.href = "./admin.html";
+            }
+
+            function saveProduct(number) {
+
+                /////////////////////////
+                // Save Product Function
+                /////////////////////////
+                console.log(">>>>> Saving Product " + number)
+                
+                productName = document.getElementById("product"+number+"Name").value;
+                productDescription = document.getElementById("product"+number+"Description").value;
+                productActive = document.getElementById("product"+number+"Active").checked;
+                productUrl = document.getElementById("product"+number+"Url").value;
+                productCategory = document.getElementById("product"+number+"Category").value;
+                productFeatured = document.getElementById("product"+number+"Featured").checked;
+                productUsePrice = document.getElementById("product"+number+"UsePrice").checked;
+
+                if(productUsePrice === true){
+                    productPrice = parseFloat(document.getElementById("product"+number+"Price").value);
+                }else{
+                    productPrice = 0;
+                }
+
+                var fileUploadControlProduct = $("#product"+number+"Image1")[0];
+                if (fileUploadControlProduct.files.length > 0) {
+                    var productImageFile = fileUploadControlProduct.files[0];
+                    var productImageName = "product"+number+".jpg";
+
+                    var parseProductImage = new Parse.File(productImageName, productImageFile);
+                }
+
+                const product = new Products();
+                
+                product.set('useProduct', productActive);
+                product.set('name', productName);
+                product.set('description', productDescription);
+                product.set('category', productCategory);
+                product.set('isFeatured', productFeatured);
+                product.set('image1', parseProductImage);
+                product.set('finalPrice', productPrice);
+                product.set('currency', brandCurrency);
+                product.set('brandId', brandId);
+                product.set('productUrl', productUrl);
+                product.set('usePrice', productUsePrice);
+                product.set('productNumber', number.toString());
+
+
+                product.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product "+number+" is saved.", result);
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== "undefined"){
+                        console.error("Error while creating Product "+number+": ", error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 1
+            /////////////////////////
+
+            function saveProduct1() {
+
+                console.log(">>>>> Saving Product 1")
+
+                product1Name = document.getElementById("product1Name").value;
+                product1Description = document.getElementById("product1Description").value;
+                product1Active = document.getElementById("product1Active").checked;
+                product1Url = document.getElementById("product1Url").value;
+                product1Category = document.getElementById("product1Category").value;
+                product1Featured = document.getElementById("product1Featured").checked;
+                product1UsePrice = document.getElementById("product1Featured").checked;
+
+                if(product1UsePrice === true){
+                    product1Price = parseFloat(document.getElementById("product1Price").value);
+                }else{
+                    product1Price = 0;
+                }
+
+                var fileUploadControlProduct1 = $("#product1Image1")[0];
+                if (fileUploadControlProduct1.files.length > 0) {
+                    var product1ImageFile = fileUploadControlProduct1.files[0];
+                    var product1ImageName = "product1.jpg";
+
+                    var parseProduct1Image = new Parse.File(product1ImageName, product1ImageFile);
+                }
+
+                const product1 = new Products();
+                
+                product1.set('useProduct', product1Active);
+                product1.set('name', product1Name);
+                product1.set('description', product1Description);
+                product1.set('category', product1Category);
+                product1.set('isFeatured', product1Featured);
+                product1.set('image1', parseProduct1Image);
+                product1.set('finalPrice', product1Price);
+                product1.set('currency', brandCurrency);
+                product1.set('brandId', brandId);
+                product1.set('productUrl', product1Url);
+                product1.set('usePrice', product1UsePrice);
+                product1.set('productNumber', '1');
+
+
+                product1.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 1 is saved.", result);
+
+                        if(product2Active && admin_product2status == "valid"){
+                            saveProduct2();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 1: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 2
+            /////////////////////////
+
+            function saveProduct2() {
+
+                console.log(">>>>> Saving Product 2")
+
+                product2Name = document.getElementById("product2Name").value;
+                product2Description = document.getElementById("product2Description").value;
+                product2Active = document.getElementById("product2Active").checked;
+                product2Url = document.getElementById("product2Url").value;
+                product2Category = document.getElementById("product2Category").value;
+                product2Featured = document.getElementById("product2Featured").checked;
+                product2UsePrice = document.getElementById("product2UsePrice").checked;
+
+                if(product2UsePrice === true){
+                    product2Price = parseFloat(document.getElementById("product2Price").value);
+                }else{
+                    product2Price = 0;
+                }
+
+                var fileUploadControlProduct2 = $("#product2Image1")[0];
+                if (fileUploadControlProduct2.files.length > 0) {
+                    var product2ImageFile = fileUploadControlProduct2.files[0];
+                    var product2ImageName = "product2.jpg";
+
+                    var parseProduct2Image = new Parse.File(product2ImageName, product2ImageFile);
+                }
+
+                const product2 = new Products();
+                
+                product2.set('useProduct', product2Active);
+                product2.set('name', product2Name);
+                product2.set('description', product2Description);
+                product2.set('category', product2Category);
+                product2.set('isFeatured', product2Featured);
+                product2.set('image1', parseProduct2Image);
+                product2.set('finalPrice', product2Price);
+                product2.set('currency', brandCurrency);
+                product2.set('brandId', brandId);
+                product2.set('productUrl', product2Url);
+                product2.set('productNumber', '2');
+
+                product2.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 2 is saved.", result);
+
+                        if(product3Active && admin_product3status == "valid"){
+                            saveProduct3();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 2: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 3
+            /////////////////////////
+
+            function saveProduct3() {
+
+                console.log(">>>>> Saving Product 3")
+
+                product3Name = document.getElementById("product3Name").value;
+                product3Description = document.getElementById("product3Description").value;
+                product3Active = document.getElementById("product3Active").checked;
+                product3Url = document.getElementById("product3Url").value;
+                product3Category = document.getElementById("product3Category").value;
+                product3Featured = document.getElementById("product3Featured").checked;
+                product3UsePrice = document.getElementById("product3UsePrice").checked;
+
+                if(product3UsePrice === true){
+                    product3Price = parseFloat(document.getElementById("product3Price").value);
+                }else{
+                    product3Price = 0;
+                }
+
+                var fileUploadControlProduct3 = $("#product3Image1")[0];
+                if (fileUploadControlProduct3.files.length > 0) {
+                    var product3ImageFile = fileUploadControlProduct3.files[0];
+                    var product3ImageName = "product3.jpg";
+
+                    var parseProduct3Image = new Parse.File(product3ImageName, product3ImageFile);
+                }
+
+                const product3 = new Products();
+                
+                product3.set('useProduct', product3Active);
+                product3.set('name', product3Name);
+                product3.set('description', product3Description);
+                product3.set('category', product3Category);
+                product3.set('isFeatured', product3Featured);
+                product3.set('image1', parseProduct3Image);
+                product3.set('finalPrice', product3Price);
+                product3.set('currency', brandCurrency);
+                product3.set('brandId', brandId);
+                product3.set('productUrl', product3Url);
+                product3.set('productNumber', '3');
+
+                product3.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 3 is saved.", result);
+
+                        if(product4Active && admin_product4status == "valid"){
+                            saveProduct4();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 3: ', error);
+                    }
+                  }
+                );
+            }
+
+
+            /////////////////////////
+            // Product 4
+            /////////////////////////
+
+            function saveProduct4() {
+
+                console.log(">>>>> Saving Product 4")
+
+                product4Name = document.getElementById("product4Name").value;
+                product4Description = document.getElementById("product4Description").value;
+                product4Active = document.getElementById("product4Active").checked;
+                product4Url = document.getElementById("product4Url").value;
+                product4Category = document.getElementById("product4Category").value;
+                product4Featured = document.getElementById("product4Featured").checked;
+                product4UsePrice = document.getElementById("product4UsePrice").checked;
+
+                if(product4UsePrice === true){
+                    product4Price = parseFloat(document.getElementById("product4Price").value);
+                }else{
+                    product4Price = 0;
+                }
+
+                var fileUploadControlProduct4 = $("#product4Image1")[0];
+                if (fileUploadControlProduct4.files.length > 0) {
+                    var product4ImageFile = fileUploadControlProduct4.files[0];
+                    var product4ImageName = "product4.jpg";
+
+                    var parseProduct4Image = new Parse.File(product4ImageName, product4ImageFile);
+                }
+
+                const product4 = new Products();
+                
+                product4.set('useProduct', product4Active);
+                product4.set('name', product4Name);
+                product4.set('description', product4Description);
+                product4.set('category', product4Category);
+                product4.set('isFeatured', product4Featured);
+                product4.set('image1', parseProduct4Image);
+                product4.set('finalPrice', product4Price);
+                product4.set('currency', brandCurrency);
+                product4.set('brandId', brandId);
+                product4.set('productUrl', product4Url);
+                product4.set('productNumber', '4');
+
+                product4.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 4 is saved.", result);
+
+                        if(product5Active && admin_product5status == "valid"){
+                            saveProduct5();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 4: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 5
+            /////////////////////////
+
+            function saveProduct5() {
+
+                console.log(">>>>> Saving Product 5")
+
+                product5Name = document.getElementById("product5Name").value;
+                product5Description = document.getElementById("product5Description").value;
+                product5Active = document.getElementById("product5Active").checked;
+                product5Url = document.getElementById("product5Url").value;
+                product5Category = document.getElementById("product5Category").value;
+                product5Featured = document.getElementById("product5Featured").checked;
+                product5UsePrice = document.getElementById("product5UsePrice").checked;
+
+                if(product5UsePrice === true){
+                    product5Price = parseFloat(document.getElementById("product5Price").value);
+                }else{
+                    product5Price = 0;
+                }
+
+                var fileUploadControlProduct5 = $("#product5Image1")[0];
+                if (fileUploadControlProduct5.files.length > 0) {
+                    var product5ImageFile = fileUploadControlProduct5.files[0];
+                    var product5ImageName = "product5.jpg";
+
+                    var parseProduct5Image = new Parse.File(product5ImageName, product5ImageFile);
+                }
+
+                const product5 = new Products();
+                
+                product5.set('useProduct', product5Active);
+                product5.set('name', product5Name);
+                product5.set('description', product5Description);
+                product5.set('category', product5Category);
+                product5.set('isFeatured', product5Featured);
+                product5.set('image1', parseProduct5Image);
+                product5.set('finalPrice', product5Price);
+                product5.set('currency', brandCurrency);
+                product5.set('brandId', brandId);
+                product5.set('productUrl', product5Url);
+                product5.set('productNumber', '5');
+
+                product5.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 5 is saved.", result);
+
+                        if(product6Active && admin_product6status == "valid"){
+                            saveProduct6();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 5: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 6
+            /////////////////////////
+
+            function saveProduct6() {
+
+                console.log(">>>>> Saving Product 6")
+
+                product6Name = document.getElementById("product6Name").value;
+                product6Description = document.getElementById("product6Description").value;
+                product6Active = document.getElementById("product6Active").checked;
+                product6Url = document.getElementById("product6Url").value;
+                product6Category = document.getElementById("product6Category").value;
+                product6Featured = document.getElementById("product6Featured").checked;
+                product6UsePrice = document.getElementById("product6UsePrice").checked;
+
+                if(product6UsePrice === true){
+                    product6Price = parseFloat(document.getElementById("product6Price").value);
+                }else{
+                    product6Price = 0;
+                }
+
+                var fileUploadControlProduct6 = $("#product6Image1")[0];
+                if (fileUploadControlProduct6.files.length > 0) {
+                    var product6ImageFile = fileUploadControlProduct6.files[0];
+                    var product6ImageName = "product6.jpg";
+
+                    var parseProduct6Image = new Parse.File(product6ImageName, product6ImageFile);
+                }
+
+                const product6 = new Products();
+                
+                product6.set('useProduct', product6Active);
+                product6.set('name', product6Name);
+                product6.set('description', product6Description);
+                product6.set('category', product6Category);
+                product6.set('isFeatured', product6Featured);
+                product6.set('image1', parseProduct6Image);
+                product6.set('finalPrice', product6Price);
+                product6.set('currency', brandCurrency);
+                product6.set('brandId', brandId);
+                product6.set('productUrl', product6Url);
+                product6.set('productNumber', '6');
+
+                product6.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 6 is saved.", result);
+
+                        if(product7Active && admin_product7status == "valid"){
+                            saveProduct7();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 6: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 7
+            /////////////////////////
+
+            function saveProduct7() {
+
+                console.log(">>>>> Saving Product 7")
+
+                product7Name = document.getElementById("product7Name").value;
+                product7Description = document.getElementById("product7Description").value;
+                product7Active = document.getElementById("product7Active").checked;
+                product7Url = document.getElementById("product7Url").value;
+                product7Category = document.getElementById("product7Category").value;
+                product7Featured = document.getElementById("product7Featured").checked;
+                product7UsePrice = document.getElementById("product7UsePrice").checked;
+
+                if(product7UsePrice === true){
+                    product7Price = parseFloat(document.getElementById("product7Price").value);
+                }else{
+                    product7Price = 0;
+                }
+
+                var fileUploadControlProduct7 = $("#product7Image1")[0];
+                if (fileUploadControlProduct7.files.length > 0) {
+                    var product7ImageFile = fileUploadControlProduct7.files[0];
+                    var product7ImageName = "product7.jpg";
+
+                    var parseProduct7Image = new Parse.File(product7ImageName, product7ImageFile);
+                }
+
+                const product7 = new Products();
+                
+                product7.set('useProduct', product7Active);
+                product7.set('name', product7Name);
+                product7.set('description', product7Description);
+                product7.set('category', product7Category);
+                product7.set('isFeatured', product7Featured);
+                product7.set('image1', parseProduct7Image);
+                product7.set('finalPrice', product7Price);
+                product7.set('currency', brandCurrency);
+                product7.set('brandId', brandId);
+                product7.set('productUrl', product7Url);
+                product7.set('productNumber', '7');
+
+                product7.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 7 is saved.", result);
+
+                        if(product8Active && admin_product8status == "valid"){
+                            saveProduct8();
+                        }else{
+                            savingProductsSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 7: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Product 8
+            /////////////////////////
+
+            function saveProduct8() {
+
+                console.log(">>>>> Saving Product 8")
+
+                product8Name = document.getElementById("product8Name").value;
+                product8Description = document.getElementById("product8Description").value;
+                product8Active = document.getElementById("product8Active").checked;
+                product8Url = document.getElementById("product8Url").value;
+                product8Category = document.getElementById("product8Category").value;
+                product8Featured = document.getElementById("product8Featured").checked;
+                product8UsePrice = document.getElementById("product8UsePrice").checked;
+
+                if(product8UsePrice === true){
+                    product8Price = parseFloat(document.getElementById("product8Price").value);
+                }else{
+                    product8Price = 0;
+                }
+
+                var fileUploadControlProduct8 = $("#product8Image1")[0];
+                if (fileUploadControlProduct8.files.length > 0) {
+                    var product8ImageFile = fileUploadControlProduct8.files[0];
+                    var product8ImageName = "product8.jpg";
+
+                    var parseProduct8Image = new Parse.File(product8ImageName, product8ImageFile);
+                }
+
+                const product8 = new Products();
+                
+                product8.set('useProduct', product8Active);
+                product8.set('name', product8Name);
+                product8.set('description', product8Description);
+                product8.set('category', product8Category);
+                product8.set('isFeatured', product8Featured);
+                product8.set('image1', parseProduct8Image);
+                product8.set('finalPrice', product8Price);
+                product8.set('currency', brandCurrency);
+                product8.set('brandId', brandId);
+                product8.set('productUrl', product8Url);
+                product8.set('productNumber', '8');
+
+                product8.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Product 8 is saved.", result);
+
+                        savingProductsSuccess();
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Product 8: ', error);
+                    }
+                  }
+                );
+            }
+        </script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "type": "Dialog.UpdateDynamicEntities",
+    "updateBehavior": "REPLACE",
+    "types": [
+        {
+            "name": "UserNameSlotType",
+            "values": [
+            ]
+        }
+    ]
+}

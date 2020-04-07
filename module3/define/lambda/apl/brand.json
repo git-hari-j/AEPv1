@@ -1,0 +1,38 @@
+{
+    "listItemIdentifier": "",
+    "ordinalNumber": 1,
+    "textContent": {
+        "primaryText": {
+            "type": "PlainText",
+            "text": ""
+        },
+        "secondaryText": {
+            "type": "PlainText",
+            "text": ""
+        },
+        "tertiaryText": {
+            "type": "PlainText",
+            "text": ""
+        }
+    },
+    "image": {
+        "contentDescription": null,
+        "smallSourceUrl": null,
+        "largeSourceUrl": null,
+        "sources": [
+            {
+                "url": "",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+            },
+            {
+                "url": "",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+            }
+        ]
+    },
+    "token": ""
+}

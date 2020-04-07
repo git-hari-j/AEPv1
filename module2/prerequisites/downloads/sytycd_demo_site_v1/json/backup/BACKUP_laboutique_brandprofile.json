@@ -1,0 +1,192 @@
+{
+  "brand": {
+    "name": "La Boutique",
+    "logo": "logoimage.png",
+    "locallogo": true,
+    "favicon": "favicon.png",
+    "localfavicon": true,
+    "hero": "heroimage.png",
+    "localhero": true,
+    "calltoaction": "Buy It Now!",
+    "calltoactionurl": "index.html",
+    "demosetuptype": "quickandnotsodirty",
+    "hostname": "localhost",
+    "portnumber": "8888"
+  },
+  "pages": {
+    "page0": {
+      "title": "Home",
+      "url": "index.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page1": {
+      "title": "",
+      "url": "custompage1.html",
+      "heroimage": "http://wvgdemosite.com:8888/images/custompage1.png",
+      "active": false
+    },
+    "page2": {
+      "title": "",
+      "url": "custompage2.html",
+      "heroimage": "http://wvgdemosite.com:8888/images/custompage2.png",
+      "active": false
+    },
+    "page3": {
+      "title": "",
+      "url": "custompage3.html",
+      "heroimage": "http://wvgdemosite.com:8888/images/custompage3.png",
+      "active": false
+    },
+    "page4": {
+      "title": "",
+      "url": "custompage4.html",
+      "heroimage": "http://wvgdemosite.com:8888/images/custompage4.png",
+      "active": false
+    },
+    "page5": {
+      "title": "",
+      "url": "custompage5.html",
+      "heroimage": "http://wvgdemosite.com:8888/images/custompage5.png",
+      "active": false
+    },
+    "page6": {
+      "title": "",
+      "url": "",
+      "heroimage": "",
+      "active": false
+    },
+    "page7": {
+      "title": "Login/Register",
+      "url": "login-register.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page8": {
+      "title": "Privacy",
+      "url": "privacy.html",
+      "heroimage": "",
+      "active": true
+    },
+    "page9": {
+      "title": "Admin",
+      "url": "admin.html",
+      "heroimage": "",
+      "active": true
+    }
+  },
+  "products": {
+    "product1": {
+      "active": true,
+      "name": "Lisette Dress",
+      "description": "Lisette Dress",
+      "category": "Dresses",
+      "price": "EUR 58.00",
+      "url": "p1.html",
+      "image1": "./img/thumbnails/db_file_img_228_480xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_229_480xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/lisettedress?$generic%5Fimg%5Fpreset$"
+    },
+    "product2": {
+      "active": true,
+      "name": "El Silencio",
+      "description": "El Silencio",
+      "category": "T-shirts",
+      "price": "EUR 57.99",
+      "url": "p2.html",
+      "image1": "./img/thumbnails/db_file_img_32_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_33_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/elsilencio?$generic%5Fimg%5Fpreset$"
+    },
+    "product3": {
+      "active": true,
+      "name": "Malta Dress",
+      "description": "Malta Dress",
+      "category": "Dresses",
+      "price": "EUR 88.00",
+      "url": "p3.html",
+      "image1": "./img/thumbnails/db_file_img_137_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_138_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/maltadress?$generic%5Fimg%5Fpreset$"
+    },
+    "product4": {
+      "active": true,
+      "name": "Babar Soul",
+      "description": "Babar Soul",
+      "category": "T-shirts",
+      "price": "EUR 70.00",
+      "url": "p4.html",
+      "image1": "./img/thumbnails/db_file_img_92_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_93_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/babarsoul?$generic%5Fimg%5Fpreset$"
+    },
+    "product5": {
+      "active": true,
+      "name": "Babar Afrique",
+      "description": "Babar Afrique",
+      "category": "T-shirts",
+      "price": "EUR 220.00",
+      "url": "p5.html",
+      "image1": "./img/thumbnails/db_file_img_88_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_87_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/babarafrique?$generic%5Fimg%5Fpreset$"
+    },
+    "product6": {
+      "active": true,
+      "name": "El Paso Tank",
+      "description": "El Paso Tank",
+      "category": "T-shirts",
+      "price": "EUR 38.00",
+      "url": "p6.html",
+      "image1": "./img/thumbnails/db_file_img_122_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_123_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/elpasotank?$generic%5Fimg%5Fpreset$"
+    },
+    "product7": {
+      "active": true,
+      "name": "Bay Blocker",
+      "description": "Bay Blocker",
+      "category": "Jackets",
+      "price": "EUR 72.00",
+      "url": "p7.html",
+      "image1": "./img/thumbnails/db_file_img_39_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_39_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/bayblocker?$generic%5Fimg%5Fpreset$"
+    },
+    "product8": {
+      "active": true,
+      "name": "Marais Dress",
+      "description": "Marais Dress",
+      "category": "Dresses",
+      "price": "EUR 58.00",
+      "url": "p8.html",
+      "image1": "./img/thumbnails/db_file_img_42_640xauto.jpg",
+      "image2": "./img/thumbnails/db_file_img_43_640xauto.jpg",
+      "EEimgurl": "http://s7e4a.scene7.com/is/image/OmniPS/maraisdress?$generic%5Fimg%5Fpreset$"
+    }
+  },
+  "dmp": {
+    "mediadetails": {
+      "iframeurl": "",
+      "pagename": "",
+      "pageurl": "media.html",
+      "activate": ""
+    },
+    "displayad1": {
+      "image": "http://www.remoteserver.com/ad1.jpg",
+      "local": false
+    },
+    "displayad2": {
+      "image": "http://www.remoteserver.com/ad2.jpg",
+      "local": false
+    },
+    "displayad3": {
+      "image": "http://www.remoteserver.com/ad3.jpg",
+      "local": false
+    },
+    "displayad4": {
+      "image": "http://www.remoteserver.com/ad4.jpg",
+      "local": false
+    }
+  }
+}

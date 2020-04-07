@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Call Center</title>
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="css/personalshopper.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+	<script src="//assets.adobedtm.com/b9d08c2e66db/23f5e8e1ddc5/launch-5e8d87fd0a37-development.min.js" async></script><link rel="stylesheet" href="./css/xray.css"/>
+	
+	<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                dashboardpage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Dashboard",
+                siteSection:"Dashboard"
+            }
+        };
+    </script>
+</head>
+
+<body onLoad="">
+
+<div style="float:left;margin-left:10px;margin-top:10px;">
+	</div>
+	
+	<script>
+		localStorage.removeItem('contractcancelled');
+         $(function() {
+            $( "#callDetails" ).dialog({
+               autoOpen: false,  
+               modal: true,
+               buttons: [
+                { "text": "Confirm", "id":"closeCallDetails", "onClick":"logCall(document.getElementById('callTopic').value, document.getElementById('callFeeling').value, document.getElementById('contractCancelled').value);", "class": "btn btn-primary", "click": function() { $(this).dialog("close"); } }
+                ]
+            });
+            $( "#logCall" ).click(function() {
+               $( "#callDetails" ).dialog( "open" );
+            });
+         });
+        function getRandomInt() {
+		  min = Math.ceil(1000000);
+		  max = Math.floor(9000000);
+		  return Math.floor(Math.random() * (max - min)) + min;
+		}
+        function logCall(topic, feeling, contractcancelled) {
+         	localStorage.setItem('callTopic', topic);
+         	localStorage.setItem('callFeeling', feeling);
+         	localStorage.setItem('contractcancelled', contractcancelled);
+         	localStorage.setItem('callFromNumber', document.getElementById("mobilenr").value);
+         	localStorage.setItem('callInteraction', 'Support Contact - ' + getRandomInt());
+         	if(contractcancelled == "yes"){
+         		localStorage.setItem('churnscore', '1.00');
+         	}else if(feeling == "positive"){
+         		localStorage.setItem('churnscore', '0.15');
+         	}else if(feeling == "neutral"){
+         		localStorage.setItem('churnscore', '0.37');
+         	}else{
+         		localStorage.setItem('churnscore', '0.78');
+         	}
+         	
+        _satellite.track('logCall');
+	    }
+      </script>
+
+    <div id="callDetails" title = "Call Details">
+            Call Topic:
+            <br/>
+            <select id="callTopic" name="callTopic" style="width:200px;">
+                <option value="wifi">Wifi Issues</option>
+                <option value="promo" selected>Promotion</option>
+                <option value="invoice">Invoice Questions</option>
+                <option value="complaint">Complaint</option>
+                <option value="contract">Contract Discussion</option>
+            </select>
+            <br/>Customer Feeling:
+            <br/>
+            <select id="callFeeling" name="callFeeling" style="width:200px;">
+                <option value="positive" selected>Positive</option>
+                <option value="neutral">Neutral</option>
+                <option value="negative">Negative</option>
+            </select>
+            <div id="contractText" style="display:none;">Contract Cancelled:
+	            <br/>
+	            <select id="contractCancelled" name="contractCancelled" style="width:200px;">
+	                <option value="yes">Yes</option>
+	                <option value="no" selected>No</option>
+	            </select>
+            </div>
+    </div>
+
+    <script>
+    	$("#callTopic").change(function(){
+		    //selection changed
+		    if(this.value === "contract"){
+		        $("#contractText").attr("style", "display:block;");
+		    }else{
+		        $("#contractText").attr("style", "display:none;");
+		    }
+		});
+    </script>
+	
+	<div align="right" id="ccheader1">
+		<div id="logCall" style="display:inline-block;color:#444;border:1px solid #CCC;background:#DDD;box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);cursor:pointer;vertical-align:middle;max-width: 100px;padding: 5px;text-align: center; margin-right:10px;">Log a Call</div>
+	</div>
+	
+	<div id="ccheader2" align="center" id="header">
+		<a id="gohome" href=""><img id="brandlogo" src="" alt="" style="width:100px"></a>
+		<h1 id="callcentername" style="color:#000000">Callcenter</h1>
+	</div>
+
+	<div align="center" id="checkMobileNr">Mobile Nr.:</td>
+                            <input type="text" id="mobilenr" class="" name="mobilenr" size="20" maxlength="100" value="">
+                            <button onclick="getAEPProfileFromPlatformCC();">Check</button>
+                        </div>
+<br/><br/>
+
+	<div align="center" id="statusField">Checking customer information...</div>
+
+<br/><br/>
+	<div align="center" style="width: 800px;overflow: hidden;margin-left:auto;margin-right:auto;">
+		<div align="center" style="width: 400px;float:left;margin-bottom:auto;margin-top:auto;margin-left:auto;margin-right:auto;" id="platformPicture">
+			<img src="img/default_avatar.png" alt="" style='width:150px'>
+		</div>
+		<div align="center" style="float: left;margin-left:auto;margin-right:auto;" id="profileTable">
+			<table style="width: 400px;font-size: 20px;">
+			  	<tr>
+				    <td align="left">First Name:</td>
+				    <td id="platformFirstName">...</td>
+				</tr>
+			  	<tr>
+				    <td align="left">Last Name:</td>
+				    <td id="platformLastName">...</td>
+				</tr>
+			  	<tr>
+				    <td align="left">Gender:</td>
+				    <td id="platformGender">...</td>
+				</tr>
+			  	<tr>
+				    <td align="left">City:</td>
+				    <td id="platformCity">...</td>
+				</tr>
+			  	<tr id="retailshoesize" hidden>
+				    <td align="left">Shoe Size:</td>
+				    <td id="platformShoeSize">...</td>
+				</tr>
+			  	<tr id="retailshirtsize" hidden>
+				    <td align="left">Shirt Size:</td>
+				    <td id="platformShirtSize">...</td>
+				</tr>
+			  	<tr id="retailpreferredcolor" hidden>
+				    <td align="left">Preferred Color:</td>
+				    <td id="platformPreferredColor">...</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<br/><br/>
+
+	<div align="center" id="statusFieldActivity">No Customer Activity Information Available</div>
+
+	<div align="center" style="width: 1200px;overflow: hidden;margin-left:auto;margin-right:auto;">
+		<div align="" style="width: 400px;float:left;margin-bottom:auto;margin-top:auto;margin-left:auto;margin-right:auto;" id="productsViewedOverview">
+			<h3>Activity:</h3>
+			<table id="productViewActivityCC" style="width: 400px;font-size: 20px;">
+			</table>
+		</div>
+		<div align="" style="width: 400px;float:left;margin-bottom:auto;margin-top:auto;margin-left:auto;margin-right:auto;" id="productsAddedToCartOverview">
+			<h3>Products Added To Cart:</h3>
+			<table id="addToCartActivityCC" style="width: 400px;font-size: 20px;">
+			</table>
+		</div>
+		<div align="" style="width: 400px;float:left;margin-bottom:auto;margin-top:auto;margin-left:auto;margin-right:auto;" id="productsPurchasedOverview">
+			<h3>Products Purchased:</h3>
+			<table id="purchaseActivityCC" style="width: 400px;font-size: 20px;">
+			</table>
+		</div>
+	</div>
+
+	<script>
+		/// CLIENT UI CODE ///
+		var pullResults = {};
+		var mobilenr = "";
+		var statusFieldText = document.getElementById("statusField");
+		var statusFieldActivity = document.getElementById("statusFieldActivity");
+		var platformFirstNameText = document.getElementById("platformFirstName");
+		var platformLastNameText = document.getElementById("platformLastName");
+		var platformGenderText = document.getElementById("platformGender");
+		var platformCityText = document.getElementById("platformCity");
+		var platformShoeSizeText = document.getElementById("platformShoeSize");
+		var platformShirtSizeText = document.getElementById("platformShirtSize");
+		var platformPreferredColorText = document.getElementById("platformPreferredColor");
+		
+		var platformPictureText = document.getElementById("platformPicture");
+
+		var browseActivity = document.getElementById("browseActivity");
+		var purchaseActivity = document.getElementById("purchaseActivity");
+		var addToCartActivity = document.getElementById("addToCartActivity");
+
+		var EEresponse = {};
+		var SKUarray = {};
+		var SKUcounter = 0;
+
+		function getAEPProfileFromPlatformCC(){
+  
+	    $.ajax(
+	            {
+	                url: "https://adobeioruntime.net/api/v1/web/vangeluw/aep-demoey/eygetAEPProfileInfo.json", 
+	                type: "GET",
+	                dataType : "json",
+	                contentType: "application/json",
+	                data: {"eventId": encodeURI(document.getElementById("mobilenr").value), "eventNS":"phone"},
+	                success: function(response) {
+	                  var profileData = response.profileData;
+	                  getAEPExperienceEventsFromPlatformCC();
+	                  displayProfilePullCC(profileData);
+	                },
+	                error: function(code, status, error) {
+	                    //console.log("Error : " + error);
+	                }
+	            }
+	        );
+		}
+
+		function getAEPExperienceEventsFromPlatformCC(){
+  
+    	$.ajax(
+            {
+                url: "https://adobeioruntime.net/api/v1/web/vangeluw/aep-demoey/eygetAEPExperienceEventInfo.json", 
+                type: "GET",
+                dataType : "json",
+                contentType: "application/json",
+                data: {"eventId": encodeURI(document.getElementById("mobilenr").value), "eventNS":"phone"},
+                success: function(response) {
+                  var experienceEventData = response.experienceEventData;
+                  displayEEPullCC(experienceEventData);
+                },
+                error: function(code, status, error) {
+                    //console.log("Error : " + error);
+                }
+            }
+        	);
+		}
+
+
+		function displayProfilePullCC(platformResponse) {
+			var key = Object.keys(platformResponse)[0];
+			console.log("Profile Key: " + key);
+
+			if(key == "message" || key == "error_code" || key == "statusCode" || key == "message"){
+				statusFieldText.innerHTML = "No Customer Found.";
+				platformFirstNameText.innerHTML = "...";
+				platformLastNameText.innerHTML = "...";
+				platformGenderText.innerHTML = "...";
+				platformCityText.innerHTML = "...";
+				platformShoeSizeText.innerHTML = "...";
+				platformShirtSizeText.innerHTML = "...";
+				platformPreferredColorText.innerHTML = "...";
+				platformPictureText.innerHTML = "<img src='img/default_avatar.png' alt='' style='width:150px'>";
+			}else{
+
+				statusFieldText.innerHTML = "<img src='img/alert_icon.png' alt='' style='width:75px'>" + "<br/><h3> Customer has recent browsing information available!</h3> ";
+
+				platformFirstNameText.innerHTML = String(platformResponse[key].entity.person.name.firstName);
+				platformLastNameText.innerHTML = String(platformResponse[key].entity.person.name.lastName);
+				platformGenderText.innerHTML = String(platformResponse[key].entity.person.gender);	
+				platformCityText.innerHTML = String(platformResponse[key].entity.homeAddress.city);
+				platformShoeSizeText.innerHTML = String(platformResponse[key].entity._eyllpamerptrsd.retailSizes.shoeSize);
+				platformShirtSizeText.innerHTML = String(platformResponse[key].entity._eyllpamerptrsd.retailSizes.shirtSize);
+				platformPreferredColorText.innerHTML = String(platformResponse[key].entity._eyllpamerptrsd.retailSizes.preferredColor);
+				platformPictureText.innerHTML = "<img src='" + String(platformResponse[key].entity.profilePictureLink) + "' alt='' style='width:150px'>"; 
+			}
+		};
+
+		function displayEEPullCC(platformEEResponse) {
+		    var EEresponse = {};
+		    var productViewSKUarray = {};
+		    var productViewSKUcounter = 0;
+		    var productAddToCartSKUarray = {};
+		    var productAddToCartSKUcounter = 0;
+		    var productPurchaseSKUarray = {};
+		    var productPurchaseSKUcounter = 0;
+		    var key = Object.keys(platformEEResponse)[0];
+		    console.log("EE key: " + key);
+
+  			statusFieldActivity.innerHTML = "Real-Time Customer Activity Found!";
+
+		    if(key == "message" || key == "error_code" || key == "statusCode" || key == "message" || key == "cause"){
+		        productViewActivityCC.innerHTML = ("<tr>" + "<td align='center' style='padding-bottom: 1em;'> Not Available</td></tr>");;
+		        console.log("ExperienceEvent Info Request: No Data Returned from Adobe I/O Runtime, try again later.");
+		    }
+		    else if(key == "retryAfterMs"){
+		      productViewActivityCC.innerHTML = ("<tr>" + "<td align='center' style='padding-bottom: 1em;'> Not Available</td></tr>");;
+		      console.log("ExperienceEvent Info Request: Our testing instance of Platform is receiving too many requests at this moment and couldn't respond to your request immediately.");
+		    }
+		    else{
+		        console.log(platformEEResponse);
+		        EEresponse = platformEEResponse;
+
+		        var EElength = EEresponse.children.length;
+		        productViewSKUcounter = 0;
+		        productAddToCartSKUcounter = 0;
+		        productPurchaseSKUcounter = 0;
+		        
+		        for (i = 0; i < EElength; i++) { 
+		            try{
+		                var SKUlength = EEresponse.children[i].entity.productListItems.length;
+						//console.log("SKUlength: " + SKUlength);
+						for (sku = 0; sku < SKUlength; sku++){
+		                    var interactionType = EEresponse.children[i].entity._eyllpamerptrsd.productData.productInteraction;
+		                    console.log("Interaction Type: " + interactionType);
+		                    if(interactionType == "productView"){
+		                        var prodArray = {};
+		                        var prodName = EEresponse.children[i].entity.productListItems[sku].name;
+		                        var prodImg = EEresponse.children[i].entity.productListItems[sku].product;
+		                        var prodQty = EEresponse.children[i].entity.productListItems[sku].quantity;
+		                        var prodChannel = EEresponse.children[i].entity.productListItems[sku].productAddMethod;
+		                        
+		                        console.log(">>>>> X-ray - Product Viewed Info: " + prodName + " - " + prodImg + " - (Qty: " + prodQty + " - Channel: " + prodChannel + ")");
+		                        prodArray["prodName"] = prodName;
+		                        prodArray["prodImg"] = prodImg;
+		                        prodArray["prodQty"] = prodQty;
+		                        prodArray["prodChannel"] = prodChannel;
+		                        productViewSKUarray[productViewSKUcounter] = prodArray;
+		                        productViewSKUcounter ++;
+		                    }
+		                    if(interactionType == "productAddToCart"){
+		                        var prodArray = {};
+		                        var prodName = EEresponse.children[i].entity.productListItems[sku].name;
+		                        var prodImg = EEresponse.children[i].entity.productListItems[sku].product;
+		                        var prodQty = EEresponse.children[i].entity.productListItems[sku].quantity;
+		                        var prodChannel = EEresponse.children[i].entity.productListItems[sku].productAddMethod;
+		                        
+		                        console.log(">>>>> X-ray - Product Add To Cart Info: " + prodName + " - " + prodImg + " - (Qty: " + prodQty + " - Channel: " + prodChannel + ")");
+		                        prodArray["prodName"] = prodName;
+		                        prodArray["prodImg"] = prodImg;
+		                        prodArray["prodQty"] = prodQty;
+		                        prodArray["prodChannel"] = prodChannel;
+		                        productAddToCartSKUarray[productAddToCartSKUcounter] = prodArray;
+		                        productAddToCartSKUcounter ++;
+		                    }
+		                    if(interactionType == "productPurchase"){
+		                        var prodArray = {};
+		                        var prodName = EEresponse.children[i].entity.productListItems[sku].name;
+		                        var prodImg = EEresponse.children[i].entity.productListItems[sku].product;
+		                        var prodQty = EEresponse.children[i].entity.productListItems[sku].quantity;
+		                        var prodChannel = EEresponse.children[i].entity.productListItems[sku].productAddMethod;
+		                        
+		                        
+		                        console.log(">>>>> X-ray - Product Purchase Info: " + prodName + " - " + prodImg + " - (Qty: " + prodQty + " - Channel: " + prodChannel + ")");
+		                        prodArray["prodName"] = prodName;
+		                        prodArray["prodImg"] = prodImg;
+		                        prodArray["prodQty"] = prodQty;
+		                        prodArray["prodChannel"] = prodChannel;
+		                        productPurchaseSKUarray[productPurchaseSKUcounter] = prodArray;
+		                        productPurchaseSKUcounter ++;
+		                    }
+		                }
+		            }catch(err) {
+		                //console.log(err.message);
+		            }
+		        }
+
+		    var productViewSKUs = productViewSKUcounter;
+		    var productAddToCartSKUs = productAddToCartSKUcounter;
+		    var productPurchaseSKUs = productPurchaseSKUcounter;
+		    var productViewActivityString = "";
+		    var addToCartActivityString = "";
+		    var purchaseActivityString = "";
+		    
+		    if(productViewSKUs > 0){
+		      for (i = 0; i < productViewSKUs; i++){
+		        	var productName = productViewSKUarray[i]["prodName"];
+		        	var productImg = productViewSKUarray[i]["prodImg"];
+		          	var productQty = productViewSKUarray[i]["prodQty"];
+		          	var productChannel = productViewSKUarray[i]["prodChannel"];
+		          	str = "<tr>" + "<td align='left' style='padding-bottom: 1em;'><img src='" + productImg + "' style='width:75px;max-height: 100px;list-style-type: none;font-size: 15px;'/>" + "</td><td align='left' style='padding-bottom: 1em;padding-left:10px;'>" + productName + "<br/>Quantity: " + productQty + " <br/>Channel: " + productChannel + "</td></tr>";
+          			productViewActivityString += str;
+		      }
+		    }else{
+		      productViewActivityString = ("<tr>" + "<td align='center' style='padding-bottom: 1em;'> Not Available</td></tr>");
+		    }
+
+		    if(productAddToCartSKUs > 0){
+		      for (i = 0; i < productAddToCartSKUs; i++){
+		          var productName = productAddToCartSKUarray[i]["prodName"];
+		          var productImg = productAddToCartSKUarray[i]["prodImg"];
+		          var productQty = productAddToCartSKUarray[i]["prodQty"];
+		          var productChannel = productAddToCartSKUarray[i]["prodChannel"];
+		          str = "<tr>" + "<td align='left' style='padding-bottom: 1em;'><img src='" + productImg + "' style='width:75px;max-height: 100px;list-style-type: none;font-size: 15px;'/>" + "</td><td align='left' style='padding-bottom: 1em;padding-left:10px;'>" + productName + "<br/>Quantity: " + productQty + " <br/>Channel: " + productChannel + "</td></tr>";
+		          addToCartActivityString += str;
+		      }
+		    }else{
+		      addToCartActivityString = ("<tr>" + "<td align='center' style='padding-bottom: 1em;'> Not Available</td></tr>");
+		    }
+		    if(productPurchaseSKUs > 0){
+		      for (i = 0; i < productPurchaseSKUs; i++){
+		          var productName = productPurchaseSKUarray[i]["prodName"];
+		          var productImg = productPurchaseSKUarray[i]["prodImg"];
+		          var productQty = productPurchaseSKUarray[i]["prodQty"];
+		          var productChannel = productPurchaseSKUarray[i]["prodChannel"];
+		          str = "<tr>" + "<td align='left' style='padding-bottom: 1em;'><img src='" + productImg + "' style='width:75px;max-height: 100px;list-style-type: none;font-size: 15px;'/>" + "</td><td align='left' style='padding-bottom: 1em;padding-left:10px;'>" + productName + "<br/>Quantity: " + productQty + " <br/>Channel: " + productChannel + "</td></tr>";
+		          purchaseActivityString += str;
+		      }
+		    }else{
+		      purchaseActivityString = ("<tr>" + "<td align='center' style='padding-bottom: 1em;'> Not Available</td></tr>");
+		    }
+
+		    productViewActivityCC.innerHTML = productViewActivityString;
+		    addToCartActivityCC.innerHTML = addToCartActivityString;
+		    purchaseActivityCC.innerHTML = purchaseActivityString;
+		}}
+	</script>
+	<script>
+		$("#mobilenr").attr("value", localStorage.getItem('mobilenr'));
+		function startCall() {
+			console.log(">>>>> Call Started");
+			_satellite.track('startcall');
+		}
+	</script>
+	<!-- Credits bar -->
+<div class="credits" style="display:none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="./js/loadFromLocalStorage.js"></script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                loadxray: false,
+                adminpage: false,
+                dashboardpage: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="getBrands()">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+    <div class="box">
+        <div class="hgroup title">
+            <h3>So You Think You Can Demo?</h3>
+            <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+            <br/>
+        </div>
+            <div id="brandsection" class="box-content" style="display:block;height:550px;">
+                <div class="row">
+                    <div class="col-sm-12">Select your Brand:
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="brands" name="brands" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="smallloader" style="display:none;"></div>
+                    </div>
+                    <div id="loader" style="display:none;"></div>
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="saveButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="saveButton" value="files" onClick="saveBrand()" disabled>
+                                Save
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <br/><br/>
+	        <!-- Credits bar -->
+            <div class="credits">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p id="footerCredits">
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End class="credits" -->
+
+            <!-- JAVASCRIPT -->
+            <script src="./js/loadFromLocalStorage.js"></script>
+            <script src="./js/jquery-1.11.3.min.js"></script>
+            <script src="./js/bootstrap.min.js"></script>
+
+            <script>
+
+
+            ////////////////////////////////
+            // Brand Section
+            ////////////////////////////////
+            $("#brands").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#saveButton").attr("disabled", true);
+                }else{
+                    $("#saveButton").attr("disabled", false);
+                }
+            });
+
+            var pullReadBrandResults = [];
+            var brandsDropdown = document.getElementById("brands");
+
+            function getBrands() {
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+
+                var ldapArray = [];
+                ldapArray.push("all");
+                if (localStorage.getItem("admin_ldap") !== null) {
+                    ldapArray.push(localStorage.getItem("admin_ldap"));
+                }
+
+                console.log(ldapArray);
+
+                query.containedIn("ldap", ldapArray);
+                query.equalTo("active", 'Y');
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Brandsresults: ", results);
+                            displayBrands(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching LDAP', error);
+                        }
+                    }
+                );
+            };
+
+            function displayBrands(pullReadBrandResults) {
+                for (i = 0; i < pullReadBrandResults.length; i++) {
+                    try{
+                        var brandId = pullReadBrandResults[i].attributes.brandId;
+                        var brandName = pullReadBrandResults[i].attributes.brandName;
+                        console.log(">>>>> Brand ID: " + brandId + " - Brand Name: " + brandName);
+                        var el = document.createElement("option");
+                        el.textContent = brandName;
+                        el.value = brandId;
+                        brandsDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+            }
+
+            function saveBrand() {
+                $("#loader").attr("style", "display:block;");
+                var e = document.getElementById("brands");
+                localStorage.setItem("admin_selectedBrandId", e.options[e.selectedIndex].value);
+                localStorage.setItem("admin_selectedBrandName", e.options[e.selectedIndex].text);
+                //document.location.href = "./admin.html";
+                loadBrand();
+                localStorage.setItem('loadconfigfromjsonstatus', "success");
+            }
+
+            function loadBrand() {
+
+                brandId = localStorage.getItem("admin_selectedBrandId");
+
+                // Retrieve Brand Configuration
+                getBrand(brandId);
+
+                // Set Standard Pages
+                setStandardPages();
+                clearLocalStorage();
+            }
+
+            function loadBrandCustomPages(){
+                numberCustomPages = localStorage.getItem("brandNumberCustomPages");
+                // Set Custom Pages
+                for (i = 0; i < numberCustomPages; i++) { 
+                    a = i + 1;
+                    getCustomPage(brandId, a);
+                }  
+                console.log("i: " + i);
+                if(i == numberCustomPages){
+                    loadBrandCategoriesProducts();
+                }
+            }
+
+            function loadBrandCategoriesProducts(){
+                if(localStorage.getItem("demosetuptype") === "fullecommerceready"){
+                    numberProductCategories = localStorage.getItem("brandNumberCategories");
+                    for (i = 0; i < numberProductCategories; i++) { 
+                        a = i + 1;
+                        getProductCategory(brandId, a);
+                    }
+                    if(i == numberProductCategories){
+                        numberProducts = localStorage.getItem("brandNumberProducts");
+                            for (j = 0; j < numberProducts; j++) {
+                                a = j + 1; 
+                                getProduct(brandId, a);
+                        }
+                        if(i == numberProductCategories){
+                            console.log(">>>>> Done");
+                            setTimeout(goHome, 10000);
+                        }
+                    }
+                }  
+            }
+
+            function goHome(){
+                $("#loader").attr("style", "display:none;");
+                document.location.href = "./index.html";
+            }
+
+            function clearLocalStorage(){
+
+                // Remove Brand Settings
+                localStorage.removeItem('brandname');
+                localStorage.removeItem('brandindustry');
+                localStorage.removeItem('brandusecallcenter');
+                localStorage.removeItem('brandusepersonalshopper');
+                localStorage.removeItem('demosetuptype');
+                localStorage.removeItem('brandcurrency');
+                localStorage.removeItem('brandcolor');
+
+                localStorage.removeItem('brandUseAAM');
+                localStorage.removeItem('brandUseAA');
+                localStorage.removeItem('brandUseAT');
+                localStorage.removeItem('brandUseACS');
+                localStorage.removeItem('brandUseMKT');
+                localStorage.removeItem('brandUsePlatform');
+
+                localStorage.removeItem('brandlogo');
+                localStorage.removeItem('faviconlink');
+                localStorage.removeItem('brandhero');
+                localStorage.removeItem('brandusecalltoaction');
+                localStorage.removeItem('brandcalltoactionboxposition');
+                localStorage.removeItem('brandcalltoaction');
+                localStorage.removeItem('brandcalltoactionurl');
+
+                // Remove Custom Page Settings
+                localStorage.removeItem('page1title');
+                localStorage.removeItem('page1url');
+                localStorage.removeItem('page1heroimage');
+                localStorage.removeItem('page1active');
+
+                localStorage.removeItem('page2title');
+                localStorage.removeItem('page2url');
+                localStorage.removeItem('page2heroimage');
+                localStorage.removeItem('page2active');
+
+                localStorage.removeItem('page3title');
+                localStorage.removeItem('page3url');
+                localStorage.removeItem('page3heroimage');
+                localStorage.removeItem('page3active');
+
+                localStorage.removeItem('page4title');
+                localStorage.removeItem('page4url');
+                localStorage.removeItem('page4heroimage');
+                localStorage.removeItem('page4active');
+
+                localStorage.removeItem('page5title');
+                localStorage.removeItem('page5url');
+                localStorage.removeItem('page5heroimage');
+                localStorage.removeItem('page5active');
+
+                //Remove Categories
+                localStorage.removeItem('category1name');
+                localStorage.removeItem('category1heroimage');
+                localStorage.removeItem('category1number');
+
+                localStorage.removeItem('category2name');
+                localStorage.removeItem('category2heroimage');
+                localStorage.removeItem('category2number');
+
+                localStorage.removeItem('category3name');
+                localStorage.removeItem('category3heroimage');
+                localStorage.removeItem('category3number');
+
+                //Remove Products
+                localStorage.removeItem('product1active');
+                localStorage.removeItem('product1name');
+                localStorage.removeItem('product1description');
+                localStorage.removeItem('product1category');
+                localStorage.removeItem('product1price');
+                localStorage.removeItem('product1url');
+                localStorage.removeItem('product1image1');
+                localStorage.removeItem('product1image2');
+                localStorage.removeItem('product1eeimgurl');
+
+                localStorage.removeItem('product2active');
+                localStorage.removeItem('product2name');
+                localStorage.removeItem('product2description');
+                localStorage.removeItem('product2category');
+                localStorage.removeItem('product2price');
+                localStorage.removeItem('product2url');
+                localStorage.removeItem('product2image1');
+                localStorage.removeItem('product2image2');
+                localStorage.removeItem('product2eeimgurl');
+
+                localStorage.removeItem('product3active');
+                localStorage.removeItem('product3name');
+                localStorage.removeItem('product3description');
+                localStorage.removeItem('product3category');
+                localStorage.removeItem('product3price');
+                localStorage.removeItem('product3url');
+                localStorage.removeItem('product3image1');
+                localStorage.removeItem('product3image2');
+                localStorage.removeItem('product3eeimgurl');
+
+                localStorage.removeItem('product4active');
+                localStorage.removeItem('product4name');
+                localStorage.removeItem('product4description');
+                localStorage.removeItem('product4category');
+                localStorage.removeItem('product4price');
+                localStorage.removeItem('product4url');
+                localStorage.removeItem('product4image1');
+                localStorage.removeItem('product4image2');
+                localStorage.removeItem('product4eeimgurl');
+
+                localStorage.removeItem('product5active');
+                localStorage.removeItem('product5name');
+                localStorage.removeItem('product5description');
+                localStorage.removeItem('product5category');
+                localStorage.removeItem('product5price');
+                localStorage.removeItem('product5url');
+                localStorage.removeItem('product5image1');
+                localStorage.removeItem('product5image2');
+                localStorage.removeItem('product5eeimgurl');
+
+                localStorage.removeItem('product6active');
+                localStorage.removeItem('product6name');
+                localStorage.removeItem('product6description');
+                localStorage.removeItem('product6category');
+                localStorage.removeItem('product6price');
+                localStorage.removeItem('product6url');
+                localStorage.removeItem('product6image1');
+                localStorage.removeItem('product6image2');
+                localStorage.removeItem('product6eeimgurl');
+
+                localStorage.removeItem('product7active');
+                localStorage.removeItem('product7name');
+                localStorage.removeItem('product7description');
+                localStorage.removeItem('product7category');
+                localStorage.removeItem('product7price');
+                localStorage.removeItem('product7url');
+                localStorage.removeItem('product7image1');
+                localStorage.removeItem('product7image2');
+                localStorage.removeItem('product7eeimgurl');
+
+                localStorage.removeItem('product8active');
+                localStorage.removeItem('product8name');
+                localStorage.removeItem('product8description');
+                localStorage.removeItem('product8category');
+                localStorage.removeItem('product8price');
+                localStorage.removeItem('product8url');
+                localStorage.removeItem('product8image1');
+                localStorage.removeItem('product8image2');
+                localStorage.removeItem('product8eeimgurl');
+            }
+
+            function setStandardPages(){
+                localStorage.setItem('page0title', 'Home');
+                localStorage.setItem('page0url', 'index.html');
+                localStorage.setItem('page0heroimage', '');
+                localStorage.setItem('page0active', true);
+
+                localStorage.setItem('page6title', '');
+                localStorage.setItem('page6url', '');
+                localStorage.setItem('page6heroimage', '');
+                localStorage.setItem('page6active', false);
+
+                localStorage.setItem('page7title', 'Login/Register');
+                localStorage.setItem('page7url', 'login-register.html');
+                localStorage.setItem('page7heroimage', '');
+                localStorage.setItem('page7active', true);
+
+                localStorage.setItem('page8title', 'Privacy');
+                localStorage.setItem('page8url', 'privacy.html');
+                localStorage.setItem('page8heroimage', '');
+                localStorage.setItem('page8active', true);
+
+                localStorage.setItem('page9title', 'Admin');
+                localStorage.setItem('page9url', 'admin.html');
+                localStorage.setItem('page9heroimage', '');
+                localStorage.setItem('page9active', true);
+            }
+
+            function getCustomPage(brandId, pageNumber){
+                const CustomPage = Parse.Object.extend('CustomPage');
+                const query = new Parse.Query(CustomPage);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("pageNumber", String(pageNumber));
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Custom Page " +pageNumber+ " has been retrieved: results: ", results);
+
+                            if(results.length > 0 ) {
+                                localStorage.setItem('page'+pageNumber+'title', results[0].attributes.pageTitle);
+                                localStorage.setItem('page'+pageNumber+'url', results[0].attributes.pageUrl);
+                                localStorage.setItem('page'+pageNumber+'heroimage', results[0].attributes.pageHeroImage._url);
+                                localStorage.setItem('page'+pageNumber+'active', results[0].attributes.usePage);
+                                }
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Custom Page' +pageNumber, error);
+                        }
+                    }
+                );
+
+            }
+
+            function getProductCategory(brandId, categoryNumber){
+                const Categories = Parse.Object.extend('Categories');
+                const query = new Parse.Query(Categories);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("categoryNumber", categoryNumber);
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Category " +categoryNumber+ " has been retrieved: results: ", results);
+
+                            if(results.length > 0 ) {
+                                localStorage.setItem('category'+categoryNumber+'name', results[0].attributes.category);
+                                localStorage.setItem('category'+categoryNumber+'heroimage', results[0].attributes.image._url);
+                                localStorage.setItem('category'+categoryNumber+'number', results[0].attributes.categoryNumber);
+                                }
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Category' +categoryNumber, error);
+                        }
+                    }
+                );
+
+            }
+
+            function getProduct(brandId, productNumber){
+                const Products = Parse.Object.extend('Products');
+                const query = new Parse.Query(Products);
+
+                query.equalTo("brandId", brandId);
+                query.equalTo("productNumber", String(productNumber));
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Custom Product " +productNumber+ " has been retrieved: results: ", results);
+
+                            if(results.length > 0 ) {
+                                localStorage.setItem('product'+productNumber+'active', results[0].attributes.useProduct);
+                                localStorage.setItem('product'+productNumber+'name', results[0].attributes.name);
+                                localStorage.setItem('product'+productNumber+'featured', results[0].attributes.isFeatured);
+                                localStorage.setItem('product'+productNumber+'description', results[0].attributes.description);
+                                localStorage.setItem('product'+productNumber+'category', results[0].attributes.category);
+                                localStorage.setItem('product'+productNumber+'price', results[0].attributes.finalPrice);
+                                localStorage.setItem('product'+productNumber+'url', results[0].attributes.productUrl);
+                                localStorage.setItem('product'+productNumber+'image1', results[0].attributes.image1._url);
+                                localStorage.setItem('product'+productNumber+'image2', results[0].attributes.image1._url);
+                                localStorage.setItem('product'+productNumber+'eeimgurl', results[0].attributes.image1._url);
+                                }
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching Custom Page' +pageNumber, error);
+                        }
+                    }
+                );
+
+            }
+
+
+            function getBrand(brandId){
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+
+                query.equalTo("brandId", brandId);
+
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            console.log(">>>>> Brand Results: ", results);
+
+                            localStorage.setItem('brandName', results[0].attributes.brandName);
+                            localStorage.setItem('brandname', results[0].attributes.brandName);
+                            localStorage.setItem('brandindustry', results[0].attributes.industry);
+                            localStorage.setItem('brandusecallcenter', results[0].attributes.useCallCenter);
+                            localStorage.setItem('brandusepersonalshopper', results[0].attributes.usePersonalShopper);
+                            localStorage.setItem('brandusecustomprofileattributes', results[0].attributes.useCustomProfileAttributes);
+                            localStorage.setItem('demosetuptype', results[0].attributes.demoType);
+                            localStorage.setItem('brandcurrency', results[0].attributes.currency);
+                            localStorage.setItem('brandcolor', results[0].attributes.brandColor);
+                            localStorage.setItem('textcolor', results[0].attributes.textColor);
+                            localStorage.setItem('brandNumberCustomPages', results[0].attributes.numberCustomPages);
+                            localStorage.setItem('brandNumberProducts', results[0].attributes.numberProducts);
+                            localStorage.setItem('brandNumberCategories', results[0].attributes.numberProductCategories);
+
+                            localStorage.setItem('brandUseAAM', results[0].attributes.useAAM);
+                            localStorage.setItem('brandUseAA', results[0].attributes.useAA);
+                            localStorage.setItem('brandUseAT', results[0].attributes.useAT);
+                            localStorage.setItem('brandUseACS', results[0].attributes.useACS);
+                            localStorage.setItem('brandUseMKT', results[0].attributes.useMKT);
+                            localStorage.setItem('brandUsePlatform', results[0].attributes.usePlatform);
+
+                            localStorage.setItem('brandlogo', results[0].attributes.brandLogo._url);
+                            localStorage.setItem('faviconlink', results[0].attributes.brandFavIcon._url);
+                            localStorage.setItem('brandhero', results[0].attributes.brandHeroImage._url);
+                            localStorage.setItem('brandcalltoaction', results[0].attributes.heroImageCTA);
+                            localStorage.setItem('brandusecalltoaction', results[0].attributes.useCTA);
+                            localStorage.setItem('brandcalltoactionboxposition', results[0].attributes.ctaBoxPosition);
+                            localStorage.setItem('brandcalltoactionurl', results[0].attributes.heroImageCTAUrl);
+                            
+                            if(results[0].attributes.industry === "car"){
+                                localStorage.setItem('testDriveDealerLocations', results[0].attributes.testDriveDealerLocations);
+                                localStorage.setItem('testDriveCarTypes', results[0].attributes.testDriveCarTypes);
+                                
+                                localStorage.setItem('page6title', 'Test Drive');
+                                localStorage.setItem('page6url', 'testdrive.html');
+                                localStorage.setItem('page6heroimage', '');
+                                localStorage.setItem('page6active', true);
+                            }
+
+                            loadBrandCustomPages();
+
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching LDAP', error);
+                        }
+                    }
+                );
+
+
+            }
+
+
+        </script>
+
+	
+	</body>
+</html>

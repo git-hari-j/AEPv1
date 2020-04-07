@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin Step 1 - Create Brand</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                admincreatepage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="resetBrandValidSettings()">
+        
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+        <div class="box">
+            <div class="hgroup title">
+                <h3>So You Think You Can Demo?</h3>
+                <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+                <br/>
+                Step 1: Brand Configuration
+            </div>
+                <div class="box-content" id="ldapAlarmSection" style="display:none;">
+                    <h5 style="color:red;">ERROR! No LDAP Selected </h5>
+                    You can't create a new brand without having selected your LDAP.
+                    <br/>
+                    Please go <a href="./admin_selectldap.html">here</a> to select your LDAP and then come back to this page to create your brand.
+                </div>
+                <div class="box-content" id="brandSettingsSection" style="display:none;">
+                <h5>Brand Settings: </h5>
+                <div class="row">
+                    <div class="col-sm-2">Demo Type:<div id="choice1" class="notification">* Make a choice</div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="demosetuptype" name="demosetuptype" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="quickandnotsodirty">Quick And Not So Dirty</option>
+                                    <option value="fullecommerceready">Full E-Commerce Ready</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Which industry?<div id="choice2" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="industry" name="industry" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="telco">Telco</option>
+                                    <option value="fsi">FSI</option>
+                                    <option value="car">Car Manufacturer</option>
+                                    <option value="hospitality">Hospitality</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Currency?<div id="choice3" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="currency" name="currency" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="USD">USD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2" style="">Leading Background Color?<div id="infoColor" class="information">Enter the hex color code that matches your brand's colors</div>
+                        <div class="form-group" style="display:block;width:180px;">
+                            <div class="controls">
+                                <input class="form-control" id="brandColor" type="text" name="brandColor" value="#FFFFFF">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2" style="">Leading Text Color?<div id="infoTextColor" class="information">Select Light or Dark</div>
+                        <div class="form-group" style="display:block;width:180px;">
+                            <div class="controls">
+                                <select id="textColor" name="textColor" style="color:#000000;height:34px;width:180px;">
+                                    <option value="light">Light</option>
+                                    <option value="dark" selected>Dark</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">Use custom Profile Attributes?<div id="choice4" class="notification">* Make a choice</div>
+                        <div class="form-group" style="display:block;">
+                            <div class="controls">
+                                <select id="usecustomprofileattributes" name="usecustomprofileattributes" style="color:#000000;height:34px;width:180px;">v
+                                    <option value="..." selected>...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Use Call Center?<div id="choice5" class="notification">* Make a choice</div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="usecallcenter" name="usecallcenter" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">Use Personal Shopper?<div id="choice6" class="notification">* Make a choice</div>  
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="usepersonalshopper" name="usepersonalshopper" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">Which solutions on X-ray? <div id="infoColor" class="information">Adobe Experience Platform should always be selected.</div>
+                        <div class="form-group">
+                            <div class="controls" style="">
+                                <input id="usePlatform" type="checkbox" name="usePlatform" value="" checked disabled="disabled"><label class="control-label" for="">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/experience_platform_RGB?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAAM" type="checkbox" name="useAAM" value=""><label class="control-label" for="">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/aam?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAA" type="checkbox" name="useAA" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/aa?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useAT" type="checkbox" name="useAT" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/at?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useACS" type="checkbox" name="useACS" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/acs?fmt=png-alpha" style="height:40px;"/></label>
+                                <input id="useMKT" type="checkbox" name="useMKT" value="" disabled="disabled" style="display:none;"><label class="control-label" for="" style="display:none;">&nbsp;&nbsp;<img src="http://s7e4a.scene7.com/is/image/OmniPS/marketo?fmt=png-alpha" style="height:40px;"/></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>    
+            </div>
+            <div class="box-content" id="brandNameSection" style="display:none;">
+                <h5>Brand Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Brand Name</label><div id="infobrandname" class="notification">* Enter your own brand name</div>  
+                            <div class="controls">
+                                <input class="form-control" id="brandName" type="text" name="brandName" value="">
+                                <button id="verifyBrandName" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="verifyBrandName" value="" onClick="checkIfBrandNameExists()">
+                                Verify Brand Name
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-content" id="brandDetailsSection" style="display:none;">  
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Alexa Brand Name</label><div id="alexabn" class="notification">* Enter your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!</div>  
+                            <div class="controls">
+                                <input class="form-control" id="alexabrandname" type="text" name="alexabrandname" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">      
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="logoImageLabel" class="control-label" for="">Brand Logo Image</label><div id="choice7" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="brandLogo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="faviconImageLabel" class="control-label" for="">Brand Fav Icon Image</label><div id="choice8" class="notification">* Select your favourite icon</div>  
+                            <div class="controls">
+                                <input type="file" id="favIcon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">  
+                        <div class="form-group">                    
+                            <label id="heroImageLabel" class="control-label" for="">Brand Hero Image</label><div id="choice9" class="notification">* Select your hero image</div>  
+                            <div class="controls">
+                                <input type="file" id="brandHeroImage">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use CTA-box?</label><div id="ctainfo" class="information">* Check to use</div>
+                            <div class="controls">
+                                <input id="ctaActive" type="checkbox" name="ctaActive" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">CTA Box Position</label><div id="ctaboxpositioninfo" class="information">* Select the position of the CTA-box</div> 
+                            <div class="controls">
+                                <select id="brandctaboxposition" name="brandctaboxposition" disabled>
+                                    <option value="..." selected>...</option>
+                                    <option value="TL">Top Left</option>
+                                    <option value="TR">Top Right</option>
+                                    <option value="BL">Bottom Left</option>
+                                    <option value="BR">Bottom Right</option>
+                                    <option value="C">Center</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Hero Img CTA</label><div id="choice10" class="information">* Enter your Call To Action</div>  
+                            <div class="controls">
+                                <input class="form-control" id="brandcalltoaction" type="text" name="brandcalltoaction" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">CTA & Hero Img URL</label><div id="choice11" class="notification">* Select the landing page after clicking the hero image</div> 
+                            <div class="controls">
+                                <select id="brandcalltoactionurl" name="brandcalltoactionurl">
+                                    <option value="..." selected>...</option>
+                                    <option value="index.html">No Next Page</option>
+                                    <option value="custompage1.html">Custom Page 1</option>
+                                    <option value="custompage2.html">Custom Page 2</option>
+                                    <option value="custompage3.html">Custom Page 3</option>
+                                    <option value="custompage4.html">Custom Page 4</option>
+                                    <option value="custompage5.html">Custom Page 5</option>
+                                    <option value="p1.html">Product 1</option>
+                                    <option value="p2.html">Product 2</option>
+                                    <option value="p3.html">Product 3</option>
+                                    <option value="p4.html">Product 4</option>
+                                    <option value="p5.html">Product 5</option>
+                                    <option value="p6.html">Product 6</option>
+                                    <option value="p7.html">Product 7</option>
+                                    <option value="p8.html">Product 8</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="box-content" id="carIndustrySection" style="display:none;">
+                <h5>Car Industry Specific Settings</h5>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="">Test Drive Dealers</label><div id="testdrivedealersinfo" class="notification">* Enter a comma-separated list of Dealer Locations</div>
+                            <div class="controls">
+                                <input class="form-control" id="testdrivedealers" type="text" name="testdrivedealers" value="Dealer Location 1, Dealer Location 2, Dealer Location 3" style="width:500px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="">Test Drive Car Types</label><div id="testdrivecartypesinfo" class="notification">* Enter a comma-separated list of Car Types</div>
+                            <div class="controls">
+                                <input class="form-control" id="testdrivecartypes" type="text" name="testdrivecartypes" value="Car Type 1, Car Type 2, Car Type 3" style="width:500px;">
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>   
+  
+                <br/>
+                <div id="loader" style="display:none;"></div>
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="nextPageCreateBrandButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="nextPageCreateBrandButton" value="" onClick="saveBrand()" disabled>
+                                Create new brand
+                            </button>
+                        </div>
+                    </div>     
+                </div> 
+            </div>
+        </div>
+
+	    <!-- Credits bar -->
+        <div class="credits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits">
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+        <script>
+            //Set Default Values for dropdownlists
+            $("#demosetuptype").val("...").change();
+            $("#industry").val("...").change();
+            $("#currency").val("...").change();
+            $("#usecustomprofileattributes").val("...").change();
+            $("#usecallcenter").val("...").change();
+            $("#usepersonalshopper").val("...").change();
+
+            //Verify Brand Settings
+            $("#demosetuptype").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice1").attr('class', 'notification');
+                    $("#choice1").text("* Make a choice");
+                    localStorage.setItem("admin_demosetuptypechoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice1").attr('class', 'information');
+                    $("#choice1").text("Good choice!");
+                    localStorage.setItem("admin_demosetuptypechoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#industry").change(function(){
+                //selection changed
+                if(this.value !== "car"){
+                    localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                    localStorage.setItem("admin_testdrivecartypes", "valid");
+                    $("#carIndustrySection").attr("style", "display:none;");
+                    verifyBrandDetailSettings();
+                }
+                
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice2").attr('class', 'notification');
+                    $("#choice2").text("* Make a choice");
+                    localStorage.setItem("admin_industrychoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice2").attr('class', 'information');
+                    $("#choice2").text("Good choice!");
+                    localStorage.setItem("admin_industrychoice", "valid");
+                    verifyBrandSettings();
+                    if(this.value === "car"){
+                        localStorage.setItem("admin_testdrivedealerlocations", "invalid");
+                        localStorage.setItem("admin_testdrivecartypes", "invalid");
+                        $("#carIndustrySection").attr("style", "display:block;");
+                        verifyBrandDetailSettings();
+                    }
+                }
+            });
+
+            $("#currency").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice3").attr('class', 'notification');
+                    $("#choice3").text("* Make a choice");
+                    localStorage.setItem("admin_currencychoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice3").attr('class', 'information');
+                    $("#choice3").text("Good choice!");
+                    localStorage.setItem("admin_currencychoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usecustomprofileattributes").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice4").attr('class', 'notification');
+                    $("#choice4").text("* Make a choice");
+                    localStorage.setItem("admin_customprofileattributeschoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice4").attr('class', 'information');
+                    $("#choice4").text("Good choice!");
+                    localStorage.setItem("admin_customprofileattributeschoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usecallcenter").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice5").attr('class', 'notification');
+                    $("#choice5").text("* Make a choice");
+                    localStorage.setItem("admin_usecallcenterchoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice5").attr('class', 'information');
+                    $("#choice5").text("Good choice!");
+                    localStorage.setItem("admin_usecallcenterchoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            $("#usepersonalshopper").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                    $("#choice6").attr('class', 'notification');
+                    $("#choice6").text("* Make a choice");
+                    localStorage.setItem("admin_usepersonalshopperchoice", "invalid");
+                    verifyBrandSettings();
+                }else{
+                    $("#choice6").attr('class', 'information');
+                    $("#choice6").text("Good choice!");
+                    localStorage.setItem("admin_usepersonalshopperchoice", "valid");
+                    verifyBrandSettings();
+                }
+            });
+
+            function verifyBrandSettings() {
+                admin_demosetuptypechoice = localStorage.getItem('admin_demosetuptypechoice');
+                admin_industrychoice = localStorage.getItem('admin_industrychoice');
+                admin_currencychoice = localStorage.getItem('admin_currencychoice');
+                admin_customprofileattributeschoice = localStorage.getItem('admin_customprofileattributeschoice');
+                admin_usecallcenterchoice = localStorage.getItem('admin_usecallcenterchoice');
+                admin_usepersonalshopperchoice = localStorage.getItem('admin_usepersonalshopperchoice');
+
+                if(admin_demosetuptypechoice == "valid" && admin_industrychoice == "valid" && admin_currencychoice == "valid" && admin_customprofileattributeschoice == "valid" && admin_usecallcenterchoice == "valid" && admin_usepersonalshopperchoice == "valid"){
+                    console.log(">>>>> Brand settings are valid!")
+                    $("#brandNameSection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Not all brand settings are valid!")
+                    $("#brandNameSection").attr("style", "display:none;");
+                }
+            }
+
+            ////////////////////////////////////
+            // Brand Name Verification
+            ////////////////////////////////////
+
+            //Check if Brand Name exists
+            function checkIfBrandNameExists() {
+                var brandName = document.getElementById("brandName").value;
+                console.log(">>>>> Checking if Brand Name: " + brandName + " already exists...")
+
+                const Brand = Parse.Object.extend('Brand');
+                const query = new Parse.Query(Brand);
+                query.equalTo("brandName", brandName);
+                query.find().then(
+                    (results) => {
+                        if (typeof document !== 'undefined'){
+                            if(results.length > 0){
+                                console.log('>>>>> Brand Name already exists:', results);
+                                localStorage.setItem("admin_brandname", "invalid");
+                                $("#infobrandname").attr('class', 'notification');
+                                $("#infobrandname").text("Brand Name already exists. Choose a new Brand Name!");
+                                $("#brandDetailsSection").attr("style", "display:none;");
+                            }else{
+                                console.log(">>>>> Brand Name doesn't exist yet:", results);
+                                $("#infobrandname").attr('class', 'information');
+                                $("#infobrandname").text("Brand Name doesn't exist yet. Continue to create this brand!");
+                                localStorage.setItem("admin_brandname", "valid");
+                                $("#brandDetailsSection").attr("style", "display:block;");
+                                var alexabrandname = brandName.replace(/ & /gi, " and ").replace(/&/gi, " and ").replace(/ - /gi, " ").replace(/-/gi, " ");
+                                $("#alexabrandname").val(alexabrandname.toLowerCase());
+                                $("#alexabn").attr('class', 'information');
+                                $("#alexabn").text("Verify your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                                localStorage.setItem("admin_alexabrandname", "valid");
+                            }
+                        }
+                    }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Brand Name doesnt exist yet.', error);
+                            localStorage.setItem("admin_brandname", "valid");
+                            $("#brandDetailsSection").attr("style", "display:block;");
+                        }
+
+                });
+            }
+
+
+            ////////////////////////////////////
+            // Brand Details Verification
+            ////////////////////////////////////
+
+            $("#brandLogo").change(function(){
+                //selection changed
+                if ($('#brandLogo').get(0).files.length === 0) {
+                    console.log(">>>>> No Brand Logo file selected.");
+                    $("#choice7").attr('class', 'notification');
+                    $("#choice7").text("* Make a choice");
+                    localStorage.setItem("admin_selectbrandlogo", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Brand Logo file selected.");
+                    $("#choice7").attr('class', 'information');
+                    $("#choice7").text("Good choice!");
+                    localStorage.setItem("admin_selectbrandlogo", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#favIcon").change(function(){
+                //selection changed
+                if ($('#favIcon').get(0).files.length === 0) {
+                    console.log(">>>>> No Fav Icon file selected.");
+                    $("#choice8").attr('class', 'notification');
+                    $("#choice8").text("* Make a choice");
+                    localStorage.setItem("admin_selectfavicon", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Fav Icon file selected.");
+                    $("#choice8").attr('class', 'information');
+                    $("#choice8").text("Good choice!");
+                    localStorage.setItem("admin_selectfavicon", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+
+            $("#brandHeroImage").change(function(){
+                //selection changed
+                if ($('#brandHeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Fav Icon file selected.");
+                    $("#choice9").attr('class', 'notification');
+                    $("#choice9").text("* Make a choice");
+                    localStorage.setItem("admin_selectbrandheroimage", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Fav Icon file selected.");
+                    $("#choice9").attr('class', 'information');
+                    $("#choice9").text("Good choice!");
+                    localStorage.setItem("admin_selectbrandheroimage", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#ctaActive").change(function(){
+                //selection changed
+                if($('#ctaActive').prop('checked')){
+                    console.log(">>>>> Use CTA is checked.");
+                    $("#ctainfo").attr('class', 'information');
+                    $("#ctainfo").text("* Good choice!");
+                    $("#choice10").attr('class', 'notification');
+                    $("#choice10").text("* Enter your Call To Action.");
+                    $("#ctaboxpositioninfo").attr('class', 'notification');
+                    $("#ctaboxpositioninfo").text("* Select your position.");
+                    localStorage.setItem("admin_usecta", "valid");
+                    localStorage.setItem("admin_cta", "invalid");
+                    localStorage.setItem("admin_ctaboxposition", "invalid");
+                    $("#brandcalltoaction").attr("disabled", false);
+                    $("#brandctaboxposition").attr("disabled", false);
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Use CTA is not checked.");
+                    $("#ctainfo").attr('class', 'information');
+                    $("#ctainfo").text("* Check to use");
+                    localStorage.setItem("admin_usecta", "valid");
+                    localStorage.setItem("admin_cta", "valid");
+                    localStorage.setItem("admin_ctaboxposition", "valid");
+                    $("#brandcalltoaction").attr("disabled", true);
+                    $("#brandctaboxposition").attr("disabled", true);
+                    $("#choice10").attr('class', 'information');
+                    $("#choice10").text("* Call To Action is unused.");
+                    $("#ctaboxpositioninfo").attr('class', 'information');
+                    $("#ctaboxpositioninfo").text("* Call To Action is unused.");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandctaboxposition").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA Box Position entered.");
+                    $("#ctaboxpositioninfo").attr('class', 'notification');
+                    $("#ctaboxpositioninfo").text("* Select a position.");
+                    localStorage.setItem("admin_ctaboxposition", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA Box Position entered.");
+                    $("#ctaboxpositioninfo").attr('class', 'information');
+                    $("#ctaboxpositioninfo").text("Good choice!");
+                    localStorage.setItem("admin_ctaboxposition", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandcalltoaction").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA entered.");
+                    $("#choice10").attr('class', 'notification');
+                    $("#choice10").text("* Enter your Call To Action.");
+                    localStorage.setItem("admin_cta", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA entered successfully.");
+                    $("#choice10").attr('class', 'information');
+                    $("#choice10").text("Good choice!");
+                    localStorage.setItem("admin_cta", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+            
+
+            $("#alexabrandname").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> No Alexa Brand Name entered.");
+                    $("#alexabn").attr('class', 'notification');
+                    $("#alexabn").text("* Enter your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                    localStorage.setItem("admin_alexabrandname", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Alexa Brand Name entered successfully.");
+                    $("#alexabn").attr('class', 'information');
+                    $("#alexabn").text("Verify your Alexa Brand Name - use lower case only and replace special characters by a space. Alexa doesn't understand special characters!");
+                    localStorage.setItem("admin_alexabrandname", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#brandcalltoactionurl").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No CTA URL selected.");
+                    $("#choice11").attr('class', 'notification');
+                    $("#choice11").text("* Select the landing page after clicking the hero image.");
+                    localStorage.setItem("admin_ctaurl", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> CTA URL selected successfully.");
+                    $("#choice11").attr('class', 'information');
+                    $("#choice11").text("Good choice!");
+                    localStorage.setItem("admin_ctaurl", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#testdrivedealers").change(function(){
+                //selection changed
+                if(this.value === "Dealer Location 1, Dealer Location 2, Dealer Location 3"){
+                    console.log(">>>>> No Dealer Locations entered.");
+                    $("#testdrivedealersinfo").attr('class', 'notification');
+                    $("#testdrivedealersinfo").text("* Enter a comma-separated list of Dealer Locations");
+                    localStorage.setItem("admin_testdrivedealerlocations", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Dealer Locations entered successfully.");
+                    $("#testdrivedealersinfo").attr('class', 'information');
+                    $("#testdrivedealersinfo").text("Good choice!");
+                    localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+            $("#testdrivecartypes").change(function(){
+                //selection changed
+                if(this.value === "Car Type 1, Car Type 2, Car Type 3"){
+                    console.log(">>>>> No Car Types entered.");
+                    $("#testdrivecartypesinfo").attr('class', 'notification');
+                    $("#testdrivecartypesinfo").text("* Enter a comma-separated list of Car Types");
+                    localStorage.setItem("admin_testdrivecartypes", "invalid");
+                    verifyBrandDetailSettings();
+                }else{
+                    console.log(">>>>> Car Types entered successfully.");
+                    $("#testdrivecartypesinfo").attr('class', 'information');
+                    $("#testdrivecartypesinfo").text("Good choice!");
+                    localStorage.setItem("admin_testdrivecartypes", "valid");
+                    verifyBrandDetailSettings();
+                }
+            });
+
+
+            function verifyBrandDetailSettings() {
+                admin_selectbrandlogo = localStorage.getItem('admin_selectbrandlogo');
+                admin_selectfavicon = localStorage.getItem('admin_selectfavicon');
+                admin_selectbrandheroimage = localStorage.getItem('admin_selectbrandheroimage');
+                admin_cta = localStorage.getItem('admin_cta');
+                admin_ctaurl = localStorage.getItem('admin_ctaurl');
+                admin_usecta = localStorage.getItem('admin_usecta');
+                admin_ctaboxposition = localStorage.getItem('admin_ctaboxposition');
+                admin_testdrivedealerlocations = localStorage.getItem('admin_testdrivedealerlocations');
+                admin_testdrivecartypes = localStorage.getItem('admin_testdrivecartypes');
+                admin_alexabrandname = localStorage.getItem('admin_alexabrandname');
+
+                if(admin_selectbrandlogo == "valid" && admin_selectfavicon == "valid" && admin_selectbrandheroimage == "valid" && admin_customprofileattributeschoice == "valid" && admin_cta == "valid" && admin_ctaurl == "valid"  && admin_usecta == "valid" && admin_ctaboxposition == "valid" && admin_testdrivedealerlocations == "valid" && admin_testdrivecartypes == "valid" && admin_alexabrandname == "valid"){
+                    console.log(">>>>> Brand Detail Settings are valid!")
+                    $("#nextPageCreateBrandButton").attr("style", "display:block;");
+                    $("#nextPageCreateBrandButton").attr("disabled", false);
+                }else{
+                    console.log(">>>>> Not all Brand Detail Settings are valid!")
+                    $("#nextPageCreateBrandButton").attr("disabled", true);
+                }
+            }
+
+
+            function resetBrandValidSettings() {
+
+                var brandLdap = localStorage.getItem('admin_ldap');
+
+                if(brandLdap === null){
+                    $("#brandSettingsSection").attr("style", "display:none;");
+                    $("#ldapAlarmSection").attr("style", "display:block;");
+
+                }else{
+                    $("#brandSettingsSection").attr("style", "display:block;");
+                }
+
+                localStorage.setItem("admin_demosetuptypechoice", "invalid");
+                localStorage.setItem("admin_industrychoice", "invalid");
+                localStorage.setItem("admin_currencychoice", "invalid");
+                localStorage.setItem("admin_customprofileattributeschoice", "invalid");
+                localStorage.setItem("admin_usecallcenterchoice", "invalid");
+                localStorage.setItem("admin_usepersonalshopperchoice", "invalid");
+                localStorage.setItem("admin_brandname", "invalid");
+                localStorage.setItem("admin_selectbrandlogo", "invalid");
+                localStorage.setItem("admin_selectfavicon", "invalid");
+                localStorage.setItem("admin_selectbrandheroimage", "invalid");
+                localStorage.setItem("admin_usecta", "valid");
+                localStorage.setItem("admin_cta", "valid");
+                localStorage.setItem("admin_ctaboxposition", "valid");
+                localStorage.setItem("admin_ctaurl", "invalid");
+                localStorage.setItem("admin_testdrivedealerlocations", "valid");
+                localStorage.setItem("admin_testdrivecartypes", "valid");
+            }
+
+            ////////////////////////////////////
+            // Save Brand Section
+            ////////////////////////////////////
+
+            var pullReadBrandResults = [];
+
+            function saveBrand() {
+                $("#loader").attr("style", "display:block;");
+                $("#nextPageCreateBrandButton").attr("disabled", true);
+
+                var unix = Date.now();
+                var brandId = unix.toString();
+                localStorage.setItem("admin_brandId", brandId);
+
+                var brandLdap = localStorage.getItem('admin_ldap');
+
+                var brandDemoSetupType = document.getElementById("demosetuptype").value;
+                localStorage.setItem("admin_brandDemoSetupType", brandDemoSetupType);
+
+                var brandIndustry = document.getElementById("industry").value;
+                localStorage.setItem("admin_brandIndustry", brandIndustry);
+
+                var brandCurrency = document.getElementById("currency").value;
+                localStorage.setItem("admin_brandCurrency", brandCurrency);
+                
+                var brandColor = document.getElementById("brandColor").value;
+                var textColor = document.getElementById("textColor").value;
+                var brandUseCustomProfileAttributes = document.getElementById("usecustomprofileattributes").value;
+                var brandUseCallCenter = document.getElementById("usecallcenter").value;
+                var brandUsePersonalShopper = document.getElementById("usepersonalshopper").value;
+                var brandUsePlatform = document.getElementById("usePlatform").checked;
+                var brandUseAAM = document.getElementById("useAAM").checked;
+                var brandUseAA = document.getElementById("useAA").checked;
+                var brandUseAT = document.getElementById("useAT").checked;
+                var brandUseACS = document.getElementById("useACS").checked;
+                var brandUseMKT = document.getElementById("useMKT").checked;
+
+                var brandName = document.getElementById("brandName").value;
+                var alexaBrandName = document.getElementById("alexabrandname").value;
+                var brandUseCallToAction = document.getElementById("ctaActive").checked;
+                var brandCallToAction = document.getElementById("brandcalltoaction").value;
+                var brandCallToActionBoxPosition = document.getElementById("brandctaboxposition").value;
+                var brandCallToActionUrl = document.getElementById("brandcalltoactionurl").value;
+
+                if(brandIndustry === "car"){
+                  var testDriveDealerLocations = document.getElementById("testdrivedealers").value;
+                  var testDriveCarTypes = document.getElementById("testdrivecartypes").value;
+                }else{
+                  var testDriveDealerLocations = "";
+                  var testDriveCarTypes = "";
+                }
+
+                var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+                var file = new Parse.File("myfile.txt", { base64: base64 });
+
+                var fileUploadControlBrandLogo = $("#brandLogo")[0];
+                if (fileUploadControlBrandLogo.files.length > 0) {
+                  var brandLogoFile = fileUploadControlBrandLogo.files[0];
+                  var brandLogoName = "image1.jpg";
+
+                  var parseBrandLogo = new Parse.File(brandLogoName, brandLogoFile);
+                }
+
+                var fileUploadControlFavIcon = $("#favIcon")[0];
+                if (fileUploadControlFavIcon.files.length > 0) {
+                  var favIconFile = fileUploadControlFavIcon.files[0];
+                  var favIconName = "image2.jpg";
+
+                  var parseFavIcon = new Parse.File(favIconName, favIconFile);
+                }
+
+                var fileUploadControlBrandHeroImage = $("#brandHeroImage")[0];
+                if (fileUploadControlBrandHeroImage.files.length > 0) {
+                  var brandHeroImageFile = fileUploadControlBrandHeroImage.files[0];
+                  var brandHeroImageName = "image2.jpg";
+
+                  var parseBrandHeroImage = new Parse.File(brandHeroImageName, brandHeroImageFile);
+                }
+
+                const Brand = Parse.Object.extend('Brand');
+                const newBrand = new Brand();
+
+                newBrand.set('brandName', brandName);
+                newBrand.set('alexaBrandName', alexaBrandName);
+                newBrand.set('brandLogo', parseBrandLogo);
+                newBrand.set('brandHeroImage', parseBrandHeroImage);
+                newBrand.set('demoType', brandDemoSetupType);
+                newBrand.set('industry', brandIndustry);
+                newBrand.set('currency', brandCurrency);
+                newBrand.set('brandColor', brandColor);
+                newBrand.set('textColor', textColor);
+                newBrand.set('useCustomProfileAttributes', brandUseCustomProfileAttributes);
+                newBrand.set('useCallCenter', brandUseCallCenter);
+                newBrand.set('usePersonalShopper', brandUsePersonalShopper);
+                newBrand.set('usePlatform', brandUsePlatform);
+                newBrand.set('useAAM', brandUseAAM);
+                newBrand.set('useAA', brandUseAA);
+                newBrand.set('useAT', brandUseAT);
+                newBrand.set('useACS', brandUseACS);
+                newBrand.set('useMKT', brandUseMKT);
+                newBrand.set('brandFavIcon', parseFavIcon);
+                newBrand.set('useCTA', brandUseCallToAction);
+                newBrand.set('heroImageCTA', brandCallToAction);
+                newBrand.set('ctaBoxPosition', brandCallToActionBoxPosition);
+                newBrand.set('heroImageCTAUrl', brandCallToActionUrl);
+                newBrand.set('brandId', brandId);
+                newBrand.set('ldap', brandLdap);
+                newBrand.set('active', 'Y');
+                newBrand.set('canbeedited', 'Y');
+                newBrand.set('numberCustomPages', 5);
+                newBrand.set('numberProducts', 8);
+                newBrand.set('numberProductCategories', 3);
+                newBrand.set('testDriveDealerLocations', testDriveDealerLocations);
+                newBrand.set('testDriveCarTypes', testDriveCarTypes);
+
+                newBrand.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log('Brand created', result);
+                        $("#loader").attr("style", "display:none;");
+                        document.location.href = "./admin_createbrand_step2.html";
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Brand: ', error);
+                        $("#loader").attr("style", "display:none;");
+                    }
+                });
+            }
+        </script>
+	</body>
+</html>

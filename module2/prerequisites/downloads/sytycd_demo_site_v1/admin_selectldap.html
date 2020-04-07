@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin - Select LDAP</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="getLdaps()">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+    <div class="box">
+        <div class="hgroup title">
+            <h3>So You Think You Can Demo?</h3>
+            <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+            <br/>
+        </div>
+            <div id="ldapsection" class="box-content" style="display:block;height: 550px;">
+                <div class="row">
+                    <div class="col-sm-12">Select your LDAP:
+                        <div class="form-group">
+                            <div class="controls">
+                                <select id="ldaps" name="ldaps" style="color:#000000;height:34px;width:180px;">
+                                    <option value="..." selected>...</option>
+                                </select>
+                            </div>
+                        </div></div>
+                <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="saveButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="saveButton" value="files" onClick="saveLdap()" disabled>
+                                Save
+                            </button>
+                        </div>
+                    </div>  
+                </div> 
+                <br/>
+                    (if your LDAP isn't shown, contact <a href="mailto:vangeluw@adobe.com">Wouter Van Geluwe</a> to have it added.)
+                    
+            </div>
+            
+	        <!-- Credits bar -->
+            <div class="credits">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p id="footerCredits">
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End class="credits" -->
+
+            <script>
+            ////////////////////////////////
+            // LDAP Section
+            ////////////////////////////////
+
+            $("#ldaps").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    $("#saveButton").attr("disabled", true);
+                }else{
+                    $("#saveButton").attr("disabled", false);
+                }
+            });
+
+            var pullReadLdapResults = [];
+            var ldapDropdown = document.getElementById("ldaps");
+
+            function getLdaps() {
+                const LDAP = Parse.Object.extend('LDAP');
+                const query = new Parse.Query(LDAP);
+                //query.equalTo("ldap", 'A string');
+                query.find().then(
+                    (results) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            pullReadLdapResults = results;
+                            displayLdapIds(pullReadLdapResults);
+                            console.log(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching LDAP', error);
+                        }
+                    }
+                );
+            };
+
+            function displayLdapIds(pullReadLdapResults) {
+                for (i = 0; i < pullReadLdapResults.length; i++) {
+                    try{
+                        var ldapId = pullReadLdapResults[i].attributes.ldap;
+                        console.log(ldapId);
+                        var el = document.createElement("option");
+                        el.textContent = ldapId;
+                        el.value = ldapId;
+                        ldapDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+            }
+
+            function saveLdap() {
+                localStorage.setItem("admin_ldap", document.getElementById("ldaps").value);
+                document.location.href = "./admin.html";
+            }
+        </script>
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+	
+	</body>
+</html>

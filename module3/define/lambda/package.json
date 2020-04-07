@@ -1,0 +1,21 @@
+{
+  "name": "laboutique",
+  "version": "1.0.0",
+  "description": "La Boutique Alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob In der Maur, Adobe",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.5.2",
+    "ask-sdk-core": "^2.5.2",
+    "ask-sdk-model": "^1.15.1",
+    "axios": "^0.18.0",
+    "moment": "^2.24.0",
+    "parse": "^2.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}

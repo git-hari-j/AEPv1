@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="La Boutique HTML v10.0" />
+
+<title id="custompagetitle"></title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+<script src="./js/launch.js"></script> 
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script>
+    localStorage.removeItem("thisProductView");
+</script>
+
+<script src="./js/jquery-1.11.3.min.js"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                custompagenumber: 3,
+                home: false,
+                productdtl: false,
+                custompage: true,
+                loadxray: true
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Products",
+                siteSection:"Products"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: ""
+            }
+        };
+    </script>
+
+    </head>
+	<body onLoad="thisProductView();">
+        
+	
+		<div class="wrapper">
+		
+			<!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                	
+                	
+                	
+                </div>
+                    
+                <!-- Mini cart -->
+                <div id="carticon" class="mini-cart">
+                    <a href="cart.html" title="Go to cart &rarr;">
+                        <span id="carticonqty" style="display:none;"></span>
+                    </a>									
+                </div>
+                <!-- End class="mini-cart" -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div>    
+
+
+
+            </div>
+
+        </div>        
+    
+    </div>
+</nav>
+<!-- End class="navigation" -->
+
+			
+			<img id="custompageimage" style="width: 100%;">
+			
+			
+			
+<!-- Footer -->
+<div id="footerbar" class="footer">
+    <div class="container">
+        <div class="row">   
+                        
+            <div class="col-sm-2">
+                
+                <!-- My account -->
+                <div class="account">
+                    <h6 id="accountsection">My account</h6>
+
+                    <ul id="loginsection" class="links">                                
+                        <li>
+                            <a href="login-register.html" title="Login / Register">Login / Register</a>                                 
+                        </li>
+                    </ul>
+                </div>
+                <!-- End class="account"-->
+                
+            </div>
+
+            <div class="col-sm-2">
+                
+                
+            </div>
+
+            <div class="col-sm-4">
+                
+            </div>
+
+            <div class="col-sm-4">              
+
+                <!-- Newsletter subscription -->
+                <div class="newsletter">
+                    <h6 id="newslettersection">Newsletter subscription</h6>
+
+                    <form onsubmit="return false;" enctype="multipart/form-data" action="#" method="post">                       
+                        
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" />
+                            <span class="input-group-addon btn" type="submit" id="newsletter_submit" data-toggle="modal" data-target="#newsletter_subscribe">Go!</span>
+                        </div>                       
+
+                    </form>                             
+
+                    <p>Sign up to receive our latest news and updates direct to your inbox</p>
+                </div>
+                <!-- End class="newsletter" -->
+                
+
+                <hr />
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End id="footer" -->
+
+            <!-- Credits bar -->
+<div class="credits">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End class="credits" -->
+            <!-- Newsletter modal window -->
+<div id="newsletter_subscribe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                <div class="hgroup title">
+                    <h3 id="modal-label">You are now subscribed to our newsletter</h3>
+                    <h5>All the latest deals and offers will be making their way to your inbox shortly!</h5>
+                </div>
+            </div>
+        
+            <div class="modal-footer">  
+                <button data-dismiss="modal" aria-hidden="true" class="btn btn-sm btn-block-xs">
+                    Close &nbsp; <i class="fa fa-check"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End id="newsletter_subscribe" -->
+		
+		</div>
+		
+		<!-- BEGIN JAVASCRIPTS -->
+
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/addToCart.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+
+
+
+<!-- END JAVASCRIPTS -->
+	
+	</body>
+</html>

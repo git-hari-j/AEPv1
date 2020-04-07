@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="bot"/>
+
+<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+<script>
+
+  var brandName = localStorage.getItem('brandname') || "None";
+  var userName = "anonymous";
+
+	var ecid = localStorage.getItem("ecid");
+	var featuredProducts = getAllFeaturedProducts();
+	var categories = getAllCategories();
+	var jsonData = {brandName: brandName, ecid: ecid, featuredProducts: featuredProducts, categories: categories};
+
+	var botConnection = new BotChat.DirectLine({
+    token: 'dnMVQKhr2TE.12BVk_CylRNJRgSIpRvODovO_Qz9F808d875Dgw54us'
+  });
+
+  BotChat.App({
+    botConnection: botConnection,
+    user: { id: userName},
+    bot: { id: 'AdobeExperiencePlatform' },
+    resize: 'detect'
+  }, document.getElementById("bot"));
+
+  botConnection
+	.postActivity({
+            from: { id: userName},
+            name: 'requestWelcomeDialog',
+            type: 'event',
+            value: JSON.stringify(jsonData)
+  })
+  .subscribe(function (id) {
+        //console.log('"trigger requestWelcomeDialog" sent');
+  });
+
+	botConnection.activity$
+    .filter(activity => activity.type === "event" && activity.name === "openProductPage")
+    .subscribe(activity => openProductPage(activity.value));
+
+	function openProductPage(producturl){
+		window.open(producturl, '_blank');
+	}
+
+	function getAllCategories(){
+		var brandNumberCategories = localStorage.getItem("brandNumberCategories") || 0;
+		var categories = [];
+		if(brandNumberCategories > 0 ) {
+			var i;
+			for (i = 1; i <= brandNumberCategories; i++) {
+				var categoryName = localStorage.getItem("category" + i + "name") || "";
+				if(categoryName) {
+						categories.push(categoryName);
+				}
+			}
+		}
+
+		return categories;
+	}
+
+	function getAllFeaturedProducts(){
+		var brandNumberProducts = localStorage.getItem("brandNumberProducts") || 0;
+		var featuredProducts = [];
+		if(brandNumberProducts > 0 ) {
+			var i;
+			for (i = 1; i <= brandNumberProducts; i++) {
+
+				var productfeatured = localStorage.getItem("product" + i + "featured") || "false";
+				productfeatured = productfeatured.toLowerCase() == 'true' ? true : false;
+				var producteeimgurl = localStorage.getItem("product" + i + "eeimgurl") || "#";
+				var productname = localStorage.getItem("product" + i + "name") || "";
+				var producturl = localStorage.getItem("product" + i + "url") || "#";
+				var productCategory = localStorage.getItem("product" + i + "category") || "";
+
+				if(productfeatured) {
+			  		featuredProducts.push({producteeimgurl: producteeimgurl, productname: productname, producturl: producturl, productCategory: productCategory});
+				}
+			}
+		}
+
+		return featuredProducts;
+	}
+
+</script>
+
+</body>
+</html>

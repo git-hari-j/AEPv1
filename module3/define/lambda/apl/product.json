@@ -1,0 +1,34 @@
+{
+    "listItemIdentifier": "objectId",
+    "ordinalNumber": 1,
+    "textContent": {
+        "primaryText": {
+            "type": "PlainText",
+            "text": "product"
+        },
+        "secondaryText": {
+            "type": "PlainText",
+            "text": "category"
+        }
+    },
+    "image": {
+        "contentDescription": null,
+        "smallSourceUrl": null,
+        "largeSourceUrl": null,
+        "sources": [
+            {
+                "url": "whatever0.jpg",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+                                },
+            {
+                "url": "whatever0.jpg",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+                                }
+                            ]
+    },
+    "token": "objectId"
+}

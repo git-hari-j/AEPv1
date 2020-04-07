@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin Step 2 - Create Custom Pages</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                admincreatepage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="resetCustomPageValidSettings()">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+        <div class="box">
+            <div class="hgroup title">
+                <h3>So You Think You Can Demo?</h3>
+                <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+                <br/>
+
+                Step 2: Create your Custom Pages
+                <br/><br/>
+            </div>
+            <div id="page1detailssection" class="box-content">
+                <h5>Custom Page 1 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page 1?</label><div id="p1a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="page1Active" type="checkbox" name="page1Active" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page 1 Title</label><div id="p1t" class="notification">* Make a choice</div>
+                            <div class="controls">
+                                <input class="form-control" id="page1Title" type="text" name="page1Title" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 1 URL</label><div id="p1u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="page1Url" type="text" name="page1Url" value="custompage1.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 1 Hero Image</label><div id="p1h" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="page1HeroImage" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div id="page2detailssection" class="box-content" style="display:none;">
+                <h5>Custom Page 2 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page 2?</label><div id="p2a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="page2Active" type="checkbox" name="page2Active" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page 2 Title</label><div id="p2t" class="notification">* Enter a Page Title</div>
+                            <div class="controls">
+                                <input class="form-control" id="page2Title" type="text" name="page2Title" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 2 URL</label><div id="p2u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="page2Url" type="text" name="page2Url" value="custompage2.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 2 Hero Image</label><div id="p2h" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="page2HeroImage" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div id="page3detailssection" class="box-content" style="display:none;">
+                <h5>Custom Page 3 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page 3?</label><div id="p3a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="page3Active" type="checkbox" name="page3Active" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page 3 Title</label><div id="p3t" class="notification">* Enter a Page Title</div>
+                            <div class="controls">
+                                <input class="form-control" id="page3Title" type="text" name="page3Title" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 3 URL</label><div id="p3u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="page3Url" type="text" name="page3Url" value="custompage3.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 3 Hero Image</label><div id="p3h" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="page3HeroImage" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            
+            <div id="page4detailssection" class="box-content" style="display:none;">
+                <h5>Custom Page 4 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page 4?</label><div id="p4a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="page4Active" type="checkbox" name="page4Active" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page 4 Title</label><div id="p4t" class="notification">* Enter a Page Title</div>
+                            <div class="controls">
+                                <input class="form-control" id="page4Title" type="text" name="page4Title" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 4 URL</label><div id="p4u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="page4Url" type="text" name="page4Url" value="custompage4.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 4 Hero Image</label><div id="p4h" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="page4HeroImage" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div id="page5detailssection" class="box-content" style="display:none;">
+                <h5>Custom Page 5 Details:  </h5>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label class="control-label" for="">Use Page 5?</label><div id="p5a" class="notification">* Check to use</div>
+                            <div class="controls">
+                                <input id="page5Active" type="checkbox" name="page5Active" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Page 5 Title</label><div id="p5t" class="notification">* Enter a Page Title</div>
+                            <div class="controls">
+                                <input class="form-control" id="page5Title" type="text" name="page5Title" value="..." disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 5 URL</label><div id="p5u" class="information">URL can't be changed.</div>
+                            <div class="controls">
+                                <input class="form-control" id="page5Url" type="text" name="page5Url" value="custompage5.html" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">  
+                        <div class="form-group">                    
+                            <label class="control-label" for="">Page 5 Hero Image</label><div id="p5h" class="notification">* Select your image</div>  
+                            <div class="controls">
+                                <input type="file" id="page5HeroImage" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pageStatusOverview" class="box-content" style="display:block;">
+                <h5>Custom Page Configuration Status:  </h5>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Custom Page 1 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="page1status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Custom Page 2 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="page2status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Custom Page 3 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="page3status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Custom Page 4 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="page4status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="control-label" for="">Custom Page 5 Status:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-group">
+                            <label id="page5status" class="control-label" for="">Not Used</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+                <div id="loader" style="display:none;"></div>
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="nextPageCreateCustomPagesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="nextPageCreateCustomPagesButton" value="" onClick="saveCustomPages()" disabled>
+                                Save Custom Pages
+                            </button>
+                        </div>
+                    </div>    
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="continueWithoutCustomPagesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="continueWithoutCustomPagesButton" value="" onClick="continueWithoutCustomPages()" style="width:300px;">
+                                Continue Without Custom Pages
+                            </button>
+                        </div>
+                    </div>  
+                </div> 
+            </div> 
+            
+        </div>
+
+	    <!-- Credits bar -->
+        <div class="credits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits">
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+
+        <script>
+
+            //////////////////////////
+            // Client-Side Validation
+            //////////////////////////
+
+            //////////////////////////
+            //Custom Page 1
+            //////////////////////////
+
+            $("#page1Active").change(function(){
+                //selection changed
+                if($('#page1Active').prop('checked')){
+                    console.log(">>>>> Custom Page 1 is active.");
+                    $("#p1a").attr('class', 'information');
+                    $("#p1a").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage1active", "valid");
+                    $("#page1Title").attr("disabled", false);
+                    $("#page1HeroImage").attr("disabled", false);
+                    verifyCustomPage1Settings();
+                    //Enable Page 2 
+                    $("#page2Active").attr("disabled", false);
+                    $("#page2detailssection").attr("style", "display:block;");
+                    $("#continueWithoutCustomPagesButton").attr("disabled", true);
+                }else{
+                    console.log(">>>>> Custom Page 1 is not active.");
+                    $("#p1a").attr('class', 'information');
+                    $("#p1a").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompage1active", "invalid");
+                    $("#page1Title").attr("disabled", true);
+                    $("#page1HeroImage").attr("disabled", true);
+                    verifyCustomPage1Settings();
+                    //Disable Page 2 
+                    $("#page2Active").attr("disabled", true);
+                    $("#page3Active").attr("disabled", true);
+                    $("#page4Active").attr("disabled", true);
+                    $("#page5Active").attr("disabled", true);
+                    $("#page2Active").prop("checked", false);
+                    $("#page3Active").prop("checked", false);
+                    $("#page4Active").prop("checked", false);
+                    $("#page5Active").prop("checked", false);
+                    $("#page2detailssection").attr("style", "display:none;");
+                    $("#page3detailssection").attr("style", "display:none;");
+                    $("#page4detailssection").attr("style", "display:none;");
+                    $("#page5detailssection").attr("style", "display:none;");
+                    $("#p2a").attr('class', 'notification');
+                    $("#p2a").text("* Check to use");
+                    $("#p3a").attr('class', 'notification');
+                    $("#p3a").text("* Check to use");
+                    $("#p4a").attr('class', 'notification');
+                    $("#p4a").text("* Check to use");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    verifyCustomPage2Settings();
+                    verifyCustomPage3Settings();
+                    verifyCustomPage4Settings();
+                    verifyCustomPage5Settings();
+                    $("#nextPageCreateCustomPagesButton").attr("disabled", true);
+                    $("#continueWithoutCustomPagesButton").attr("disabled", false);
+                }
+            });
+
+            $("#page1Title").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page 1 Title entered.");
+                    $("#p1t").attr('class', 'notification');
+                    $("#p1t").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompage1title", "invalid");
+                    verifyCustomPage1Settings();
+                }else{
+                    console.log(">>>>> Custom Page 1 Title is entered successfully.");
+                    $("#p1t").attr('class', 'information');
+                    $("#p1t").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage1title", "valid");
+                    verifyCustomPage1Settings();
+                }
+            });
+
+            $("#page1HeroImage").change(function(){
+                //selection changed
+                if ($('#page1HeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page 1 Image File selected.");
+                    $("#p1h").attr('class', 'notification');
+                    $("#p1h").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompage1image", "invalid");
+                    verifyCustomPage1Settings();
+                }else{
+                    console.log(">>>>> Custom Page 1 Image File selected.");
+                    $("#p1h").attr('class', 'information');
+                    $("#p1h").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage1image", "valid");
+                    verifyCustomPage1Settings();
+                }
+            });
+
+            function verifyCustomPage1Settings() {
+                if($('#page1Active').prop('checked')){
+                    admin_selectcustompage1active = localStorage.getItem('admin_selectcustompage1active');
+                    admin_selectcustompage1title = localStorage.getItem('admin_selectcustompage1title');
+                    admin_selectcustompage1image = localStorage.getItem('admin_selectcustompage1image');
+
+                    if(admin_selectcustompage1active == "valid" && admin_selectcustompage1title == "valid" && admin_selectcustompage1image == "valid" ){
+                        console.log(">>>>> Custom Page 1 settings are valid!")
+                        $("#page1status").attr('class', 'information');
+                        $("#page1status").text("Used and Valid");
+                        localStorage.setItem("admin_custompage1status", "valid");
+                    }else{
+                        console.log(">>>>> Not all brand settings are valid!")
+                        $("#page1status").attr('class', 'notification');
+                        $("#page1status").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompage1status", "invalid");
+                    }
+                }else{
+                    $("#page1status").attr('class', 'information');
+                    $("#page1status").text("Not Used");
+                    localStorage.setItem("admin_custompage1status", "valid");
+                }
+                verifyAllCustomPages();
+            }
+
+            //////////////////////////
+            //Custom Page 1
+            //////////////////////////
+
+            $("#page2HeroImage").change(function(){
+                //selection changed
+                if ($('#page2HeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page 2 Image File selected.");
+                    $("#p2h").attr('class', 'notification');
+                    $("#p2h").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompage2image", "invalid");
+                    verifyCustomPage2Settings();
+                }else{
+                    console.log(">>>>> Custom Page 2 Image File selected.");
+                    $("#p2h").attr('class', 'information');
+                    $("#p2h").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage2image", "valid");
+                    verifyCustomPage2Settings();
+                }
+            });
+
+            $("#page2Active").change(function(){
+                //selection changed
+                if($('#page2Active').prop('checked')){
+                    console.log(">>>>> Custom Page 2 is active.");
+                    $("#p2a").attr('class', 'information');
+                    $("#p2a").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage2active", "valid");
+                    $("#page2Title").attr("disabled", false);
+                    $("#page2HeroImage").attr("disabled", false);
+                    verifyCustomPage2Settings();
+                    //Enable Page 3
+                    $("#page3Active").attr("disabled", false);
+                    $("#page3detailssection").attr("style", "display:block;");
+
+                }else{
+                    console.log(">>>>> Custom Page 2 is not active.");
+                    $("#p2a").attr('class', 'notification');
+                    $("#p2a").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompage2active", "invalid");
+                    $("#page2Title").attr("disabled", true);
+                    $("#page2HeroImage").attr("disabled", true);
+                    verifyCustomPage2Settings();
+                    //Disable Page 3 
+                    $("#page3Active").attr("disabled", true);
+                    $("#page4Active").attr("disabled", true);
+                    $("#page5Active").attr("disabled", true);
+                    $("#page3Active").prop("checked", false);
+                    $("#page4Active").prop("checked", false);
+                    $("#page5Active").prop("checked", false);
+                    $("#page3detailssection").attr("style", "display:none;");
+                    $("#page4detailssection").attr("style", "display:none;");
+                    $("#page5detailssection").attr("style", "display:none;");
+                    $("#p3a").attr('class', 'notification');
+                    $("#p3a").text("* Check to use");
+                    $("#p4a").attr('class', 'notification');
+                    $("#p4a").text("* Check to use");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    verifyCustomPage3Settings();
+                    verifyCustomPage4Settings();
+                    verifyCustomPage5Settings();
+                }
+            });
+
+            $("#page2Title").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page 2 Title entered.");
+                    $("#p2t").attr('class', 'notification');
+                    $("#p2t").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompage2title", "invalid");
+                    verifyCustomPage2Settings();
+                }else{
+                    console.log(">>>>> Custom Page 2 Title is entered successfully.");
+                    $("#p2t").attr('class', 'information');
+                    $("#p2t").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage2title", "valid");
+                    verifyCustomPage2Settings();
+                }
+            });
+
+            function verifyCustomPage2Settings() {
+                if($('#page2Active').prop('checked')){
+                    admin_selectcustompage2active = localStorage.getItem('admin_selectcustompage2active');
+                    admin_selectcustompage2title = localStorage.getItem('admin_selectcustompage2title');
+                    admin_selectcustompage2image = localStorage.getItem('admin_selectcustompage2image');
+
+                    if(admin_selectcustompage2active == "valid" && admin_selectcustompage2title == "valid" && admin_selectcustompage2image == "valid" ){
+                        console.log(">>>>> Custom Page 2 settings are valid!")
+                        $("#page2status").attr('class', 'information');
+                        $("#page2status").text("Used and Valid");
+                        localStorage.setItem("admin_custompage2status", "valid");
+                    }else{
+                        console.log(">>>>> Not all brand settings are valid!")
+                        $("#page2status").attr('class', 'notification');
+                        $("#page2status").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompage2status", "invalid");
+                    }
+                }else{
+                    $("#page2status").attr('class', 'information');
+                    $("#page2status").text("Not Used");
+                    localStorage.setItem("admin_custompage2status", "valid");
+                }
+                verifyAllCustomPages();
+            }
+
+            //////////////////////////
+            //Custom Page 3
+            //////////////////////////
+
+            $("#page3HeroImage").change(function(){
+                //selection changed
+                if ($('#page3HeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page 3 Image File selected.");
+                    $("#p3h").attr('class', 'notification');
+                    $("#p3h").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompage3image", "invalid");
+                    verifyCustomPage3Settings();
+                }else{
+                    console.log(">>>>> Custom Page 3 Image File selected.");
+                    $("#p3h").attr('class', 'information');
+                    $("#p3h").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage3image", "valid");
+                    verifyCustomPage3Settings();
+                }
+            });
+
+            $("#page3Active").change(function(){
+                //selection changed
+                if($('#page3Active').prop('checked')){
+                    console.log(">>>>> Custom Page 3 is active.");
+                    $("#p3a").attr('class', 'information');
+                    $("#p3a").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage3active", "valid");
+                    $("#page3Title").attr("disabled", false);
+                    $("#page3HeroImage").attr("disabled", false);
+                    verifyCustomPage3Settings();
+                    //Enable Page 4
+                    $("#page4Active").attr("disabled", false);
+                    $("#page4detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Custom Page 3 is not active.");
+                    $("#p3a").attr('class', 'notification');
+                    $("#p3a").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompage3active", "invalid");
+                    $("#page3Title").attr("disabled", true);
+                    $("#page3HeroImage").attr("disabled", true);
+                    verifyCustomPage3Settings();
+                    //Disable Page 4 
+                    $("#page4Active").attr("disabled", true);
+                    $("#page5Active").attr("disabled", true);
+                    $("#page4Active").prop("checked", false);
+                    $("#page5Active").prop("checked", false);
+                    $("#page4detailssection").attr("style", "display:none;");
+                    $("#page5detailssection").attr("style", "display:none;");
+                    $("#p4a").attr('class', 'notification');
+                    $("#p4a").text("* Check to use");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    verifyCustomPage4Settings();
+                    verifyCustomPage5Settings();
+                }
+            });
+
+            $("#page3Title").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page 3 Title entered.");
+                    $("#p3t").attr('class', 'notification');
+                    $("#p3t").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompage3title", "invalid");
+                    verifyCustomPage3Settings();
+                }else{
+                    console.log(">>>>> Custom Page 3 Title is entered successfully.");
+                    $("#p3t").attr('class', 'information');
+                    $("#p3t").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage3title", "valid");
+                    verifyCustomPage3Settings();
+                }
+            });
+
+            function verifyCustomPage3Settings() {
+                if($('#page3Active').prop('checked')){
+                    admin_selectcustompage3active = localStorage.getItem('admin_selectcustompage3active');
+                    admin_selectcustompage3title = localStorage.getItem('admin_selectcustompage3title');
+                    admin_selectcustompage3image = localStorage.getItem('admin_selectcustompage3image');
+
+                    if(admin_selectcustompage3active == "valid" && admin_selectcustompage3title == "valid" && admin_selectcustompage3image == "valid" ){
+                        console.log(">>>>> Custom Page 3 settings are valid!")
+                        $("#page3status").attr('class', 'information');
+                        $("#page3status").text("Used and Valid");
+                        localStorage.setItem("admin_custompage3status", "valid");
+                    }else{
+                        console.log(">>>>> Not all brand settings are valid!")
+                        $("#page3status").attr('class', 'notification');
+                        $("#page3status").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompage3status", "invalid");
+                    }
+                }else{
+                    $("#page3status").attr('class', 'information');
+                    $("#page3status").text("Not Used");
+                    localStorage.setItem("admin_custompage3status", "valid");
+                }
+                verifyAllCustomPages();
+            }
+
+            //////////////////////////
+            //Custom Page 4
+            //////////////////////////
+
+            $("#page4HeroImage").change(function(){
+                //selection changed
+                if ($('#page4HeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page 4 Image File selected.");
+                    $("#p4h").attr('class', 'notification');
+                    $("#p4h").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompage4image", "invalid");
+                    verifyCustomPage4Settings();
+                }else{
+                    console.log(">>>>> Custom Page 4 Image File selected.");
+                    $("#p4h").attr('class', 'information');
+                    $("#p4h").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage4image", "valid");
+                    verifyCustomPage4Settings();
+                }
+            });
+
+            $("#page4Active").change(function(){
+                //selection changed
+                if($('#page4Active').prop('checked')){
+                    console.log(">>>>> Custom Page 4 is active.");
+                    $("#p4a").attr('class', 'information');
+                    $("#p4a").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage4active", "valid");
+                    $("#page4Title").attr("disabled", false);
+                    $("#page4HeroImage").attr("disabled", false);
+                    verifyCustomPage4Settings();
+                    //Enable Page 5
+                    $("#page5Active").attr("disabled", false);
+                    $("#page5detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Custom Page 4 is not active.");
+                    $("#p4a").attr('class', 'notification');
+                    $("#p4a").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompage4active", "invalid");
+                    $("#page4Title").attr("disabled", true);
+                    $("#page4HeroImage").attr("disabled", true);
+                    verifyCustomPage4Settings();
+                    //Disable Page 5 
+                    $("#page5Active").attr("disabled", true);
+                    $("#page5Active").prop("checked", false);
+                    $("#page5detailssection").attr("style", "display:none;");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    verifyCustomPage5Settings();
+            }});
+
+            $("#page4Title").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page 4 Title entered.");
+                    $("#p4t").attr('class', 'notification');
+                    $("#p4t").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompage4title", "invalid");
+                    verifyCustomPage4Settings();
+                }else{
+                    console.log(">>>>> Custom Page 4 Title is entered successfully.");
+                    $("#p4t").attr('class', 'information');
+                    $("#p4t").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage4title", "valid");
+                    verifyCustomPage4Settings();
+                }
+            });
+
+            function verifyCustomPage4Settings() {
+                if($('#page4Active').prop('checked')){
+                    admin_selectcustompage4active = localStorage.getItem('admin_selectcustompage4active');
+                    admin_selectcustompage4title = localStorage.getItem('admin_selectcustompage4title');
+                    admin_selectcustompage4image = localStorage.getItem('admin_selectcustompage4image');
+
+                    if(admin_selectcustompage4active == "valid" && admin_selectcustompage4title == "valid" && admin_selectcustompage4image == "valid" ){
+                        console.log(">>>>> Custom Page 4 settings are valid!")
+                        $("#page4status").attr('class', 'information');
+                        $("#page4status").text("Used and Valid");
+                        localStorage.setItem("admin_custompage4status", "valid");
+                    }else{
+                        console.log(">>>>> Not all brand settings are valid!")
+                        $("#page4status").attr('class', 'notification');
+                        $("#page4status").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompage4status", "invalid");
+                    }
+                }else{
+                    $("#page4status").attr('class', 'information');
+                    $("#page4status").text("Not Used");
+                    localStorage.setItem("admin_custompage4status", "valid");
+                }
+                verifyAllCustomPages();
+            }
+
+            //////////////////////////
+            //Custom Page 5
+            //////////////////////////
+
+            $("#page5HeroImage").change(function(){
+                //selection changed
+                if ($('#page5HeroImage').get(0).files.length === 0) {
+                    console.log(">>>>> No Custom Page 5 Image File selected.");
+                    $("#p5h").attr('class', 'notification');
+                    $("#p5h").text("* Select your image");
+                    localStorage.setItem("admin_selectcustompage5image", "invalid");
+                    verifyCustomPage5Settings();
+                }else{
+                    console.log(">>>>> Custom Page 5 Image File selected.");
+                    $("#p5h").attr('class', 'information');
+                    $("#p5h").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage5image", "valid");
+                    verifyCustomPage5Settings();
+                }
+            });
+
+
+            $("#page5Active").change(function(){
+                //selection changed
+                if($('#page5Active').prop('checked')){
+                    console.log(">>>>> Custom Page 5 is active.");
+                    $("#p5a").attr('class', 'information');
+                    $("#p5a").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage5active", "valid");
+                    $("#page5Title").attr("disabled", false);
+                    $("#page5HeroImage").attr("disabled", false);
+                    verifyCustomPage5Settings();
+                }else{
+                    console.log(">>>>> Custom Page 5 is not active.");
+                    $("#p5a").attr('class', 'notification');
+                    $("#p5a").text("* Check to use");
+                    localStorage.setItem("admin_selectcustompage5active", "invalid");
+                    $("#page5Title").attr("disabled", true);
+                    $("#page5HeroImage").attr("disabled", true);
+                    verifyCustomPage5Settings();
+                }
+            });
+
+            $("#page5Title").change(function(){
+                //selection changed
+                if(this.value === "..."){
+                    console.log(">>>>> No Custom Page 5 Title entered.");
+                    $("#p5t").attr('class', 'notification');
+                    $("#p5t").text("* Enter a Page Title");
+                    localStorage.setItem("admin_selectcustompage5title", "invalid");
+                    verifyCustomPage5Settings();
+                }else{
+                    console.log(">>>>> Custom Page 5 Title is entered successfully.");
+                    $("#p5t").attr('class', 'information');
+                    $("#p5t").text("Good choice!");
+                    localStorage.setItem("admin_selectcustompage5title", "valid");
+                    verifyCustomPage5Settings();
+                }
+            });
+
+            function verifyCustomPage5Settings() {
+                if($('#page5Active').prop('checked')){
+                    admin_selectcustompage5active = localStorage.getItem('admin_selectcustompage5active');
+                    admin_selectcustompage5title = localStorage.getItem('admin_selectcustompage5title');
+                    admin_selectcustompage5image = localStorage.getItem('admin_selectcustompage5image');
+
+                    if(admin_selectcustompage5active == "valid" && admin_selectcustompage5title == "valid" && admin_selectcustompage5image == "valid" ){
+                        console.log(">>>>> Custom Page 5 settings are valid!")
+                        $("#page5status").attr('class', 'information');
+                        $("#page5status").text("Used and Valid");
+                        localStorage.setItem("admin_custompage5status", "valid");
+                    }else{
+                        console.log(">>>>> Not all brand settings are valid!")
+                        $("#page5status").attr('class', 'notification');
+                        $("#page5status").text("Used and Not Valid");
+                        localStorage.setItem("admin_custompage5status", "invalid");
+                    }
+                }else{
+                    $("#page5status").attr('class', 'information');
+                    $("#page5status").text("Not Used");
+                    localStorage.setItem("admin_custompage5status", "valid");
+                }
+                verifyAllCustomPages();
+            }
+
+            function verifyAllCustomPages() {
+                admin_custompage1status = localStorage.getItem('admin_custompage1status');
+                admin_custompage2status = localStorage.getItem('admin_custompage2status');
+                admin_custompage3status = localStorage.getItem('admin_custompage3status');
+                admin_custompage4status = localStorage.getItem('admin_custompage4status');
+                admin_custompage5status = localStorage.getItem('admin_custompage5status');
+
+                if((admin_custompage1status == "valid") && (admin_custompage2status == "valid" || admin_custompage2status == "unused")  && (admin_custompage3status == "valid" || admin_custompage3status == "unused") && (admin_custompage4status == "valid" || admin_custompage4status == "unused") && (admin_custompage5status == "valid" || admin_custompage5status == "unused") ){
+                    $("#nextPageCreateCustomPagesButton").attr("disabled", false);
+                }else{
+                    $("#nextPageCreateCustomPagesButton").attr("disabled", true);
+                }
+            }
+
+            function resetCustomPageValidSettings() {
+                localStorage.setItem("admin_custompage1status", "unused");
+                localStorage.setItem("admin_custompage2status", "unused");
+                localStorage.setItem("admin_custompage3status", "unused");
+                localStorage.setItem("admin_custompage4status", "unused");
+                localStorage.setItem("admin_custompage5status", "unused");
+                localStorage.setItem("admin_selectcustompage1active", "invalid");
+                localStorage.setItem("admin_selectcustompage1title", "invalid");
+                localStorage.setItem("admin_selectcustompage1image", "invalid");
+                localStorage.setItem("admin_selectcustompage2active", "invalid");
+                localStorage.setItem("admin_selectcustompage2title", "invalid");
+                localStorage.setItem("admin_selectcustompage2image", "invalid");
+                localStorage.setItem("admin_selectcustompage3active", "invalid");
+                localStorage.setItem("admin_selectcustompage3title", "invalid");
+                localStorage.setItem("admin_selectcustompage3image", "invalid");
+                localStorage.setItem("admin_selectcustompage4active", "invalid");
+                localStorage.setItem("admin_selectcustompage4title", "invalid");
+                localStorage.setItem("admin_selectcustompage4image", "invalid");
+                localStorage.setItem("admin_selectcustompage5active", "invalid");
+                localStorage.setItem("admin_selectcustompage5title", "invalid");
+                localStorage.setItem("admin_selectcustompage5image", "invalid");
+            }
+
+            const CustomPage = Parse.Object.extend('CustomPage');
+
+            var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+            var file = new Parse.File("myfile.txt", { base64: base64 });
+
+            var brandId = localStorage.getItem('admin_brandId');
+
+            function saveCustomPages() {
+                $("#loader").attr("style", "display:block;");
+                $("#nextPageCreateCustomPagesButton").attr("disabled", true);
+
+                var page1Active = document.getElementById("page1Active").checked;
+                var page2Active = document.getElementById("page2Active").checked;
+                var page3Active = document.getElementById("page3Active").checked;
+                var page4Active = document.getElementById("page4Active").checked;
+                var page5Active = document.getElementById("page5Active").checked;
+
+                var admin_custompage1status = localStorage.getItem('admin_custompage1status');
+                var admin_custompage2status = localStorage.getItem('admin_custompage2status');
+                var admin_custompage3status = localStorage.getItem('admin_custompage3status');
+                var admin_custompage4status = localStorage.getItem('admin_custompage4status');
+                var admin_custompage5status = localStorage.getItem('admin_custompage5status');
+
+                if(page1Active && admin_custompage1status == "valid"){
+                    saveCustomPage1();
+                }
+            }
+
+            function savingPagesSuccess() {
+                $("#loader").attr("style", "display:none;");
+                document.location.href = "./admin_createbrand_step3.html";
+            }
+
+            function continueWithoutCustomPages(){
+                document.location.href = "./admin_createbrand_step3.html";
+            }
+
+            /////////////////////////
+            // Custom Page 1
+            /////////////////////////
+
+            function saveCustomPage1() {
+
+                console.log(">>>>> Saving Custom Page 1")
+
+                page1Title = document.getElementById("page1Title").value;
+                page1Url = document.getElementById("page1Url").value;
+                page1Active = document.getElementById("page1Active").checked;
+
+                var fileUploadControlCustomPage1 = $("#page1HeroImage")[0];
+                if (fileUploadControlCustomPage1.files.length > 0) {
+                    var page1HeroImageFile = fileUploadControlCustomPage1.files[0];
+                    var page1HeroImageName = "custompage1.jpg";
+
+                    var parseCustomPage1 = new Parse.File(page1HeroImageName, page1HeroImageFile);
+                }
+
+                const customPage1 = new CustomPage();
+
+                customPage1.set('usePage', page1Active);
+                customPage1.set('pageTitle', page1Title);
+                customPage1.set('brandId', brandId);
+                customPage1.set('pageUrl', page1Url);
+                customPage1.set('pageHeroImage', parseCustomPage1);
+                customPage1.set('pageNumber', '1');
+
+
+                customPage1.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Custom Page 1 is saved.", result);
+
+                        if(page2Active && admin_custompage2status == "valid"){
+                            saveCustomPage2();
+                        }else{
+                            savingPagesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating CustomPage: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Custom Page 2
+            /////////////////////////
+
+            function saveCustomPage2() {
+
+                console.log(">>>>> Saving Custom Page 2")
+
+                page2Title = document.getElementById("page2Title").value;
+                page2Url = document.getElementById("page2Url").value;
+                page2Active = document.getElementById("page2Active").checked;
+
+                var fileUploadControlCustomPage2 = $("#page2HeroImage")[0];
+                if (fileUploadControlCustomPage2.files.length > 0) {
+                    var page2HeroImageFile = fileUploadControlCustomPage2.files[0];
+                    var page2HeroImageName = "custompage2.jpg";
+
+                    var parseCustomPage2 = new Parse.File(page2HeroImageName, page2HeroImageFile);
+                }
+
+                const customPage2 = new CustomPage();
+
+                customPage2.set('usePage', page2Active);
+                customPage2.set('pageTitle', page2Title);
+                customPage2.set('brandId', brandId);
+                customPage2.set('pageUrl', page2Url);
+                customPage2.set('pageHeroImage', parseCustomPage2);
+                customPage2.set('pageNumber', '2');
+
+                customPage2.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Custom Page 2 is saved.", result);
+
+                        if(page3Active && admin_custompage3status == "valid"){
+                            saveCustomPage3();
+                        }else{
+                            savingPagesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating CustomPage: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Custom Page 3
+            /////////////////////////
+
+            function saveCustomPage3() {
+
+                console.log(">>>>> Saving Custom Page 3")
+
+                page3Title = document.getElementById("page3Title").value;
+                page3Url = document.getElementById("page3Url").value;
+                page3Active = document.getElementById("page3Active").checked;
+
+                var fileUploadControlCustomPage3 = $("#page3HeroImage")[0];
+                if (fileUploadControlCustomPage3.files.length > 0) {
+                    var page3HeroImageFile = fileUploadControlCustomPage3.files[0];
+                    var page3HeroImageName = "custompage3.jpg";
+
+                    var parseCustomPage3 = new Parse.File(page3HeroImageName, page3HeroImageFile);
+                }
+
+                const customPage3 = new CustomPage();
+
+                customPage3.set('usePage', page3Active);
+                customPage3.set('pageTitle', page3Title);
+                customPage3.set('brandId', brandId);
+                customPage3.set('pageUrl', page3Url);
+                customPage3.set('pageHeroImage', parseCustomPage3);
+                customPage3.set('pageNumber', '3');
+
+                customPage3.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Custom Page 3 is saved.", result);
+
+                        if(page4Active && admin_custompage4status == "valid"){
+                            saveCustomPage4();
+                        }else{
+                            savingPagesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating CustomPage: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Custom Page 4
+            /////////////////////////
+
+            function saveCustomPage4() {
+
+                console.log(">>>>> Saving Custom Page 4")
+
+                page4Title = document.getElementById("page4Title").value;
+                page4Url = document.getElementById("page4Url").value;
+                page4Active = document.getElementById("page4Active").checked;
+
+                var fileUploadControlCustomPage4 = $("#page4HeroImage")[0];
+                if (fileUploadControlCustomPage4.files.length > 0) {
+                    var page4HeroImageFile = fileUploadControlCustomPage4.files[0];
+                    var page4HeroImageName = "custompage4.jpg";
+
+                    var parseCustomPage4 = new Parse.File(page4HeroImageName, page4HeroImageFile);
+                }
+
+                const customPage4 = new CustomPage();
+
+                customPage4.set('usePage', page4Active);
+                customPage4.set('pageTitle', page4Title);
+                customPage4.set('brandId', brandId);
+                customPage4.set('pageUrl', page4Url);
+                customPage4.set('pageHeroImage', parseCustomPage4);
+                customPage4.set('pageNumber', '4');
+
+                customPage4.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Custom Page 4 is saved.", result);
+
+                        if(page5Active && admin_custompage5status == "valid"){
+                            saveCustomPage5();
+                        }else{
+                            savingPagesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating CustomPage: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Custom Page 5
+            /////////////////////////
+
+            function saveCustomPage5() {
+
+                console.log(">>>>> Saving Custom Page 5")
+
+                page5Title = document.getElementById("page5Title").value;
+                page5Url = document.getElementById("page5Url").value;
+                page5Active = document.getElementById("page5Active").checked;
+
+                var fileUploadControlCustomPage5 = $("#page5HeroImage")[0];
+                if (fileUploadControlCustomPage5.files.length > 0) {
+                    var page5HeroImageFile = fileUploadControlCustomPage5.files[0];
+                    var page5HeroImageName = "custompage5.jpg";
+
+                    var parseCustomPage5 = new Parse.File(page5HeroImageName, page5HeroImageFile);
+                }
+
+                const customPage5 = new CustomPage();
+
+                customPage5.set('usePage', page5Active);
+                customPage5.set('pageTitle', page5Title);
+                customPage5.set('brandId', brandId);
+                customPage5.set('pageUrl', page5Url);
+                customPage5.set('pageHeroImage', parseCustomPage5);
+                customPage5.set('pageNumber', '5');
+
+                customPage5.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Custom Page 5 is saved.", result);
+
+                        savingPagesSuccess();
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating CustomPage: ', error);
+                    }
+                  }
+                );
+            }
+        </script>
+	</body>
+</html>

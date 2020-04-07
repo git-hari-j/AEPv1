@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin Step 3</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/back4app.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+    <script src="./js/adobeprivacy.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                admincreatepage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="resetCategoryValidSettings()">
+        <div class="wrapper" style="">
+		  <!-- Header -->
+            <div class="header" style="">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home" style="display:none;">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                        <a href="./admin.html" title="&larr; Back home">
+                            <img id="" alt="" src="./images/sytycd.png" style="">
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation" style="">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="page9"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div> </div> </div> </div>    
+</nav>
+<!-- End class="navigation" -->
+
+        <div class="box">
+            <div class="hgroup title">
+                <h3>So You Think You Can Demo?</h3>
+                <h5>Personalize your demo website for your customer by updating the below settings in under 10 minutes!</h5>
+                <br/>
+        </div>
+                <br/>
+                Step 3: Create your Product Categories
+                <div id="category1detailssection" class="box-content" style="display:block;">
+                <h5>Category 1 Details:  </h5>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <label class="control-label" for="">Use Category 1?</label><div id="c1a" class="notification">* Check to use</div>
+                                <div class="controls">
+                                    <input id="category1Active" type="checkbox" name="category1Active" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 1 Name</label><div id="c1n" class="notification">* Enter a Category Name</div>
+                                <div class="controls">
+                                    <input class="form-control" id="category1Name" type="text" name="category1Name" value="" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">  
+                            <div class="form-group">                    
+                                <label class="control-label" for="">Category 1 Image</label><div id="c1i" class="notification">* Select your image</div>
+                                <div class="controls">
+                                    <input type="file" id="category1Image" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category2detailssection" class="box-content" style="display:none;">
+                <h5>Category 2 Details:  </h5>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <label class="control-label" for="">Use Category 2?</label><div id="c2a" class="notification">* Check to use</div>
+                                <div class="controls">
+                                    <input id="category2Active" type="checkbox" name="category2Active" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 2 Name</label><div id="c2n" class="notification">* Enter a Category Name</div>
+                                <div class="controls">
+                                    <input class="form-control" id="category2Name" type="text" name="category2Name" value="" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">  
+                            <div class="form-group">                    
+                                <label class="control-label" for="">Category 2 Image</label><div id="c2i" class="notification">* Select your image</div>
+                                <div class="controls">
+                                    <input type="file" id="category2Image" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category3detailssection" class="box-content" style="display:none;">
+                <h5>Category 3 Details:  </h5>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <label class="control-label" for="">Use Category 3?</label><div id="c3a" class="notification">* Check to use</div>
+                                <div class="controls">
+                                    <input id="category3Active" type="checkbox" name="category3Active" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 3 Name</label><div id="c3n" class="notification">* Enter a Category Name</div>
+                                <div class="controls">
+                                    <input class="form-control" id="category3Name" type="text" name="category3Name" value="" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">  
+                            <div class="form-group">                    
+                                <label class="control-label" for="">Category 3 Image</label><div id="c3i" class="notification">* Select your image</div>
+                                <div class="controls">
+                                    <input type="file" id="category3Image" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="categoryStatusOverview" class="box-content" style="display:block;">
+                    <h5>Category Configuration Status:  </h5>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 1 Status:</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label id="category1status" class="control-label" for="">Not Used</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 2 Status:</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label id="category2status" class="control-label" for="">Not Used</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="control-label" for="">Category 3 Status:</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label id="category3status" class="control-label" for="">Not Used</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div id="loader" style="display:none;"></div>
+                <div class="row">
+                    <div class="controls">
+                        <div class="col-sm-2">
+                            <button id="nextStepCreateCategoriesButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="nextStepCreateCategoriesButton" value="" onClick="saveCategories()" disabled style="display:block;">
+                                Save Categories
+                            </button>
+                        </div>
+                    </div>     
+                </div> 
+        </div>
+
+	    <!-- Credits bar -->
+        <div class="credits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits">
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+
+        <script>
+
+            //////////////////////////
+            // Client-Side Validation of Categories
+            //////////////////////////
+
+            //////////////////////////
+            //Validation Category 1
+            //////////////////////////
+
+            $("#category1Active").change(function(){
+                //selection changed
+                if($('#category1Active').prop('checked')){
+                    console.log(">>>>> Category 1 is active.");
+                    $("#c1a").attr('class', 'information');
+                    $("#c1a").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory1active", "valid");
+                    $("#category1Name").attr("disabled", false);
+                    $("#category1Image").attr("disabled", false);
+                    verifyCategory1Settings();
+                    //Enable Page 2 
+                    $("#category2Active").attr("disabled", false);
+                    $("#category2detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Category 1 is not active.");
+                    $("#c1a").attr('class', 'notification');
+                    $("#c1a").text("* Check to use");
+                    localStorage.setItem("admin_selectcategory1active", "invalid");
+                    $("#category1Name").attr("disabled", true);
+                    $("#category1Image").attr("disabled", true);
+                    verifyCategory1Settings();
+                    //Disable Page 2
+                    $("#category2detailssection").attr("style", "display:none;");
+                    $("#category3detailssection").attr("style", "display:none;");
+                    $("#category2Active").prop("checked", false);
+                    $("#category3Active").prop("checked", false);
+                    $("#c2a").attr('class', 'notification');
+                    $("#c2a").text("* Check to use");
+                    $("#c3a").attr('class', 'notification');
+                    $("#c3a").text("* Check to use");
+                    verifyCategory2Settings();
+                    verifyCategory3Settings();
+                }
+            });
+
+            $("#category1Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Category 1 - No Name entered.");
+                    $("#c1n").attr('class', 'notification');
+                    $("#c1n").text("* Enter a Category Name");
+                    localStorage.setItem("admin_selectcategory1name", "invalid");
+                    verifyCategory1Settings();
+                }else{
+                    console.log(">>>>> Category 1 - Name entered successfully.");
+                    $("#c1n").attr('class', 'information');
+                    $("#c1n").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory1name", "valid");
+                    verifyCategory1Settings();
+                }
+            });
+
+            $("#category1Image").change(function(){
+                //selection changed
+                if ($('#category1Image').get(0).files.length === 0) {
+                    console.log(">>>>> No Category 1 Image File selected.");
+                    $("#c1i").attr('class', 'notification');
+                    $("#c1i").text("* Select your image");
+                    localStorage.setItem("admin_selectcategory1image", "invalid");
+                    verifyCategory1Settings();
+                }else{
+                    console.log(">>>>> Category 1 Image File selected.");
+                    $("#c1i").attr('class', 'information');
+                    $("#c1i").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory1image", "valid");
+                    verifyCategory1Settings();
+                }
+            });
+
+            function verifyCategory1Settings() {
+                if($('#category1Active').prop('checked')){
+                    admin_selectcategory1active = localStorage.getItem('admin_selectcategory1active');
+                    admin_selectcategory1name = localStorage.getItem('admin_selectcategory1name');
+                    admin_selectcategory1image = localStorage.getItem('admin_selectcategory1image');
+
+                    if(admin_selectcategory1active == "valid" && admin_selectcategory1name == "valid" && admin_selectcategory1image == "valid" ){
+                        console.log(">>>>> Category 1: All settings are valid!")
+                        $("#category1status").attr('class', 'information');
+                        $("#category1status").text("Used and Valid");
+                        localStorage.setItem("admin_category1status", "valid");
+                    }else{
+                        console.log(">>>>> Category 1: Some settings are invalid!")
+                        $("#category1status").attr('class', 'notification');
+                        $("#category1status").text("Used and Not Valid");
+                        localStorage.setItem("admin_category1status", "invalid");
+                    }
+                }else{
+                    $("#category1status").attr('class', 'notification');
+                    $("#category1status").text("Not Valid - A minimum of 1 category is required.");
+                    localStorage.setItem("admin_category1status", "invalid");
+                }
+                verifyAllCategories();
+            }
+
+            //////////////////////////
+            //Validation Category 2
+            //////////////////////////
+
+            $("#category2Active").change(function(){
+                //selection changed
+                if($('#category2Active').prop('checked')){
+                    console.log(">>>>> Category 2 is active.");
+                    $("#c2a").attr('class', 'information');
+                    $("#c2a").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory2active", "valid");
+                    $("#category2Name").attr("disabled", false);
+                    $("#category2Image").attr("disabled", false);
+                    verifyCategory2Settings();
+                    //Enable Page 3
+                    $("#category3Active").attr("disabled", false);
+                    $("#category3detailssection").attr("style", "display:block;");
+                }else{
+                    console.log(">>>>> Category 2 is not active.");
+                    $("#c2a").attr('class', 'notification');
+                    $("#c2a").text("* Check to use");
+                    localStorage.setItem("admin_selectcategory2active", "invalid");
+                    $("#category2Name").attr("disabled", true);
+                    $("#category2Image").attr("disabled", true);
+                    verifyCategory2Settings();
+                    //Disable Page 3
+                    $("#category3detailssection").attr("style", "display:none;");
+                    $("#category3Active").prop("checked", false);
+                    $("#c3a").attr('class', 'notification');
+                    $("#c3a").text("* Check to use");
+                    verifyCategory3Settings();
+                }
+            });
+
+            $("#category2Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Category 2 - No Name entered.");
+                    $("#c2n").attr('class', 'notification');
+                    $("#c2n").text("* Enter a Category Name");
+                    localStorage.setItem("admin_selectcategory2name", "invalid");
+                    verifyCategory2Settings();
+                }else{
+                    console.log(">>>>> Category 2 - Name entered successfully.");
+                    $("#c2n").attr('class', 'information');
+                    $("#c2n").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory2name", "valid");
+                    verifyCategory2Settings();
+                }
+            });
+
+            $("#category2Image").change(function(){
+                //selection changed
+                if ($('#category2Image').get(0).files.length === 0) {
+                    console.log(">>>>> No Category 2 Image File selected.");
+                    $("#c2i").attr('class', 'notification');
+                    $("#c2i").text("* Select your image");
+                    localStorage.setItem("admin_selectcategory2image", "invalid");
+                    verifyCategory2Settings();
+                }else{
+                    console.log(">>>>> Category 2 Image File selected.");
+                    $("#c2i").attr('class', 'information');
+                    $("#c2i").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory2image", "valid");
+                    verifyCategory2Settings();
+                }
+            });
+
+            function verifyCategory2Settings() {
+                if($('#category2Active').prop('checked')){
+                    admin_selectcategory2active = localStorage.getItem('admin_selectcategory2active');
+                    admin_selectcategory2name = localStorage.getItem('admin_selectcategory2name');
+                    admin_selectcategory2image = localStorage.getItem('admin_selectcategory2image');
+
+                    if(admin_selectcategory2active == "valid" && admin_selectcategory2name == "valid" && admin_selectcategory2image == "valid" ){
+                        console.log(">>>>> Category 2: All settings are valid!")
+                        $("#category2status").attr('class', 'information');
+                        $("#category2status").text("Used and Valid");
+                        localStorage.setItem("admin_category2status", "valid");
+                    }else{
+                        console.log(">>>>> Category 2: Some settings are invalid!")
+                        $("#category2status").attr('class', 'notification');
+                        $("#category2status").text("Used and Not Valid");
+                        localStorage.setItem("admin_category2status", "invalid");
+                    }
+                }else{
+                    $("#category2status").attr('class', 'information');
+                    $("#category2status").text("Not Used");
+                    localStorage.setItem("admin_category2status", "valid");
+                }
+                verifyAllCategories();
+            }
+
+            //////////////////////////
+            //Validation Category 3
+            //////////////////////////
+
+            $("#category3Active").change(function(){
+                //selection changed
+                if($('#category3Active').prop('checked')){
+                    console.log(">>>>> Category 3 is active.");
+                    $("#c3a").attr('class', 'information');
+                    $("#c3a").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory3active", "valid");
+                    $("#category3Name").attr("disabled", false);
+                    $("#category3Image").attr("disabled", false);
+                    verifyCategory3Settings();
+                }else{
+                    console.log(">>>>> Category 3 is not active.");
+                    $("#c3a").attr('class', 'notification');
+                    $("#c3a").text("* Check to use");
+                    localStorage.setItem("admin_selectcategory3active", "invalid");
+                    $("#category3Name").attr("disabled", true);
+                    $("#category3Image").attr("disabled", true);
+                    verifyCategory3Settings();
+                }
+            });
+
+            $("#category3Name").change(function(){
+                //selection changed
+                if(this.value === ""){
+                    console.log(">>>>> Category 3 - No Name entered.");
+                    $("#c3n").attr('class', 'notification');
+                    $("#c3n").text("* Enter a Category Name");
+                    localStorage.setItem("admin_selectcategory3name", "invalid");
+                    verifyCategory3Settings();
+                }else{
+                    console.log(">>>>> Category 3 - Name entered successfully.");
+                    $("#c3n").attr('class', 'information');
+                    $("#c3n").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory3name", "valid");
+                    verifyCategory3Settings();
+                }
+            });
+
+            $("#category3Image").change(function(){
+                //selection changed
+                if ($('#category3Image').get(0).files.length === 0) {
+                    console.log(">>>>> No Category 3 Image File selected.");
+                    $("#c3i").attr('class', 'notification');
+                    $("#c3i").text("* Select your image");
+                    localStorage.setItem("admin_selectcategory3image", "invalid");
+                    verifyCategory3Settings();
+                }else{
+                    console.log(">>>>> Category 3 Image File selected.");
+                    $("#c3i").attr('class', 'information');
+                    $("#c3i").text("Good choice!");
+                    localStorage.setItem("admin_selectcategory3image", "valid");
+                    verifyCategory3Settings();
+                }
+            });
+
+            function verifyCategory3Settings() {
+                if($('#category3Active').prop('checked')){
+                    admin_selectcategory3active = localStorage.getItem('admin_selectcategory3active');
+                    admin_selectcategory3name = localStorage.getItem('admin_selectcategory3name');
+                    admin_selectcategory3image = localStorage.getItem('admin_selectcategory3image');
+
+                    if(admin_selectcategory3active == "valid" && admin_selectcategory3name == "valid" && admin_selectcategory3image == "valid" ){
+                        console.log(">>>>> Category 3: All settings are valid!")
+                        $("#category3status").attr('class', 'information');
+                        $("#category3status").text("Used and Valid");
+                        localStorage.setItem("admin_category3status", "valid");
+                    }else{
+                        console.log(">>>>> Category 3: Some settings are invalid!")
+                        $("#category3status").attr('class', 'notification');
+                        $("#category3status").text("Used and Not Valid");
+                        localStorage.setItem("admin_category3status", "invalid");
+                    }
+                }else{
+                    $("#category3status").attr('class', 'information');
+                    $("#category3status").text("Not Used");
+                    localStorage.setItem("admin_category3status", "valid");
+                }
+                verifyAllCategories();
+            }
+
+            //////////////////////////
+            //Final Validation of all Categories
+            //////////////////////////
+
+            function verifyAllCategories() {
+                admin_category1status = localStorage.getItem('admin_category1status');
+                admin_category2status = localStorage.getItem('admin_category2status');
+                admin_category3status = localStorage.getItem('admin_category3status');
+
+                if((admin_category1status == "valid") && (admin_category2status == "valid" || admin_category2status == "unused")  && (admin_category3status == "valid" || admin_category3status == "unused")){
+                    $("#nextStepCreateCategoriesButton").attr("disabled", false);
+                }else{
+                    $("#nextStepCreateCategoriesButton").attr("disabled", true);
+                }
+            }
+            //////////////////////////
+            //Reset Validation of all Categories on pageload
+            //////////////////////////
+
+            function resetCategoryValidSettings() {
+                localStorage.setItem("admin_category1status", "invalid");
+                localStorage.setItem("admin_category2status", "unused");
+                localStorage.setItem("admin_category3status", "unused");
+
+                localStorage.setItem("admin_selectcategory1active", "invalid");
+                localStorage.setItem("admin_selectcategory1name", "invalid");
+                localStorage.setItem("admin_selectcategory1image", "invalid");
+
+                localStorage.setItem("admin_selectcategory2active", "invalid");
+                localStorage.setItem("admin_selectcategory2name", "invalid");
+                localStorage.setItem("admin_selectcategory2image", "invalid");
+
+                localStorage.setItem("admin_selectcategory3active", "invalid");
+                localStorage.setItem("admin_selectcategory3name", "invalid");
+                localStorage.setItem("admin_selectcategory3image", "invalid");
+            }
+
+            //////////////////////////
+            //Set global variables for all categories
+            //////////////////////////
+
+            const Categories = Parse.Object.extend('Categories');
+
+            var base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+            var file = new Parse.File("myfile.txt", { base64: base64 });
+
+            var brandId = localStorage.getItem('admin_brandId');
+
+            //////////////////////////
+            //Start Saving Categories
+            //////////////////////////
+
+            function saveCategories() {
+                $("#loader").attr("style", "display:block;");
+                $("#nextStepCreateCategoriesButton").attr("disabled", true);
+
+                var category1Active = document.getElementById("category1Active").checked;
+                var category2Active = document.getElementById("category2Active").checked;
+                var category3Active = document.getElementById("category3Active").checked;
+
+                
+                var admin_category1status = localStorage.getItem('admin_category1status');
+                var admin_category2status = localStorage.getItem('admin_category2status');
+                var admin_category3status = localStorage.getItem('admin_category3status');
+
+                //Start with Product 1
+                if(category1Active && admin_category1status == "valid"){
+                    saveCategory1();
+                }
+            }
+
+            function savingCategoriesSuccess() {
+                $("#loader").attr("style", "display:none;");
+                document.location.href = "./admin_createbrand_step4.html";
+            }
+
+            /////////////////////////
+            // Category 1
+            /////////////////////////
+
+            function saveCategory1() {
+
+                console.log(">>>>> Saving Category 1")
+
+                category1Name = document.getElementById("category1Name").value;
+                category1Active = document.getElementById("category1Active").checked;
+
+                var fileUploadControlCategory1 = $("#category1Image")[0];
+                if (fileUploadControlCategory1.files.length > 0) {
+                    var category1ImageFile = fileUploadControlCategory1.files[0];
+                    var category1ImageName = "category1.jpg";
+
+                    var parseCategory1Image = new Parse.File(category1ImageName, category1ImageFile);
+                }
+
+                const category1 = new Categories();
+                
+                category1.set('image', parseCategory1Image);
+                category1.set('category', category1Name);
+                category1.set('brandId', brandId);
+                category1.set('categoryNumber', 1);
+
+                category1.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Category 1 is saved.", result);
+
+                        if(category2Active && admin_category2status == "valid"){
+                            saveCategory2();
+                        }else{
+                            savingCategoriesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Category 1: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Category 2
+            /////////////////////////
+
+            function saveCategory2() {
+
+                console.log(">>>>> Saving Category 2")
+
+                category2Name = document.getElementById("category2Name").value;
+                category2Active = document.getElementById("category2Active").checked;
+
+                var fileUploadControlCategory2 = $("#category2Image")[0];
+                if (fileUploadControlCategory2.files.length > 0) {
+                    var category2ImageFile = fileUploadControlCategory2.files[0];
+                    var category2ImageName = "category2.jpg";
+
+                    var parseCategory2Image = new Parse.File(category2ImageName, category2ImageFile);
+                }
+
+                const category2 = new Categories();
+                
+                category2.set('image', parseCategory2Image);
+                category2.set('category', category2Name);
+                category2.set('brandId', brandId);
+                category2.set('categoryNumber', 2);
+
+                category2.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Category 2 is saved.", result);
+
+                        if(category3Active && admin_category3status == "valid"){
+                            saveCategory3();
+                        }else{
+                            savingCategoriesSuccess();
+                        }
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Category 2: ', error);
+                    }
+                  }
+                );
+            }
+
+            /////////////////////////
+            // Category 3
+            /////////////////////////
+
+            function saveCategory3() {
+
+                console.log(">>>>> Saving Category 3")
+
+                category3Name = document.getElementById("category3Name").value;
+                category3Active = document.getElementById("category3Active").checked;
+
+                var fileUploadControlCategory3 = $("#category3Image")[0];
+                if (fileUploadControlCategory3.files.length > 0) {
+                    var category3ImageFile = fileUploadControlCategory3.files[0];
+                    var category3ImageName = "category3.jpg";
+
+                    var parseCategory3Image = new Parse.File(category3ImageName, category3ImageFile);
+                }
+
+                const category3 = new Categories();
+                
+                category3.set('image', parseCategory3Image);
+                category3.set('category', category3Name);
+                category3.set('brandId', brandId);
+                category3.set('categoryNumber', 3);
+
+                category3.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log(">>>>> SUCCESS! Category 3 is saved.", result);
+                        
+                        savingCategoriesSuccess();
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating Category 3: ', error);
+                    }
+                  }
+                );
+            }
+        </script>
+	</body>
+</html>
