@@ -14,7 +14,7 @@
     "ask-sdk-model": "^1.15.1",
     "axios": "^0.18.0",
     "moment": "^2.24.0",
-    "parse": "^2.4.0",
+    "parse": "^2.10.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
